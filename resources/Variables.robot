@@ -1,6 +1,6 @@
 *** Variables ***
-${checkin}=         2025-12-15
-${checkout}=        2025-12-16
+${checkin}=         2025-12-16
+${checkout}=        2025-12-17
 ${ADMIN_USER}       admin
 #${ADMIN_PASS}       password
 ${FIRSTNAME}        Sourabh

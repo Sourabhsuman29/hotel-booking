@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.10 on win32)" generated="2025-11-11T11:43:33.726453" rpa="false" schemaversion="5">
-<suite id="s1" name="E2E Application Flow" source="C:\Users\sozkum\OneDrive - SAS\Documents\Pycharm Projects\Robot Framework\HotelBooking\tests\e2e_application_flow.robot">
+<robot generator="Robot 7.3.2 (Python 3.12.12 on linux)" generated="2025-11-12T05:45:39.334816" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E Application Flow" source="/tests/tests/e2e_application_flow.robot">
 <test id="s1-t1" name="Positive Scenario: Send a inquiry messages from UI" line="16">
 <kw name="Launch Browser Application" owner="PlaywrightCore">
-<msg time="2025-11-11T11:43:41.471672" level="INFO">Launching browser: firefox
+<msg time="2025-11-12T05:45:44.893770" level="INFO">Launching browser: firefox
 Browser launched and application opened.</msg>
 <arg>firefox</arg>
-<status status="PASS" start="2025-11-11T11:43:34.459239" elapsed="7.012433"/>
+<status status="PASS" start="2025-11-12T05:45:39.893522" elapsed="5.000421"/>
 </kw>
 <kw name="Login As Admin" owner="PlaywrightCore">
-<msg time="2025-11-11T11:43:41.471672" level="INFO">.env file loaded: True</msg>
-<msg time="2025-11-11T11:43:42.929048" level="INFO">Secrets fetched successfully:</msg>
-<msg time="2025-11-11T11:43:50.771617" level="INFO">Admin login successful.</msg>
-<msg time="2025-11-11T11:43:50.771617" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
+<msg time="2025-11-12T05:45:44.918282" level="INFO">.env file loaded: True</msg>
+<msg time="2025-11-12T05:45:45.591989" level="INFO">Secrets fetched successfully:</msg>
+<msg time="2025-11-12T05:45:52.433874" level="INFO">Admin login successful.</msg>
+<msg time="2025-11-12T05:45:52.434120" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
 {
   "DOPPLER_CONFIG": "dev",
   "DOPPLER_ENVIRONMENT": "dev",
@@ -20,11 +20,11 @@ Browser launched and application opened.</msg>
   "PASSWORD": "password",
   "USER": "admin"
 }</msg>
-<status status="PASS" start="2025-11-11T11:43:41.471672" elapsed="9.299945"/>
+<status status="PASS" start="2025-11-12T05:45:44.894236" elapsed="7.540001"/>
 </kw>
 <kw name="Go Back To Front Page" owner="PlaywrightCore">
-<msg time="2025-11-11T11:43:51.805227" level="INFO">clicked on Home/Front Page.</msg>
-<status status="PASS" start="2025-11-11T11:43:50.771617" elapsed="1.033610"/>
+<msg time="2025-11-12T05:45:53.317621" level="INFO">clicked on Home/Front Page.</msg>
+<status status="PASS" start="2025-11-12T05:45:52.434592" elapsed="0.883245"/>
 </kw>
 <kw name="Send Us a Message" owner="PlaywrightCore">
 <arg>${name}</arg>
@@ -32,39 +32,39 @@ Browser launched and application opened.</msg>
 <arg>${PHONE}</arg>
 <arg>${subject}</arg>
 <arg>${description}</arg>
-<status status="PASS" start="2025-11-11T11:43:51.805227" elapsed="6.530588"/>
+<status status="PASS" start="2025-11-12T05:45:53.318181" elapsed="6.271045"/>
 </kw>
 <kw name="Close Browser" owner="PlaywrightCore">
-<msg time="2025-11-11T11:43:59.133421" level="INFO">Browser and context closed.</msg>
-<status status="PASS" start="2025-11-11T11:43:58.335815" elapsed="0.797606"/>
+<msg time="2025-11-12T05:46:00.111420" level="INFO">Browser and context closed.</msg>
+<status status="PASS" start="2025-11-12T05:45:59.589496" elapsed="0.522105"/>
 </kw>
-<status status="PASS" start="2025-11-11T11:43:34.459239" elapsed="24.674768"/>
+<status status="PASS" start="2025-11-12T05:45:39.892759" elapsed="20.219048"/>
 </test>
 <test id="s1-t2" name="Positive Scenario: Validate messages from APIs" line="24">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:43:59.135083" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A98080&gt;</msg>
+<msg time="2025-11-12T05:46:00.114385" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:43:59.135083" level="INFO">https://automationintesting.online/api/message</msg>
+<msg time="2025-11-12T05:46:00.115902" level="INFO">https://automationintesting.online/api/message</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:43:59.135083" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:00.115398" elapsed="0.000568"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:43:59.135083" elapsed="0.002176"/>
+<status status="PASS" start="2025-11-12T05:46:00.115159" elapsed="0.000875"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:43:59.137259" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:00.116202" elapsed="0.000156"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:43:59.135083" elapsed="0.002176"/>
+<status status="PASS" start="2025-11-12T05:46:00.114621" elapsed="0.001797"/>
 </kw>
-<msg time="2025-11-11T11:43:59.137259" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A98080&gt;</msg>
+<msg time="2025-11-12T05:46:00.116570" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:00.413185" level="INFO">{
+<msg time="2025-11-12T05:46:00.717918" level="INFO">{
     "messages": [
         {
             "id": 1,
@@ -80,36 +80,6 @@ Browser launched and application opened.</msg>
         },
         {
             "id": 3,
-            "name": "Marry jane",
-            "subject": "You have a new booking!",
-            "read": false
-        },
-        {
-            "id": 4,
-            "name": "Sourabh Kumar",
-            "subject": "You have a new booking!",
-            "read": false
-        },
-        {
-            "id": 5,
-            "name": "TestName001",
-            "subject": "Book a room",
-            "read": false
-        },
-        {
-            "id": 6,
-            "name": "Sourabh Kumar",
-            "subject": "You have a new booking!",
-            "read": false
-        },
-        {
-            "id": 7,
-            "name": "TestName001",
-            "subject": "Book a room",
-            "read": false
-        },
-        {
-            "id": 8,
             "name": "TestName001",
             "subject": "Book a room",
             "read": false
@@ -118,54 +88,54 @@ Browser launched and application opened.</msg>
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:00.412481" elapsed="0.001287"/>
+<status status="PASS" start="2025-11-12T05:46:00.717509" elapsed="0.000457"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:00.414410" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:14:00 GMT",
+<msg time="2025-11-12T05:46:00.718406" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:00 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "ZgHVz9EASvq2PCE2AQeqjw",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "FdTGVHsCRbCurs15w9P4nw",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=hOEQdOneBugDz3gM8cBxQFGE2LkNHyZ2pxO4zOwLgXC0FMbcollMQ9PvG2IzLTnK9suMeceQegp2%2FC6s9TyrdfvBDmDRPuh0i1lZyzMHPs9Xy80BDf%2FmTI75\"}]}",
-    "Content-Encoding": "br",
-    "CF-RAY": "99cba5995ef748ef-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IBMbc8bo%2FggoEvKhzV%2F6pEsu4%2BZute0OC1BCkaOhczpH6gK7b9%2FGaILaySrA7KIB1m9w0iTJlws%2BNt%2FveXc2c8D0Q8%2FKJDNaG0gKqWIZ8pHpvmPE6hwyGZCg\"}]}",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "99d3b9f96bc465a8-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:00.413768" elapsed="0.000642"/>
+<status status="PASS" start="2025-11-12T05:46:00.718104" elapsed="0.000338"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:00.414942" level="INFO">200</msg>
+<msg time="2025-11-12T05:46:00.718791" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:00.414410" elapsed="0.000532"/>
+<status status="PASS" start="2025-11-12T05:46:00.718523" elapsed="0.000298"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:43:59.137259" elapsed="1.277683"/>
+<status status="PASS" start="2025-11-12T05:46:00.116694" elapsed="0.602164"/>
 </kw>
-<msg time="2025-11-11T11:44:00.414942" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A98080&gt;</msg>
+<msg time="2025-11-12T05:46:00.718944" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:44:00.415541" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:00.719211" elapsed="0.000082"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C621A98080&gt;</arg>
-<status status="PASS" start="2025-11-11T11:44:00.415541" elapsed="0.000000"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:00.719126" elapsed="0.000200"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:00.414942" elapsed="0.000599"/>
+<status status="PASS" start="2025-11-12T05:46:00.719012" elapsed="0.000340"/>
 </kw>
-<msg time="2025-11-11T11:44:00.415541" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A98080&gt;</msg>
+<msg time="2025-11-12T05:46:00.719404" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all messages</arg>
 <arg>https://automationintesting.online/api/message</arg>
@@ -184,19 +154,14 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:43:59.135083" elapsed="1.280458"/>
+<status status="PASS" start="2025-11-12T05:46:00.112951" elapsed="0.606468"/>
 </kw>
 <kw name="Execute RC" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:00.447847" level="INFO">data_manager.RC('''get all messages''','''body''','''$.messages[*].name''')
-['James Dean', 'Sourabh Kumar', 'Marry jane', 'Sourabh Kumar', 'TestName001', 'Sourabh Kumar', 'TestName001', 'TestName001']</msg>
-<msg time="2025-11-11T11:44:00.447847" level="INFO">${name_api} = [
+<msg time="2025-11-12T05:46:00.738937" level="INFO">data_manager.RC('''get all messages''','''body''','''$.messages[*].name''')
+['James Dean', 'Sourabh Kumar', 'TestName001']</msg>
+<msg time="2025-11-12T05:46:00.739053" level="INFO">${name_api} = [
     "James Dean",
     "Sourabh Kumar",
-    "Marry jane",
-    "Sourabh Kumar",
-    "TestName001",
-    "Sourabh Kumar",
-    "TestName001",
     "TestName001"
 ]</msg>
 <var>${name_api}</var>
@@ -211,41 +176,41 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
                             &lt;&lt;&lt;RC, src request id, body, patch json&gt;&gt;&gt;
 Returns:
     returns the value after running the response channelization, it could be a single node value or entire json, depending on whether it is normal RC or entire</doc>
-<status status="PASS" start="2025-11-11T11:44:00.416735" elapsed="0.031112"/>
+<status status="PASS" start="2025-11-12T05:46:00.720550" elapsed="0.018519"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${name_api}</arg>
 <arg>${name}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-11-11T11:44:00.448469" elapsed="0.000538"/>
+<status status="PASS" start="2025-11-12T05:46:00.739193" elapsed="0.000136"/>
 </kw>
-<status status="PASS" start="2025-11-11T11:43:59.134546" elapsed="1.314461"/>
+<status status="PASS" start="2025-11-12T05:46:00.112168" elapsed="0.627241"/>
 </test>
 <test id="s1-t3" name="Positive Scenario: Get available hotel rooms details" line="31">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:00.449007" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A1AFF0&gt;</msg>
+<msg time="2025-11-12T05:46:00.740204" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:00.449007" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T05:46:00.740841" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:00.449007" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:00.740516" elapsed="0.000357"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:00.449007" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:00.740397" elapsed="0.000520"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:00.451027" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:00.740979" elapsed="0.000109"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:00.449007" elapsed="0.002020"/>
+<status status="PASS" start="2025-11-12T05:46:00.740279" elapsed="0.000903"/>
 </kw>
-<msg time="2025-11-11T11:44:00.451027" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A1AFF0&gt;</msg>
+<msg time="2025-11-12T05:46:00.741308" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:01.556580" level="INFO">{
+<msg time="2025-11-12T05:46:01.678563" level="INFO">{
     "rooms": [
         {
             "roomid": 1,
@@ -293,54 +258,54 @@ Returns:
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:01.554456" elapsed="0.002124"/>
+<status status="PASS" start="2025-11-12T05:46:01.678166" elapsed="0.000451"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:01.558096" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:14:01 GMT",
+<msg time="2025-11-12T05:46:01.679100" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:01 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "ubIQQm84RJmEXZ-fV7rehQ",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "62ywvJi3SwCkhBRhm3z_FQ",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Wmv74aBv4%2BkbEcHa2LUaTJRb1byLLWC%2BFx1NT0uazpHE0ByJl5CSIlTQD9DFecVQpGlnGAxuNDdRGU%2Flv%2BKp5Cv9zrO4fOG3WPkLUFaY5FKOrFl1qmNGggGA\"}]}",
-    "Content-Encoding": "br",
-    "CF-RAY": "99cba5a16efd3af5-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=KFKNyutElD9nPeJUviGAR2xymdN9oEyQLvu2%2BL6gXFFGGSS65kI1bTSMdO2VFK0cmh5%2B14BXNkiKo3OWv2INcqLjtqID37fsYXxpkWPbEXa4dcSRq4fwO79Z\"}]}",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "99d3b9fdad742b41-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:01.556580" elapsed="0.001516"/>
+<status status="PASS" start="2025-11-12T05:46:01.678766" elapsed="0.000379"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:01.559347" level="INFO">200</msg>
+<msg time="2025-11-12T05:46:01.679541" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:01.558096" elapsed="0.001251"/>
+<status status="PASS" start="2025-11-12T05:46:01.679238" elapsed="0.000336"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:00.451027" elapsed="1.108320"/>
+<status status="PASS" start="2025-11-12T05:46:00.741411" elapsed="0.938202"/>
 </kw>
-<msg time="2025-11-11T11:44:01.559347" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A1AFF0&gt;</msg>
+<msg time="2025-11-12T05:46:01.679711" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:44:01.560464" elapsed="0.000553"/>
+<status status="PASS" start="2025-11-12T05:46:01.680001" elapsed="0.000092"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C621A1AFF0&gt;</arg>
-<status status="PASS" start="2025-11-11T11:44:01.559887" elapsed="0.001130"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:01.679908" elapsed="0.000229"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:01.559887" elapsed="0.001130"/>
+<status status="PASS" start="2025-11-12T05:46:01.679788" elapsed="0.000384"/>
 </kw>
-<msg time="2025-11-11T11:44:01.561017" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A1AFF0&gt;</msg>
+<msg time="2025-11-12T05:46:01.680230" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -359,12 +324,12 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:44:00.449007" elapsed="1.112010"/>
+<status status="PASS" start="2025-11-12T05:46:00.739942" elapsed="0.940306"/>
 </kw>
 <kw name="Execute RC" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:01.584446" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
+<msg time="2025-11-12T05:46:01.695269" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
 1</msg>
-<msg time="2025-11-11T11:44:01.584446" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T05:46:01.695373" level="INFO">${room_id} = 1</msg>
 <var>${room_id}</var>
 <arg>&lt;&lt;&lt;rc, get all rooms, body,${JSON_QUERY}&gt;&gt;&gt;</arg>
 <doc>input : lets you evaluate all the RC macros, including multiple RCs and NOW immediately and run the response channelization, you can store the value in any variable and use it as required
@@ -377,29 +342,29 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
                             &lt;&lt;&lt;RC, src request id, body, patch json&gt;&gt;&gt;
 Returns:
     returns the value after running the response channelization, it could be a single node value or entire json, depending on whether it is normal RC or entire</doc>
-<status status="PASS" start="2025-11-11T11:44:01.561555" elapsed="0.022891"/>
+<status status="PASS" start="2025-11-12T05:46:01.680956" elapsed="0.014434"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-11T11:44:01.585153" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T05:46:01.695713" level="INFO">${room_id} = 1</msg>
 <var>${room_id}</var>
 <arg>${room_id}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-11T11:44:01.585153" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:01.695529" elapsed="0.000202"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-11-11T11:44:01.585670" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T05:46:01.695934" level="INFO">${room_id} = 1</msg>
 <arg>${room_id}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-11-11T11:44:01.585153" elapsed="0.000517"/>
+<status status="PASS" start="2025-11-12T05:46:01.695816" elapsed="0.000142"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-11T11:44:00.449007" elapsed="1.136663"/>
+<status status="PASS" start="2025-11-12T05:46:00.739595" elapsed="0.956424"/>
 </test>
 <test id="s1-t4" name="Positive Scenario: Create booking from UI" line="48">
 <kw name="Execute RC" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:01.600750" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
+<msg time="2025-11-12T05:46:01.714831" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
 1</msg>
-<msg time="2025-11-11T11:44:01.600750" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T05:46:01.714950" level="INFO">${room_id} = 1</msg>
 <var>${room_id}</var>
 <arg>&lt;&lt;&lt;rc, get all rooms, body,${JSON_QUERY}&gt;&gt;&gt;</arg>
 <doc>input : lets you evaluate all the RC macros, including multiple RCs and NOW immediately and run the response channelization, you can store the value in any variable and use it as required
@@ -412,24 +377,24 @@ Returns:
                             &lt;&lt;&lt;RC, src request id, body, patch json&gt;&gt;&gt;
 Returns:
     returns the value after running the response channelization, it could be a single node value or entire json, depending on whether it is normal RC or entire</doc>
-<status status="PASS" start="2025-11-11T11:44:01.586391" elapsed="0.014359"/>
+<status status="PASS" start="2025-11-12T05:46:01.696506" elapsed="0.018464"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>====&gt;&gt; Using RC room id for booking from UI: ${room_id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:01.600750" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:01.715119" elapsed="0.000244"/>
 </kw>
 <kw name="Launch Browser Application" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:07.423627" level="INFO">Launching browser: firefox
+<msg time="2025-11-12T05:46:05.093457" level="INFO">Launching browser: firefox
 Browser launched and application opened.</msg>
 <arg>firefox</arg>
-<status status="PASS" start="2025-11-11T11:44:01.600750" elapsed="5.822877"/>
+<status status="PASS" start="2025-11-12T05:46:01.715470" elapsed="3.378140"/>
 </kw>
 <kw name="Login As Admin" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:07.425645" level="INFO">.env file loaded: True</msg>
-<msg time="2025-11-11T11:44:08.676127" level="INFO">Secrets fetched successfully:</msg>
-<msg time="2025-11-11T11:44:15.678992" level="INFO">Admin login successful.</msg>
-<msg time="2025-11-11T11:44:15.678992" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
+<msg time="2025-11-12T05:46:05.107654" level="INFO">.env file loaded: True</msg>
+<msg time="2025-11-12T05:46:05.849878" level="INFO">Secrets fetched successfully:</msg>
+<msg time="2025-11-12T05:46:11.793881" level="INFO">Admin login successful.</msg>
+<msg time="2025-11-12T05:46:11.794055" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
 {
   "DOPPLER_CONFIG": "dev",
   "DOPPLER_ENVIRONMENT": "dev",
@@ -437,74 +402,74 @@ Browser launched and application opened.</msg>
   "PASSWORD": "password",
   "USER": "admin"
 }</msg>
-<status status="PASS" start="2025-11-11T11:44:07.423627" elapsed="8.255365"/>
+<status status="PASS" start="2025-11-12T05:46:05.094021" elapsed="6.700124"/>
 </kw>
 <kw name="Go Back To Front Page" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:16.705050" level="INFO">clicked on Home/Front Page.</msg>
-<status status="PASS" start="2025-11-11T11:44:15.678992" elapsed="1.026058"/>
+<msg time="2025-11-12T05:46:12.614359" level="INFO">clicked on Home/Front Page.</msg>
+<status status="PASS" start="2025-11-12T05:46:11.794433" elapsed="0.820172"/>
 </kw>
 <kw name="Select Dates For Booking" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:18.758003" level="INFO">CheckIn Date selected as : Choose Tuesday, 16 December</msg>
-<msg time="2025-11-11T11:44:20.635812" level="INFO">CheckIn Date selected as : Choose Wednesday, 17 December</msg>
-<msg time="2025-11-11T11:44:21.217588" level="INFO">Clicked on checked availability</msg>
+<msg time="2025-11-12T05:46:14.484432" level="INFO">CheckIn Date selected as : Choose Tuesday, 16 December</msg>
+<msg time="2025-11-12T05:46:16.273549" level="INFO">CheckIn Date selected as : Choose Wednesday, 17 December</msg>
+<msg time="2025-11-12T05:46:16.847169" level="INFO">Clicked on checked availability</msg>
 <arg>${checkin}</arg>
 <arg>${checkout}</arg>
-<status status="PASS" start="2025-11-11T11:44:16.705050" elapsed="4.512538"/>
+<status status="PASS" start="2025-11-12T05:46:12.614976" elapsed="4.232351"/>
 </kw>
 <kw name="Select Room Type" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:25.615330" level="INFO">Clicked on Book Now</msg>
+<msg time="2025-11-12T05:46:19.295002" level="INFO">Clicked on Book Now</msg>
 <arg>${room_id}</arg>
-<status status="PASS" start="2025-11-11T11:44:21.217588" elapsed="4.397742"/>
+<status status="PASS" start="2025-11-12T05:46:16.847643" elapsed="2.447555"/>
 </kw>
 <kw name="Fill Reservation Details" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:27.826062" level="INFO">Reservation details entered</msg>
+<msg time="2025-11-12T05:46:21.455204" level="INFO">Reservation details entered</msg>
 <arg>${FIRSTNAME}</arg>
 <arg>${LASTNAME}</arg>
 <arg>${EMAIL}</arg>
 <arg>${PHONE}</arg>
-<status status="PASS" start="2025-11-11T11:44:25.615330" elapsed="2.210732"/>
+<status status="PASS" start="2025-11-12T05:46:19.295478" elapsed="2.159905"/>
 </kw>
 <kw name="Confirm Reservation" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:29.460131" level="INFO">clicked on confirm reservation</msg>
-<msg time="2025-11-11T11:44:29.471806" level="INFO">Booking confirmation validated</msg>
-<status status="PASS" start="2025-11-11T11:44:27.827710" elapsed="1.644096"/>
+<msg time="2025-11-12T05:46:23.027685" level="INFO">clicked on confirm reservation</msg>
+<msg time="2025-11-12T05:46:23.040476" level="INFO">Booking confirmation validated</msg>
+<status status="PASS" start="2025-11-12T05:46:21.455788" elapsed="1.584774"/>
 </kw>
 <kw name="Capture Screenshot" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:29.632430" level="INFO">Screenshot saved: screenshots\screenshot_20251111_114429.png</msg>
-<status status="PASS" start="2025-11-11T11:44:29.471806" elapsed="0.160624"/>
+<msg time="2025-11-12T05:46:23.178233" level="INFO">Screenshot saved: screenshots/screenshot_20251112_054623.png</msg>
+<status status="PASS" start="2025-11-12T05:46:23.040683" elapsed="0.137637"/>
 </kw>
 <kw name="Close Browser" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:31.152835" level="INFO">Browser and context closed.</msg>
-<status status="PASS" start="2025-11-11T11:44:29.632967" elapsed="1.519868"/>
+<msg time="2025-11-12T05:46:23.794237" level="INFO">Browser and context closed.</msg>
+<status status="PASS" start="2025-11-12T05:46:23.178491" elapsed="0.615868"/>
 </kw>
 <tag>UI TestCase</tag>
-<status status="PASS" start="2025-11-11T11:44:01.586391" elapsed="29.566444"/>
+<status status="PASS" start="2025-11-12T05:46:01.696216" elapsed="22.098316"/>
 </test>
 <test id="s1-t5" name="Positive Scenario: Check available rooms after booking" line="66">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:31.156810" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622EB6BA0&gt;</msg>
+<msg time="2025-11-12T05:46:23.796738" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:31.156810" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T05:46:23.798354" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:31.156810" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:23.797560" elapsed="0.000876"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:31.156810" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:23.797288" elapsed="0.003585"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:31.156810" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:23.801084" elapsed="0.000354"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:31.156810" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:23.796945" elapsed="0.004578"/>
 </kw>
-<msg time="2025-11-11T11:44:31.156810" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622EB6BA0&gt;</msg>
+<msg time="2025-11-12T05:46:23.801673" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:32.903918" level="INFO">{
+<msg time="2025-11-12T05:46:24.354430" level="INFO">{
     "rooms": [
         {
             "roomid": 2,
@@ -538,54 +503,54 @@ Browser launched and application opened.</msg>
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.903918" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.353949" elapsed="0.000614"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:32.903918" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:14:32 GMT",
+<msg time="2025-11-12T05:46:24.355847" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:24 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "wHbHLZTLTQ2qUI5l0ubPiw",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "OsChRdptTXi2mSOgm3z_FQ",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=36zUjQ6KawJdqURmmTacBNmqWGIgnM47bnvTpTlfxL0hxxn7VeQtDsNL8P9AlZJ2uT2BI2bge1wbVYDI%2FtmaaaWz%2BVAEBZuaKX8YrUGxMzZ9MkWr3LHAzQ%3D%3D\"}]}",
-    "Content-Encoding": "br",
-    "CF-RAY": "99cba661e8a031b1-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=M%2FWkBqWX7lQdUCqhLyQlTOk4ndqr8%2FlC9LkyvXyQthP%2BDZAvbnUwwMdkYLJwhm6vea32nSpQPxBx36CWlHAITbHWTHnCT0II7s05s37Mv3jMxswMEkj%2FC1Cv\"}]}",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "99d3ba8d68019e0d-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.903918" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.355019" elapsed="0.001020"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:32.903918" level="INFO">200</msg>
+<msg time="2025-11-12T05:46:24.356645" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.903918" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.356259" elapsed="0.000428"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:31.156810" elapsed="1.747108"/>
+<status status="PASS" start="2025-11-12T05:46:23.801798" elapsed="0.554935"/>
 </kw>
-<msg time="2025-11-11T11:44:32.903918" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622EB6BA0&gt;</msg>
+<msg time="2025-11-12T05:46:24.356843" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.913605" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.357345" elapsed="0.000444"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C622EB6BA0&gt;</arg>
-<status status="PASS" start="2025-11-11T11:44:32.913605" elapsed="0.000000"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:24.357210" elapsed="0.000635"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:32.903918" elapsed="0.009687"/>
+<status status="PASS" start="2025-11-12T05:46:24.356962" elapsed="0.000931"/>
 </kw>
-<msg time="2025-11-11T11:44:32.913605" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622EB6BA0&gt;</msg>
+<msg time="2025-11-12T05:46:24.357983" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -604,65 +569,65 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:44:31.156810" elapsed="1.756795"/>
+<status status="PASS" start="2025-11-12T05:46:23.795999" elapsed="0.562010"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-11T11:44:32.915780" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
+<msg time="2025-11-12T05:46:24.358863" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.915780" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.358152" elapsed="0.000753"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-11T11:44:32.917788" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
+<msg time="2025-11-12T05:46:24.359231" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.915780" elapsed="0.002008"/>
+<status status="PASS" start="2025-11-12T05:46:24.359056" elapsed="0.000198"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-11T11:44:32.917788" level="INFO">Length is 2.</msg>
-<msg time="2025-11-11T11:44:32.917788" level="INFO">${total} = 2</msg>
+<msg time="2025-11-12T05:46:24.359452" level="INFO">Length is 2.</msg>
+<msg time="2025-11-12T05:46:24.359530" level="INFO">${total} = 2</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.917788" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.359345" elapsed="0.000204"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after booking : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.918794" elapsed="0.000577"/>
+<status status="PASS" start="2025-11-12T05:46:24.359640" elapsed="0.000197"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-11T11:44:31.152835" elapsed="1.766536"/>
+<status status="PASS" start="2025-11-12T05:46:23.795183" elapsed="0.565471"/>
 </test>
 <test id="s1-t6" name="Positive Scenario: Get available hotel rooms details after booking from UI" line="79">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:32.921406" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05A00&gt;</msg>
+<msg time="2025-11-12T05:46:24.361630" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:32.921406" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T05:46:24.362254" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.921406" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.361970" elapsed="0.000335"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:32.921406" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.361865" elapsed="0.000477"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:32.921406" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.362418" elapsed="0.000083"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:32.921406" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.361733" elapsed="0.000814"/>
 </kw>
-<msg time="2025-11-11T11:44:32.921406" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05A00&gt;</msg>
+<msg time="2025-11-12T05:46:24.362641" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.927740" level="INFO">{
+<msg time="2025-11-12T05:46:24.953938" level="INFO">{
     "rooms": [
         {
             "roomid": 2,
@@ -696,54 +661,54 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.927740" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.952903" elapsed="0.001156"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.927740" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:14:33 GMT",
+<msg time="2025-11-12T05:46:24.955304" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:24 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "iVjwP-fKQsqV_RTaDcO5xA",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "PTTlFz6tQFKMbxl1ss7a6g",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TYkTlOWD6uKUI972ykzHt8wHFHh8KM9f%2BLK5gbwqFAPH%2FwdylfBpqLeRiavVHMJCg8YW2Abi2BpRyj%2FVv0ogy1wX9%2FISO%2B0AktlF0KVmEs%2B%2BiB9F0T8DWbnC\"}]}",
-    "Content-Encoding": "br",
-    "CF-RAY": "99cba66c4e3668a4-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zooyZ4gwX7L7l3Flg89TT%2Bovv0jXVp1LZzl2KjyXUDqeYlMW6UX34W9%2Bd%2FTdMDOsd6nXyCi7TcZG0YpcBDJ8vurgofM48WmGvhAHnSG8loFlofVSgO8IaQox\"}]}",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "99d3ba90dcded3a8-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.927740" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.954454" elapsed="0.000974"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.927740" level="INFO">200</msg>
+<msg time="2025-11-12T05:46:24.956397" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.927740" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.955654" elapsed="0.000829"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:32.921406" elapsed="1.006334"/>
+<status status="PASS" start="2025-11-12T05:46:24.362734" elapsed="0.593851"/>
 </kw>
-<msg time="2025-11-11T11:44:33.927740" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05A00&gt;</msg>
+<msg time="2025-11-12T05:46:24.956885" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.938646" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.957704" elapsed="0.000234"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C622F05A00&gt;</arg>
-<status status="PASS" start="2025-11-11T11:44:33.927740" elapsed="0.010906"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:24.957457" elapsed="0.000582"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.927740" elapsed="0.010906"/>
+<status status="PASS" start="2025-11-12T05:46:24.957093" elapsed="0.001027"/>
 </kw>
-<msg time="2025-11-11T11:44:33.938646" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05A00&gt;</msg>
+<msg time="2025-11-12T05:46:24.958265" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -762,203 +727,203 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:44:32.919371" elapsed="1.019275"/>
+<status status="PASS" start="2025-11-12T05:46:24.361340" elapsed="0.596980"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.938646" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.958576" elapsed="0.001033"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.938646" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
+<msg time="2025-11-12T05:46:24.961602" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.938646" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.959940" elapsed="0.001761"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-11T11:44:33.938646" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
+<msg time="2025-11-12T05:46:24.963889" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.938646" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.963319" elapsed="0.000635"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.938646" level="INFO">Length is 2.</msg>
-<msg time="2025-11-11T11:44:33.938646" level="INFO">${total} = 2</msg>
+<msg time="2025-11-12T05:46:24.964433" level="INFO">Length is 2.</msg>
+<msg time="2025-11-12T05:46:24.964566" level="INFO">${total} = 2</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.938646" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.964208" elapsed="0.000396"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.938646" level="INFO">Before Booking- Total available rooms in hotel: 2</msg>
+<msg time="2025-11-12T05:46:24.965065" level="INFO">Before Booking- Total available rooms in hotel: 2</msg>
 <arg>Before Booking- Total available rooms in hotel: ${total}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.938646" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.964785" elapsed="0.000517"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after booking : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.938646" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.965512" elapsed="0.000420"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>${total} == 0</arg>
 <arg>Fail</arg>
 <arg>No rooms available in JSON Response, Check for other date.</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.948843" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.966244" elapsed="0.000411"/>
 </kw>
 <kw name="Pick Random Room from List">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.948843" level="INFO">${rand_index} = 0</msg>
+<msg time="2025-11-12T05:46:24.969971" level="INFO">${rand_index} = 1</msg>
 <var>${rand_index}</var>
 <arg>random.randint(0, ${total}-1)</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.948843" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.968822" elapsed="0.001309"/>
 </kw>
 <kw name="Get From List" owner="Collections">
-<msg time="2025-11-11T11:44:33.948843" level="INFO">${random_room} = {'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, el...</msg>
+<msg time="2025-11-12T05:46:24.970854" level="INFO">${random_room} = {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis ...</msg>
 <var>${random_room}</var>
 <arg>${rooms}</arg>
 <arg>${rand_index}</arg>
 <doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.948843" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.970430" elapsed="0.000463"/>
 </kw>
 <return>
 <value>${random_room}</value>
-<status status="PASS" start="2025-11-11T11:44:33.948843" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.970980" elapsed="0.000099"/>
 </return>
-<msg time="2025-11-11T11:44:33.948843" level="INFO">${random_room} = {'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, el...</msg>
+<msg time="2025-11-12T05:46:24.971334" level="INFO">${random_room} = {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis ...</msg>
 <var>${random_room}</var>
 <arg>${rooms}</arg>
 <arg>${total}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.948843" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.967663" elapsed="0.003715"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.953955" level="INFO">random room details : {'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ', 'features': ['TV', 'Radio', 'Safe'], 'roomPrice': 150}</msg>
+<msg time="2025-11-12T05:46:24.971834" level="INFO">random room details : {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ', 'features': ['Radio', 'WiFi', 'Safe'], 'roomPrice': 225}</msg>
 <arg>random room details : ${random_room}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.948843" elapsed="0.005112"/>
+<status status="PASS" start="2025-11-12T05:46:24.971563" elapsed="0.000349"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.954641" level="INFO">${random_room} = {'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, el...</msg>
+<msg time="2025-11-12T05:46:24.972890" level="INFO">${random_room} = {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis ...</msg>
 <var>${random_room}</var>
 <arg>dict(${random_room})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.954641" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.972077" elapsed="0.000860"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-11T11:44:33.954641" level="INFO">${room_id} = 2</msg>
+<msg time="2025-11-12T05:46:24.973429" level="INFO">${room_id} = 3</msg>
 <var>${room_id}</var>
 <arg>${random_room}</arg>
 <arg>roomid</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.954641" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.973198" elapsed="0.000263"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Picked random room id: ${room_id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.954641" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.973590" elapsed="0.000273"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Evaluate</arg>
 <arg>type(${room_id})</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.954641" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.974018" elapsed="0.000315"/>
 </kw>
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.954641" level="INFO">${room_id} = 2</msg>
+<msg time="2025-11-12T05:46:24.974696" level="INFO">${room_id} = 3</msg>
 <var>${room_id}</var>
 <arg>${room_id}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.954641" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.974497" elapsed="0.000225"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-11T11:44:33.954641" level="INFO">${room_type} = Double</msg>
+<msg time="2025-11-12T05:46:24.974971" level="INFO">${room_type} = Suite</msg>
 <var>${room_type}</var>
 <arg>${random_room}</arg>
 <arg>type</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.954641" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.974822" elapsed="0.000174"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.959148" level="INFO">selected room type for boking : Double</msg>
+<msg time="2025-11-12T05:46:24.975224" level="INFO">selected room type for boking : Suite</msg>
 <arg>selected room type for boking : ${room_type}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.975097" elapsed="0.000171"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.959148" level="INFO">${room_id} = 2</msg>
+<msg time="2025-11-12T05:46:24.975526" level="INFO">${room_id} = 3</msg>
 <var>${room_id}</var>
 <arg>${room_id}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.975372" elapsed="0.000176"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.959148" level="INFO">${room_id} = 2</msg>
+<msg time="2025-11-12T05:46:24.975802" level="INFO">${room_id} = 3</msg>
 <arg>${room_id}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.975624" elapsed="0.000217"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-11T11:44:32.919371" elapsed="1.039777"/>
+<status status="PASS" start="2025-11-12T05:46:24.360880" elapsed="0.615045"/>
 </test>
 <test id="s1-t7" name="Positive scenario : Create another new booking from API" line="113">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>===&gt; global room id ${room_id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.976482" elapsed="0.000222"/>
 </kw>
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:33.959148" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622E75A30&gt;</msg>
+<msg time="2025-11-12T05:46:24.977494" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.959148" level="INFO">https://automationintesting.online/api/booking</msg>
+<msg time="2025-11-12T05:46:24.978421" level="INFO">https://automationintesting.online/api/booking</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.978041" elapsed="0.000424"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.977855" elapsed="0.000666"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.978618" elapsed="0.000113"/>
 </kw>
 <kw name="Generate Request Headers" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.959148" level="INFO">{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-api-key': ''}</msg>
+<msg time="2025-11-12T05:46:24.980447" level="INFO">{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-api-key': ''}</msg>
 <arg>${_requestInfo.requestHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.979928" elapsed="0.000583"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.979677" elapsed="0.000902"/>
 </kw>
 <kw name="Generate Request Body" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:33.959148" level="INFO">{"roomid": 2,"firstname":"Sourabh","lastname":"Kumar","depositpaid":false,"bookingdates":{"checkin":"2025-12-16","checkout":"2025-12-17"},"email":"sourabhsuman29@gmail.com","phone":"09576573031"}</msg>
+<msg time="2025-11-12T05:46:24.982115" level="INFO">{"roomid": 3,"firstname":"Sourabh","lastname":"Kumar","depositpaid":false,"bookingdates":{"checkin":"2025-12-16","checkout":"2025-12-17"},"email":"sourabhsuman29@gmail.com","phone":"09576573031"}</msg>
 <arg>${_requestInfo.requestBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.981591" elapsed="0.000590"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.980701" elapsed="0.001548"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:24.977633" elapsed="0.004665"/>
 </kw>
-<msg time="2025-11-11T11:44:33.959148" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622E75A30&gt;</msg>
+<msg time="2025-11-12T05:46:24.982452" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:35.380517" level="INFO">{
+<msg time="2025-11-12T05:46:25.584213" level="INFO">{
     "bookingid": 5,
-    "roomid": 2,
+    "roomid": 3,
     "firstname": "Sourabh",
     "lastname": "Kumar",
     "depositpaid": false,
@@ -969,53 +934,53 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.380517" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.583503" elapsed="0.000783"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:35.380517" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:14:35 GMT",
+<msg time="2025-11-12T05:46:25.584885" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:25 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "Bcdi0-kXT82q5LaJAQeqjw",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "Ktfif3TnTYqxS6-iw9P4nw",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=sefRzpbt8GWjyHel4VlyCJFIEZQsBlghnqWzOnl%2Fqo%2FVutJ76aH7L5XTtmpMo4oWzY%2B2e6LtwhfgCnPD3EQfbBI1MZJhoUeIMbEfWOPy9aEjVrsX6Op6RRO7\"}]}",
-    "CF-RAY": "99cba6729b9bff97-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SZYOlu0F%2FYNw03xDFj5v4xDz1un%2F%2B%2BK2LEuQfjnoQ%2BCZa6O%2BadOJwDmjtJiFj21HBqYQV3iaxfuvIt8KlYUe2WZsIXnxv3kuxzdBpHusD092swuOkzs3BrK4\"}]}",
+    "CF-RAY": "99d3ba94bc6fa037-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.380517" elapsed="0.002573"/>
+<status status="PASS" start="2025-11-12T05:46:25.584464" elapsed="0.000466"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:35.383708" level="INFO">201</msg>
+<msg time="2025-11-12T05:46:25.585490" level="INFO">201</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.383090" elapsed="0.000618"/>
+<status status="PASS" start="2025-11-12T05:46:25.585042" elapsed="0.000501"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="1.424560"/>
+<status status="PASS" start="2025-11-12T05:46:24.982561" elapsed="0.603037"/>
 </kw>
-<msg time="2025-11-11T11:44:35.383708" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622E75A30&gt;</msg>
+<msg time="2025-11-12T05:46:25.585732" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>201</arg>
 <arg>201</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.383708" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.586064" elapsed="0.000092"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C622E75A30&gt;</arg>
-<status status="PASS" start="2025-11-11T11:44:35.383708" elapsed="0.000000"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:25.585966" elapsed="0.000229"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:35.383708" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.585819" elapsed="0.000408"/>
 </kw>
-<msg time="2025-11-11T11:44:35.383708" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622E75A30&gt;</msg>
+<msg time="2025-11-12T05:46:25.586287" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
 <var>${requestInfo}</var>
 <arg>create a new booking</arg>
 <arg>https://automationintesting.online/api/booking</arg>
@@ -1039,111 +1004,111 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="1.424560"/>
+<status status="PASS" start="2025-11-12T05:46:24.976840" elapsed="0.609465"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.383708" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.586402" elapsed="0.000358"/>
 </kw>
-<status status="PASS" start="2025-11-11T11:44:33.959148" elapsed="1.424560"/>
+<status status="PASS" start="2025-11-12T05:46:24.976125" elapsed="0.610715"/>
 </test>
 <test id="s1-t8" name="Negative scenarios: create booking with wrong payload data" line="129">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:35.392852" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05BB0&gt;</msg>
+<msg time="2025-11-12T05:46:25.588140" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:35.393750" level="INFO">https://automationintesting.online/api/booking</msg>
+<msg time="2025-11-12T05:46:25.589425" level="INFO">https://automationintesting.online/api/booking</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.588912" elapsed="0.000567"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.588717" elapsed="0.000822"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.590303" elapsed="0.000323"/>
 </kw>
 <kw name="Generate Request Headers" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:35.393750" level="INFO">{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-api-key': ''}</msg>
+<msg time="2025-11-12T05:46:25.591210" level="INFO">{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-api-key': ''}</msg>
 <arg>${_requestInfo.requestHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.590907" elapsed="0.000335"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.590735" elapsed="0.000540"/>
 </kw>
 <kw name="Generate Request Body" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:35.393750" level="INFO">{"roomid": 2,"firstname":"Sourabh","lastname":"Kumar","depositpaid":false,"bookingdates":{"checkin":"2025-12-16","checkout":"2025-12-17"},"email":"sourabhsuman29@gmail.com","phone":"09576573031"}</msg>
+<msg time="2025-11-12T05:46:25.592576" level="INFO">{"roomid": 3,"firstname":"Sourabh","lastname":"Kumar","depositpaid":false,"bookingdates":{"checkin":"2025-12-16","checkout":"2025-12-17"},"email":"sourabhsuman29@gmail.com","phone":"09576573031"}</msg>
 <arg>${_requestInfo.requestBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:25.592028" elapsed="0.000598"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.005161"/>
+<status status="PASS" start="2025-11-12T05:46:25.591341" elapsed="0.001341"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:35.393750" elapsed="0.005161"/>
+<status status="PASS" start="2025-11-12T05:46:25.588246" elapsed="0.004496"/>
 </kw>
-<msg time="2025-11-11T11:44:35.398911" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05BB0&gt;</msg>
+<msg time="2025-11-12T05:46:25.592881" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:36.626016" level="INFO">{
+<msg time="2025-11-12T05:46:26.183254" level="INFO">{
     "error": "Failed to create booking"
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:36.615436" elapsed="0.010580"/>
+<status status="PASS" start="2025-11-12T05:46:26.182700" elapsed="0.000614"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:36.627778" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:14:36 GMT",
+<msg time="2025-11-12T05:46:26.184124" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:26 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "soPtUM5aQeiA9CvnAQeqjw",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "3fqAwNmBQByRTRd65nX1uw",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vERzm%2FDLDG6JBjvNATJBt25o1mm8K%2FEazGEAFHrGQU%2BtRvI0EUkBc64FZqroqg6flMkgS9gjsb7qkUojfF0Bs6luyr7vuORH93RM2ggQelbSVb03o4pP%2FHsg\"}]}",
-    "CF-RAY": "99cba67b1f26ff63-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TUk0LABeXHHK1oNynLbjYx3xhG6GW4jgwEh2IgeagMh2dQhmxrvWEoWmLdVOdivNlIq7pusNr4QGsqK6dZaWLwiFchWNMjx3vOxkRS04h2ALvdNoJyXLd37o\"}]}",
+    "CF-RAY": "99d3ba988fab9279-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:36.626016" elapsed="0.001762"/>
+<status status="PASS" start="2025-11-12T05:46:26.183550" elapsed="0.000646"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:36.627778" level="INFO">409</msg>
+<msg time="2025-11-12T05:46:26.184874" level="INFO">409</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:36.627778" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.184355" elapsed="0.000579"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:35.399534" elapsed="1.228244"/>
+<status status="PASS" start="2025-11-12T05:46:25.592978" elapsed="0.592029"/>
 </kw>
-<msg time="2025-11-11T11:44:36.627778" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05BB0&gt;</msg>
+<msg time="2025-11-12T05:46:26.185294" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>409</arg>
 <arg>409</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:44:36.629794" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.187538" elapsed="0.000198"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C622F05BB0&gt;</arg>
-<status status="PASS" start="2025-11-11T11:44:36.627778" elapsed="0.002016"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:26.185748" elapsed="0.002055"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:36.627778" elapsed="0.002016"/>
+<status status="PASS" start="2025-11-12T05:46:26.185490" elapsed="0.002361"/>
 </kw>
-<msg time="2025-11-11T11:44:36.629794" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F05BB0&gt;</msg>
+<msg time="2025-11-12T05:46:26.188261" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
 <var>${requestInfo}</var>
 <arg>create a new booking</arg>
 <arg>https://automationintesting.online/api/booking</arg>
@@ -1167,108 +1132,108 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:44:35.383708" elapsed="1.246086"/>
+<status status="PASS" start="2025-11-12T05:46:25.587531" elapsed="0.600771"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:36.629794" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.188472" elapsed="0.000527"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-11T11:44:35.383708" elapsed="1.249021"/>
+<status status="PASS" start="2025-11-12T05:46:25.587060" elapsed="0.602133"/>
 </test>
 <test id="s1-t9" name="Positioe Scenario: Check available rooms after booking from API" line="143">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:44:36.632729" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A19E20&gt;</msg>
+<msg time="2025-11-12T05:46:26.190625" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:36.636308" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T05:46:26.191937" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:36.636308" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.191246" elapsed="0.000763"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:36.632729" elapsed="0.003579"/>
+<status status="PASS" start="2025-11-12T05:46:26.191020" elapsed="0.001069"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:36.636308" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.192858" elapsed="0.000159"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:36.632729" elapsed="0.003579"/>
+<status status="PASS" start="2025-11-12T05:46:26.190791" elapsed="0.002284"/>
 </kw>
-<msg time="2025-11-11T11:44:36.637085" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A19E20&gt;</msg>
+<msg time="2025-11-12T05:46:26.193320" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:37.647941" level="INFO">{
+<msg time="2025-11-12T05:46:26.786368" level="INFO">{
     "rooms": [
         {
-            "roomid": 3,
-            "roomName": "103",
-            "type": "Suite",
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
             "accessible": true,
-            "image": "/images/room3.jpg",
-            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
             "features": [
+                "TV",
                 "Radio",
-                "WiFi",
                 "Safe"
             ],
-            "roomPrice": 225
+            "roomPrice": 150
         }
     ]
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.785864" elapsed="0.000553"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:37.647941" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:14:37 GMT",
+<msg time="2025-11-12T05:46:26.787420" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:26 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "RvICnmS6Q3aathcjV7rehQ",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "B_pGFu_bQWum_ZQ_w9P4nw",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mJUMfr4qoplKxdpMWhvZIi2ZCLAo4KWOz8MZZDbrwMaW2cJfqNqiQIooijj%2BWGlOprd4T%2FSY4kA5iPOVK8HYe5JYVsymwi133DEyNcS37aAAAs4IuKRrKi%2Ft\"}]}",
-    "Content-Encoding": "br",
-    "CF-RAY": "99cba682eacdff6e-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cM32uQPvtGP3S2Bc%2FN1435YfQIYOUYioTgjHVkgjKZ6FZ2KhORJwaUnqO31Zk6Kd15qrWJHr66H8Wnhd%2BKfKtyva3H40XvOybTKHBlXMiSa1gSpL8YfaZLuQ\"}]}",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "99d3ba9c39cedc86-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.786604" elapsed="0.000922"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:37.647941" level="INFO">200</msg>
+<msg time="2025-11-12T05:46:26.788730" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.787818" elapsed="0.001057"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:36.637085" elapsed="1.010856"/>
+<status status="PASS" start="2025-11-12T05:46:26.193421" elapsed="0.595575"/>
 </kw>
-<msg time="2025-11-11T11:44:37.647941" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A19E20&gt;</msg>
+<msg time="2025-11-12T05:46:26.789298" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.790337" elapsed="0.000706"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C621A19E20&gt;</arg>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.000000"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:26.789979" elapsed="0.001181"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.789518" elapsed="0.001728"/>
 </kw>
-<msg time="2025-11-11T11:44:37.647941" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C621A19E20&gt;</msg>
+<msg time="2025-11-12T05:46:26.791406" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -1287,81 +1252,81 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:44:36.632729" elapsed="1.015212"/>
+<status status="PASS" start="2025-11-12T05:46:26.190183" elapsed="0.601270"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:37.647941" level="INFO">Response Code: 200</msg>
+<msg time="2025-11-12T05:46:26.792552" level="INFO">Response Code: 200</msg>
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.791682" elapsed="0.000951"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:44:37.657826" level="INFO">Response Body: {
+<msg time="2025-11-12T05:46:26.793625" level="INFO">Response Body: {
     "rooms": [
         {
-            "roomid": 3,
-            "roomName": "103",
-            "type": "Suite",
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
             "accessible": true,
-            "image": "/images/room3.jpg",
-            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
             "features": [
+                "TV",
                 "Radio",
-                "WiFi",
                 "Safe"
             ],
-            "roomPrice": 225
+            "roomPrice": 150
         }
     ]
 }</msg>
 <arg>Response Body: ${requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.647941" elapsed="0.009885"/>
+<status status="PASS" start="2025-11-12T05:46:26.792823" elapsed="0.000886"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-11T11:44:37.657826" level="INFO">${data} = {'rooms': [{'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc co...</msg>
+<msg time="2025-11-12T05:46:26.794117" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.657826" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.793771" elapsed="0.000363"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-11T11:44:37.657826" level="INFO">${rooms} = [{'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis...</msg>
+<msg time="2025-11-12T05:46:26.794359" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.657826" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.794235" elapsed="0.000142"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-11T11:44:37.657826" level="INFO">Length is 1.</msg>
-<msg time="2025-11-11T11:44:37.657826" level="INFO">${total} = 1</msg>
+<msg time="2025-11-12T05:46:26.795407" level="INFO">Length is 1.</msg>
+<msg time="2025-11-12T05:46:26.795478" level="INFO">${total} = 1</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.657826" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:26.795255" elapsed="0.000248"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after booking : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:44:37.662964" elapsed="0.000680"/>
+<status status="PASS" start="2025-11-12T05:46:26.795590" elapsed="0.000166"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-11T11:44:36.632729" elapsed="1.030915"/>
+<status status="PASS" start="2025-11-12T05:46:26.189541" elapsed="0.606294"/>
 </test>
 <test id="s1-t10" name="Positive Scenario: Adding new hotel room" line="155">
 <kw name="Launch Browser Application" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:43.112480" level="INFO">Launching browser: firefox
+<msg time="2025-11-12T05:46:29.937083" level="INFO">Launching browser: firefox
 Browser launched and application opened.</msg>
 <arg>firefox</arg>
-<status status="PASS" start="2025-11-11T11:44:37.665675" elapsed="5.446805"/>
+<status status="PASS" start="2025-11-12T05:46:26.796362" elapsed="3.140870"/>
 </kw>
 <kw name="Login As Admin" owner="PlaywrightCore">
-<msg time="2025-11-11T11:44:43.114564" level="INFO">.env file loaded: True</msg>
-<msg time="2025-11-11T11:44:44.513803" level="INFO">Secrets fetched successfully:</msg>
-<msg time="2025-11-11T11:44:51.076479" level="INFO">Admin login successful.</msg>
-<msg time="2025-11-11T11:44:51.076479" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
+<msg time="2025-11-12T05:46:29.955942" level="INFO">.env file loaded: True</msg>
+<msg time="2025-11-12T05:46:30.568855" level="INFO">Secrets fetched successfully:</msg>
+<msg time="2025-11-12T05:46:36.596951" level="INFO">Admin login successful.</msg>
+<msg time="2025-11-12T05:46:36.597258" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
 {
   "DOPPLER_CONFIG": "dev",
   "DOPPLER_ENVIRONMENT": "dev",
@@ -1369,53 +1334,53 @@ Browser launched and application opened.</msg>
   "PASSWORD": "password",
   "USER": "admin"
 }</msg>
-<status status="PASS" start="2025-11-11T11:44:43.112480" elapsed="7.963999"/>
+<status status="PASS" start="2025-11-12T05:46:29.937434" elapsed="6.659959"/>
 </kw>
 <kw name="Add New HotelRoom" owner="PlaywrightCore">
-<status status="PASS" start="2025-11-11T11:44:51.077607" elapsed="10.751197"/>
+<status status="PASS" start="2025-11-12T05:46:36.597712" elapsed="8.593077"/>
 </kw>
 <tag>UI TestCase</tag>
-<status status="PASS" start="2025-11-11T11:44:37.665675" elapsed="24.163129"/>
+<status status="PASS" start="2025-11-12T05:46:26.795999" elapsed="18.394981"/>
 </test>
 <test id="s1-t11" name="Positioe Scenario: Check available rooms after adding new room in the hotelbooking" line="161">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-11T11:45:01.836229" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F66E40&gt;</msg>
+<msg time="2025-11-12T05:46:45.192598" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:45:01.836229" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T05:46:45.194172" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:45:01.836229" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.193465" elapsed="0.000836"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:45:01.836229" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.193169" elapsed="0.001208"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:45:01.836229" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.194507" elapsed="0.000152"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:45:01.836229" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.192809" elapsed="0.001907"/>
 </kw>
-<msg time="2025-11-11T11:45:01.836229" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F66E40&gt;</msg>
+<msg time="2025-11-12T05:46:45.194932" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:45:03.050648" level="INFO">{
+<msg time="2025-11-12T05:46:45.822581" level="INFO">{
     "rooms": [
         {
-            "roomid": 3,
-            "roomName": "103",
-            "type": "Suite",
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
             "accessible": true,
-            "image": "/images/room3.jpg",
-            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
             "features": [
+                "TV",
                 "Radio",
-                "WiFi",
                 "Safe"
             ],
-            "roomPrice": 225
+            "roomPrice": 150
         },
         {
             "roomid": 4,
@@ -1436,54 +1401,54 @@ Browser launched and application opened.</msg>
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.050648" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.820811" elapsed="0.001968"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:45:03.050648" level="INFO">{
-    "Date": "Tue, 11 Nov 2025 06:15:03 GMT",
+<msg time="2025-11-12T05:46:45.824802" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 05:46:45 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/asia-southeast1-eqsg3a",
-    "x-railway-request-id": "zL0yDcGLTAKJByTBAQeqjw",
+    "x-railway-edge": "railway/europe-west4-drams3a",
+    "x-railway-request-id": "Tc68EGGBSUKySAku0-QtfA",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=i3z%2Bs84rqhGMYvz0bCXMdm3DZeIWC7hIKofwTbcrGTNis3in3h6ZpflZ66WJ0Nfr%2F%2BJ%2Fgb2BRyKoHZFxip5LiO2QV5jQ0KCYh5%2B8Vg92E5b7FiqQ%2FvNm88RE\"}]}",
-    "Content-Encoding": "br",
-    "CF-RAY": "99cba7208dec48ec-BOM",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=891m5FO6SpL%2BmXQGjDPKwxaIkKKPvoq04GDtweyCZbH0Gfy%2FN53MYca4qeQArirvsmr3kP91xIlL5lZVhCO7dHAYsd5KndNpWM9AnkZAMrmsZMwzkLjfl4Ia\"}]}",
+    "Content-Encoding": "gzip",
+    "CF-RAY": "99d3bb1328c81973-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.050648" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.823361" elapsed="0.001603"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:45:03.050648" level="INFO">200</msg>
+<msg time="2025-11-12T05:46:45.826632" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.050648" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.825390" elapsed="0.001367"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:45:01.836229" elapsed="1.214419"/>
+<status status="PASS" start="2025-11-12T05:46:45.195046" elapsed="0.631823"/>
 </kw>
-<msg time="2025-11-11T11:45:03.050648" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F66E40&gt;</msg>
+<msg time="2025-11-12T05:46:45.827088" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.050648" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.828488" elapsed="0.000244"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x000001C622F66E40&gt;</arg>
-<status status="PASS" start="2025-11-11T11:45:03.050648" elapsed="0.000000"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</arg>
+<status status="PASS" start="2025-11-12T05:46:45.828141" elapsed="0.000699"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-11T11:45:03.050648" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.827308" elapsed="0.001618"/>
 </kw>
-<msg time="2025-11-11T11:45:03.050648" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x000001C622F66E40&gt;</msg>
+<msg time="2025-11-12T05:46:45.829095" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -1502,30 +1467,30 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-11T11:45:01.836229" elapsed="1.214419"/>
+<status status="PASS" start="2025-11-12T05:46:45.192131" elapsed="0.637045"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:45:03.056344" level="INFO">Response Code: 200</msg>
+<msg time="2025-11-12T05:46:45.831017" level="INFO">Response Code: 200</msg>
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.050648" elapsed="0.005696"/>
+<status status="PASS" start="2025-11-12T05:46:45.830438" elapsed="0.000657"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-11T11:45:03.056344" level="INFO">Response Body: {
+<msg time="2025-11-12T05:46:45.831719" level="INFO">Response Body: {
     "rooms": [
         {
-            "roomid": 3,
-            "roomName": "103",
-            "type": "Suite",
+            "roomid": 2,
+            "roomName": "102",
+            "type": "Double",
             "accessible": true,
-            "image": "/images/room3.jpg",
-            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
+            "image": "/images/room2.jpg",
+            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
             "features": [
+                "TV",
                 "Radio",
-                "WiFi",
                 "Safe"
             ],
-            "roomPrice": 225
+            "roomPrice": 150
         },
         {
             "roomid": 4,
@@ -1546,41 +1511,41 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
 }</msg>
 <arg>Response Body: ${requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.056344" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.831228" elapsed="0.000551"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-11T11:45:03.056344" level="INFO">${data} = {'rooms': [{'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc co...</msg>
+<msg time="2025-11-12T05:46:45.832672" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.056344" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.831905" elapsed="0.000802"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-11T11:45:03.057461" level="INFO">${rooms} = [{'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis...</msg>
+<msg time="2025-11-12T05:46:45.833045" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.057461" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.832841" elapsed="0.000234"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-11T11:45:03.057461" level="INFO">Length is 2.</msg>
-<msg time="2025-11-11T11:45:03.057461" level="INFO">${total} = 2</msg>
+<msg time="2025-11-12T05:46:45.833435" level="INFO">Length is 2.</msg>
+<msg time="2025-11-12T05:46:45.833521" level="INFO">${total} = 2</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.057461" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.833299" elapsed="0.000246"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after adding new room : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-11T11:45:03.057461" elapsed="0.000000"/>
+<status status="PASS" start="2025-11-12T05:46:45.833658" elapsed="0.000220"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-11T11:45:01.833998" elapsed="1.223463"/>
+<status status="PASS" start="2025-11-12T05:46:45.191276" elapsed="0.642708"/>
 </test>
-<status status="PASS" start="2025-11-11T11:43:33.726453" elapsed="89.331008"/>
+<status status="PASS" start="2025-11-12T05:45:39.337301" elapsed="66.497093"/>
 </suite>
 <statistics>
 <total>

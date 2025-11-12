@@ -1,0 +1,11 @@
+robotframework==7.3.2
+robotframework-requests
+robotframework-jsonlibrary
+robotframework-restlibrary
+python-dotenv
+playwright==1.55.0
+robotframework-pythonlibcore>=3.0.0
+#robotframework-playwright
+flask
+
+

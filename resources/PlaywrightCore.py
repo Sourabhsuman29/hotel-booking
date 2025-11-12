@@ -45,11 +45,11 @@ class PlaywrightCore:
         print(f"Launching browser: {browser_name}")
         PlaywrightCore.pwSync = sync_playwright().start()
         if browser_name.lower() == 'chromium':
-            PlaywrightCore.browser = PlaywrightCore.pwSync.chromium.launch(headless=False, slow_mo=500)
+            PlaywrightCore.browser = PlaywrightCore.pwSync.chromium.launch(headless=True, slow_mo=500)
         elif browser_name.lower() == 'firefox':
-            PlaywrightCore.browser = PlaywrightCore.pwSync.firefox.launch(headless=False, slow_mo=500)
+            PlaywrightCore.browser = PlaywrightCore.pwSync.firefox.launch(headless=True, slow_mo=500)
         elif browser_name.lower() == 'webkit':
-            PlaywrightCore.browser = PlaywrightCore.pwSync.webkit.launch(headless=False, slow_mo=500)
+            PlaywrightCore.browser = PlaywrightCore.pwSync.webkit.launch(headless=True, slow_mo=500)
         else:
             logger.error(f"Unsupported browser: {browser_name}")
             raise ValueError(f"Unsupported browser: {browser_name}")

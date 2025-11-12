@@ -12,7 +12,7 @@ Pick Random Room from List
     [Arguments]    ${rooms}    ${total}
     ${rand_index}=    Evaluate    random.randint(0, ${total}-1)    random
     ${random_room}=   Get From List    ${rooms}    ${rand_index}
-    [Return]    ${random_room}
+    RETURN    ${random_room}
 
 *** Test Cases ***
 Get available hotel rooms details
