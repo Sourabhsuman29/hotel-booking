@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.12.12 on linux)" generated="2025-11-12T05:45:39.334816" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.12 on linux)" generated="2025-11-12T11:06:07.271004" rpa="false" schemaversion="5">
 <suite id="s1" name="E2E Application Flow" source="/tests/tests/e2e_application_flow.robot">
 <test id="s1-t1" name="Positive Scenario: Send a inquiry messages from UI" line="16">
 <kw name="Launch Browser Application" owner="PlaywrightCore">
-<msg time="2025-11-12T05:45:44.893770" level="INFO">Launching browser: firefox
+<msg time="2025-11-12T11:06:12.734657" level="INFO">Launching browser: firefox
 Browser launched and application opened.</msg>
 <arg>firefox</arg>
-<status status="PASS" start="2025-11-12T05:45:39.893522" elapsed="5.000421"/>
+<status status="PASS" start="2025-11-12T11:06:07.859258" elapsed="4.875519"/>
 </kw>
 <kw name="Login As Admin" owner="PlaywrightCore">
-<msg time="2025-11-12T05:45:44.918282" level="INFO">.env file loaded: True</msg>
-<msg time="2025-11-12T05:45:45.591989" level="INFO">Secrets fetched successfully:</msg>
-<msg time="2025-11-12T05:45:52.433874" level="INFO">Admin login successful.</msg>
-<msg time="2025-11-12T05:45:52.434120" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
+<msg time="2025-11-12T11:06:12.756004" level="INFO">.env file loaded: True</msg>
+<msg time="2025-11-12T11:06:13.329916" level="INFO">Secrets fetched successfully:</msg>
+<msg time="2025-11-12T11:06:19.285246" level="INFO">Admin login successful.</msg>
+<msg time="2025-11-12T11:06:19.285403" level="INFO">dp.st.dev.HwEdK7f9C1OoOQkd7R98w2VOIUNicpbq746fLh5aXdb
 {
   "DOPPLER_CONFIG": "dev",
   "DOPPLER_ENVIRONMENT": "dev",
@@ -20,11 +20,11 @@ Browser launched and application opened.</msg>
   "PASSWORD": "password",
   "USER": "admin"
 }</msg>
-<status status="PASS" start="2025-11-12T05:45:44.894236" elapsed="7.540001"/>
+<status status="PASS" start="2025-11-12T11:06:12.734973" elapsed="6.550535"/>
 </kw>
 <kw name="Go Back To Front Page" owner="PlaywrightCore">
-<msg time="2025-11-12T05:45:53.317621" level="INFO">clicked on Home/Front Page.</msg>
-<status status="PASS" start="2025-11-12T05:45:52.434592" elapsed="0.883245"/>
+<msg time="2025-11-12T11:06:20.204906" level="INFO">clicked on Home/Front Page.</msg>
+<status status="PASS" start="2025-11-12T11:06:19.285726" elapsed="0.919447"/>
 </kw>
 <kw name="Send Us a Message" owner="PlaywrightCore">
 <arg>${name}</arg>
@@ -32,39 +32,39 @@ Browser launched and application opened.</msg>
 <arg>${PHONE}</arg>
 <arg>${subject}</arg>
 <arg>${description}</arg>
-<status status="PASS" start="2025-11-12T05:45:53.318181" elapsed="6.271045"/>
+<status status="PASS" start="2025-11-12T11:06:20.205515" elapsed="6.238399"/>
 </kw>
 <kw name="Close Browser" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:00.111420" level="INFO">Browser and context closed.</msg>
-<status status="PASS" start="2025-11-12T05:45:59.589496" elapsed="0.522105"/>
+<msg time="2025-11-12T11:06:27.010449" level="INFO">Browser and context closed.</msg>
+<status status="PASS" start="2025-11-12T11:06:26.444075" elapsed="0.566503"/>
 </kw>
-<status status="PASS" start="2025-11-12T05:45:39.892759" elapsed="20.219048"/>
+<status status="PASS" start="2025-11-12T11:06:07.857960" elapsed="19.152833"/>
 </test>
 <test id="s1-t2" name="Positive Scenario: Validate messages from APIs" line="24">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:00.114385" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
+<msg time="2025-11-12T11:06:27.012745" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24ab7140&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:00.115902" level="INFO">https://automationintesting.online/api/message</msg>
+<msg time="2025-11-12T11:06:27.014369" level="INFO">https://automationintesting.online/api/message</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.115398" elapsed="0.000568"/>
+<status status="PASS" start="2025-11-12T11:06:27.013717" elapsed="0.000714"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.115159" elapsed="0.000875"/>
+<status status="PASS" start="2025-11-12T11:06:27.013463" elapsed="0.001035"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.116202" elapsed="0.000156"/>
+<status status="PASS" start="2025-11-12T11:06:27.014607" elapsed="0.000179"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.114621" elapsed="0.001797"/>
+<status status="PASS" start="2025-11-12T11:06:27.012945" elapsed="0.001892"/>
 </kw>
-<msg time="2025-11-12T05:46:00.116570" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
+<msg time="2025-11-12T11:06:27.014966" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24ab7140&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:00.717918" level="INFO">{
+<msg time="2025-11-12T11:06:27.639218" level="INFO">{
     "messages": [
         {
             "id": 1,
@@ -80,6 +80,2418 @@ Browser launched and application opened.</msg>
         },
         {
             "id": 3,
+            "name": "User_oEdUJM",
+            "subject": "Test_IXClzQqi",
+            "read": false
+        },
+        {
+            "id": 4,
+            "name": "User_uaxsgL",
+            "subject": "Test_RFlSQGok",
+            "read": false
+        },
+        {
+            "id": 5,
+            "name": "User_OksdyZ",
+            "subject": "Test_yKbIXIHy",
+            "read": false
+        },
+        {
+            "id": 6,
+            "name": "User_eVylnA",
+            "subject": "Test_yqvebrTK",
+            "read": false
+        },
+        {
+            "id": 7,
+            "name": "User_BVNKDX",
+            "subject": "Test_ScfqBHSd",
+            "read": false
+        },
+        {
+            "id": 8,
+            "name": "User_dyMjWr",
+            "subject": "Test_fbJkttLm",
+            "read": false
+        },
+        {
+            "id": 9,
+            "name": "User_xnMvqq",
+            "subject": "Test_REATMjeO",
+            "read": false
+        },
+        {
+            "id": 10,
+            "name": "User_nOcBVf",
+            "subject": "Test_XrTToIqt",
+            "read": false
+        },
+        {
+            "id": 11,
+            "name": "User_aOjmtt",
+            "subject": "Test_mcYpLTHy",
+            "read": false
+        },
+        {
+            "id": 12,
+            "name": "User_gQSHDP",
+            "subject": "Test_eoriZqly",
+            "read": false
+        },
+        {
+            "id": 13,
+            "name": "User_eMHVAK",
+            "subject": "Test_vCLGHzBA",
+            "read": false
+        },
+        {
+            "id": 14,
+            "name": "User_fhjlTs",
+            "subject": "Test_yHJMuZae",
+            "read": false
+        },
+        {
+            "id": 15,
+            "name": "User_MhYfGY",
+            "subject": "Test_IBreTUSH",
+            "read": false
+        },
+        {
+            "id": 16,
+            "name": "User_FGCxov",
+            "subject": "Test_qRanEPgm",
+            "read": false
+        },
+        {
+            "id": 17,
+            "name": "User_RkWCYV",
+            "subject": "Test_gOJTSDAP",
+            "read": false
+        },
+        {
+            "id": 18,
+            "name": "User_fNqqoC",
+            "subject": "Test_mtLVWbHM",
+            "read": false
+        },
+        {
+            "id": 19,
+            "name": "User_MYVWDC",
+            "subject": "Test_GLoMdvyZ",
+            "read": false
+        },
+        {
+            "id": 20,
+            "name": "User_csZRDt",
+            "subject": "Test_aNiFvmmd",
+            "read": false
+        },
+        {
+            "id": 21,
+            "name": "User_JkpALl",
+            "subject": "Test_AgmriEFk",
+            "read": false
+        },
+        {
+            "id": 22,
+            "name": "User_GWLtjp",
+            "subject": "Test_qDtnlYXS",
+            "read": false
+        },
+        {
+            "id": 23,
+            "name": "User_HlDhwu",
+            "subject": "Test_wLHRWgsg",
+            "read": false
+        },
+        {
+            "id": 24,
+            "name": "User_RMUaaV",
+            "subject": "Test_HdaEDJHN",
+            "read": false
+        },
+        {
+            "id": 25,
+            "name": "User_srpSKE",
+            "subject": "Test_oyrwbyCg",
+            "read": false
+        },
+        {
+            "id": 26,
+            "name": "User_oxMByC",
+            "subject": "Test_yFPBpNkZ",
+            "read": false
+        },
+        {
+            "id": 27,
+            "name": "User_prUkMG",
+            "subject": "Test_dQXYiPgU",
+            "read": false
+        },
+        {
+            "id": 28,
+            "name": "User_FjFuaT",
+            "subject": "Test_lUqLUKyr",
+            "read": false
+        },
+        {
+            "id": 29,
+            "name": "User_nVhZpo",
+            "subject": "Test_NbkEVYZd",
+            "read": false
+        },
+        {
+            "id": 30,
+            "name": "User_nNAxCx",
+            "subject": "Test_cKrgUTnP",
+            "read": false
+        },
+        {
+            "id": 31,
+            "name": "User_asbugG",
+            "subject": "Test_efhorBgQ",
+            "read": false
+        },
+        {
+            "id": 32,
+            "name": "User_mthixF",
+            "subject": "Test_GgXDYqLa",
+            "read": false
+        },
+        {
+            "id": 33,
+            "name": "User_IHgyDC",
+            "subject": "Test_RIXDwIfq",
+            "read": false
+        },
+        {
+            "id": 34,
+            "name": "User_dyqTLH",
+            "subject": "Test_LqdCcOdW",
+            "read": false
+        },
+        {
+            "id": 35,
+            "name": "User_EcOYlK",
+            "subject": "Test_ZoBwVnBw",
+            "read": false
+        },
+        {
+            "id": 36,
+            "name": "User_VvVtxC",
+            "subject": "Test_wgUxVzsp",
+            "read": false
+        },
+        {
+            "id": 37,
+            "name": "User_UwsdAg",
+            "subject": "Test_ycrsZWna",
+            "read": false
+        },
+        {
+            "id": 38,
+            "name": "User_licPSg",
+            "subject": "Test_ZdUriKem",
+            "read": false
+        },
+        {
+            "id": 39,
+            "name": "User_dpSZjE",
+            "subject": "Test_rCllAGRV",
+            "read": false
+        },
+        {
+            "id": 40,
+            "name": "User_NYhHsP",
+            "subject": "Test_PIsVoeWt",
+            "read": false
+        },
+        {
+            "id": 41,
+            "name": "User_eIFXcX",
+            "subject": "Test_vaSvwjhm",
+            "read": false
+        },
+        {
+            "id": 42,
+            "name": "User_HmKVUf",
+            "subject": "Test_mYwzIitA",
+            "read": false
+        },
+        {
+            "id": 43,
+            "name": "User_GeuWld",
+            "subject": "Test_NvIZCeoC",
+            "read": false
+        },
+        {
+            "id": 44,
+            "name": "User_dWtbQJ",
+            "subject": "Test_pYqKfxFl",
+            "read": false
+        },
+        {
+            "id": 45,
+            "name": "User_XxUiWn",
+            "subject": "Test_zXegpsuK",
+            "read": false
+        },
+        {
+            "id": 46,
+            "name": "User_DtdFjN",
+            "subject": "Test_WJFQOfyb",
+            "read": false
+        },
+        {
+            "id": 47,
+            "name": "User_VCTmUj",
+            "subject": "Test_cBqfWzyD",
+            "read": false
+        },
+        {
+            "id": 48,
+            "name": "User_OXYZdJ",
+            "subject": "Test_KQAntSbY",
+            "read": false
+        },
+        {
+            "id": 49,
+            "name": "User_mqCSKr",
+            "subject": "Test_ddXbZkRD",
+            "read": false
+        },
+        {
+            "id": 50,
+            "name": "User_ofbOZP",
+            "subject": "Test_WzuyumwV",
+            "read": false
+        },
+        {
+            "id": 51,
+            "name": "User_qXSVSl",
+            "subject": "Test_bVQHcOIG",
+            "read": false
+        },
+        {
+            "id": 52,
+            "name": "User_dWTFuo",
+            "subject": "Test_MAyufuga",
+            "read": false
+        },
+        {
+            "id": 53,
+            "name": "User_GoLmuT",
+            "subject": "Test_ogJjBKYp",
+            "read": false
+        },
+        {
+            "id": 54,
+            "name": "User_IZYfvp",
+            "subject": "Test_OlfrwMrt",
+            "read": false
+        },
+        {
+            "id": 55,
+            "name": "User_ARswBp",
+            "subject": "Test_FOfzfLtJ",
+            "read": false
+        },
+        {
+            "id": 56,
+            "name": "User_uIMgDN",
+            "subject": "Test_CkGGkhDf",
+            "read": false
+        },
+        {
+            "id": 57,
+            "name": "User_WjVXWr",
+            "subject": "Test_bDXqTvzY",
+            "read": false
+        },
+        {
+            "id": 58,
+            "name": "User_OsVVmT",
+            "subject": "Test_qPXHTbcb",
+            "read": false
+        },
+        {
+            "id": 59,
+            "name": "User_ZbKOKg",
+            "subject": "Test_AaJyMrZI",
+            "read": false
+        },
+        {
+            "id": 60,
+            "name": "User_fMQWYA",
+            "subject": "Test_iYUODiBy",
+            "read": false
+        },
+        {
+            "id": 61,
+            "name": "User_NSeULb",
+            "subject": "Test_WErnMRjl",
+            "read": false
+        },
+        {
+            "id": 62,
+            "name": "User_XKVKXT",
+            "subject": "Test_OYLmbRuc",
+            "read": false
+        },
+        {
+            "id": 63,
+            "name": "User_znOOJo",
+            "subject": "Test_vLCiANhD",
+            "read": false
+        },
+        {
+            "id": 64,
+            "name": "User_jiraky",
+            "subject": "Test_kGnYAUmW",
+            "read": false
+        },
+        {
+            "id": 65,
+            "name": "User_CrZjxr",
+            "subject": "Test_AZQDBloZ",
+            "read": false
+        },
+        {
+            "id": 66,
+            "name": "User_zIwKEo",
+            "subject": "Test_mESCIOtW",
+            "read": false
+        },
+        {
+            "id": 67,
+            "name": "User_rcWbtf",
+            "subject": "Test_RIFHutUR",
+            "read": false
+        },
+        {
+            "id": 68,
+            "name": "User_BKWKnc",
+            "subject": "Test_LCSPKFVT",
+            "read": false
+        },
+        {
+            "id": 69,
+            "name": "User_RRkyOD",
+            "subject": "Test_KwQdrUdw",
+            "read": false
+        },
+        {
+            "id": 70,
+            "name": "User_ChRfVs",
+            "subject": "Test_KlheuxBc",
+            "read": false
+        },
+        {
+            "id": 71,
+            "name": "User_ThhYTM",
+            "subject": "Test_eIAHAUlw",
+            "read": false
+        },
+        {
+            "id": 72,
+            "name": "User_XUsslJ",
+            "subject": "Test_tPVrzXoX",
+            "read": false
+        },
+        {
+            "id": 73,
+            "name": "User_lBKFVv",
+            "subject": "Test_uYuDGhvF",
+            "read": false
+        },
+        {
+            "id": 74,
+            "name": "User_HXWFkM",
+            "subject": "Test_buxzqYfd",
+            "read": false
+        },
+        {
+            "id": 75,
+            "name": "User_YvPGUE",
+            "subject": "Test_aGYyrhzN",
+            "read": false
+        },
+        {
+            "id": 76,
+            "name": "User_KcHblx",
+            "subject": "Test_fqHltAVM",
+            "read": false
+        },
+        {
+            "id": 77,
+            "name": "User_eXsjIk",
+            "subject": "Test_RjVqOFDj",
+            "read": false
+        },
+        {
+            "id": 78,
+            "name": "User_ZRigWb",
+            "subject": "Test_fqlvSxLH",
+            "read": false
+        },
+        {
+            "id": 79,
+            "name": "User_yPZfEa",
+            "subject": "Test_dfVGzsmm",
+            "read": false
+        },
+        {
+            "id": 80,
+            "name": "User_ZGuvIP",
+            "subject": "Test_ykQCVAHZ",
+            "read": false
+        },
+        {
+            "id": 81,
+            "name": "User_qOQVXz",
+            "subject": "Test_GewkYlRM",
+            "read": false
+        },
+        {
+            "id": 82,
+            "name": "User_vDtrAb",
+            "subject": "Test_LYaLwtlr",
+            "read": false
+        },
+        {
+            "id": 83,
+            "name": "User_urwesJ",
+            "subject": "Test_sszqOQUt",
+            "read": false
+        },
+        {
+            "id": 84,
+            "name": "User_hbwngL",
+            "subject": "Test_XjpwrqLd",
+            "read": false
+        },
+        {
+            "id": 85,
+            "name": "User_gpXvsU",
+            "subject": "Test_txUXBPpy",
+            "read": false
+        },
+        {
+            "id": 86,
+            "name": "User_DRUnkR",
+            "subject": "Test_DRraubMT",
+            "read": false
+        },
+        {
+            "id": 87,
+            "name": "User_xbnopN",
+            "subject": "Test_ewPcCsiv",
+            "read": false
+        },
+        {
+            "id": 88,
+            "name": "User_rWOknt",
+            "subject": "Test_gwojqqwD",
+            "read": false
+        },
+        {
+            "id": 89,
+            "name": "User_rFhaJS",
+            "subject": "Test_XjNFRmtj",
+            "read": false
+        },
+        {
+            "id": 90,
+            "name": "User_HKKwiW",
+            "subject": "Test_FGCdfVgz",
+            "read": false
+        },
+        {
+            "id": 91,
+            "name": "User_YBMJPL",
+            "subject": "Test_nifOQDmo",
+            "read": false
+        },
+        {
+            "id": 92,
+            "name": "User_eNLvpD",
+            "subject": "Test_WoTlWPdq",
+            "read": false
+        },
+        {
+            "id": 93,
+            "name": "User_JRKPaA",
+            "subject": "Test_VhPVUTcr",
+            "read": false
+        },
+        {
+            "id": 94,
+            "name": "User_qvpVyf",
+            "subject": "Test_ftodPpjx",
+            "read": false
+        },
+        {
+            "id": 95,
+            "name": "User_KMWZax",
+            "subject": "Test_ewnlYMZb",
+            "read": false
+        },
+        {
+            "id": 96,
+            "name": "User_dbXEXX",
+            "subject": "Test_EmUFxuHc",
+            "read": false
+        },
+        {
+            "id": 97,
+            "name": "User_BlyfrU",
+            "subject": "Test_FKeCjcwy",
+            "read": false
+        },
+        {
+            "id": 98,
+            "name": "User_jUQzBg",
+            "subject": "Test_dNxmUOVZ",
+            "read": false
+        },
+        {
+            "id": 99,
+            "name": "User_fltXsm",
+            "subject": "Test_fNYjGxwP",
+            "read": false
+        },
+        {
+            "id": 100,
+            "name": "User_yfqeoE",
+            "subject": "Test_lbSmXxUs",
+            "read": false
+        },
+        {
+            "id": 101,
+            "name": "User_WOnlzM",
+            "subject": "Test_sSrpIWgi",
+            "read": false
+        },
+        {
+            "id": 102,
+            "name": "User_YjYrEN",
+            "subject": "Test_HiixbdvC",
+            "read": false
+        },
+        {
+            "id": 103,
+            "name": "User_MNjqqN",
+            "subject": "Test_BfLPPaKS",
+            "read": false
+        },
+        {
+            "id": 104,
+            "name": "User_yXgBBk",
+            "subject": "Test_tufcEzSs",
+            "read": false
+        },
+        {
+            "id": 105,
+            "name": "User_WCMByF",
+            "subject": "Test_DHJInWRQ",
+            "read": false
+        },
+        {
+            "id": 106,
+            "name": "User_HvVbbK",
+            "subject": "Test_NzhsuhXQ",
+            "read": false
+        },
+        {
+            "id": 107,
+            "name": "User_JPbVWG",
+            "subject": "Test_sgHxpQVg",
+            "read": false
+        },
+        {
+            "id": 108,
+            "name": "User_IpKpWf",
+            "subject": "Test_KTWBlmib",
+            "read": false
+        },
+        {
+            "id": 109,
+            "name": "User_fKkswG",
+            "subject": "Test_vqGIugjp",
+            "read": false
+        },
+        {
+            "id": 110,
+            "name": "User_CGZXPN",
+            "subject": "Test_KyjfSkeX",
+            "read": false
+        },
+        {
+            "id": 111,
+            "name": "User_vKyvNj",
+            "subject": "Test_OLYEBFmK",
+            "read": false
+        },
+        {
+            "id": 112,
+            "name": "User_SjUVdo",
+            "subject": "Test_Idtpkeyf",
+            "read": false
+        },
+        {
+            "id": 113,
+            "name": "User_CcUBKB",
+            "subject": "Test_HFThjRfE",
+            "read": false
+        },
+        {
+            "id": 114,
+            "name": "User_HUtClA",
+            "subject": "Test_PTyLbEvL",
+            "read": false
+        },
+        {
+            "id": 115,
+            "name": "User_nCEakv",
+            "subject": "Test_INcZTRwQ",
+            "read": false
+        },
+        {
+            "id": 116,
+            "name": "User_ekQpNN",
+            "subject": "Test_msJcmiGL",
+            "read": false
+        },
+        {
+            "id": 117,
+            "name": "User_hOcpFO",
+            "subject": "Test_JvKfrqQe",
+            "read": false
+        },
+        {
+            "id": 118,
+            "name": "User_NxcnsE",
+            "subject": "Test_iitOoaQP",
+            "read": false
+        },
+        {
+            "id": 119,
+            "name": "User_JIUoUY",
+            "subject": "Test_zpIRJxRB",
+            "read": false
+        },
+        {
+            "id": 120,
+            "name": "User_lgALQy",
+            "subject": "Test_IYsaqmds",
+            "read": false
+        },
+        {
+            "id": 121,
+            "name": "User_NTytsm",
+            "subject": "Test_rmQnxJZU",
+            "read": false
+        },
+        {
+            "id": 122,
+            "name": "User_MHgsJj",
+            "subject": "Test_PoYmCZDM",
+            "read": false
+        },
+        {
+            "id": 123,
+            "name": "User_JqoZPd",
+            "subject": "Test_IGMBsGGT",
+            "read": false
+        },
+        {
+            "id": 124,
+            "name": "User_xdfETH",
+            "subject": "Test_aimgZNMs",
+            "read": false
+        },
+        {
+            "id": 125,
+            "name": "User_BnBrVu",
+            "subject": "Test_UYRGWNuo",
+            "read": false
+        },
+        {
+            "id": 126,
+            "name": "User_dGjNqp",
+            "subject": "Test_qQKsbmzl",
+            "read": false
+        },
+        {
+            "id": 127,
+            "name": "User_sOMMWI",
+            "subject": "Test_GnGaFMkx",
+            "read": false
+        },
+        {
+            "id": 128,
+            "name": "User_ozOHSP",
+            "subject": "Test_DVMNEOMB",
+            "read": false
+        },
+        {
+            "id": 129,
+            "name": "User_BJLpkK",
+            "subject": "Test_ZhkqSLuG",
+            "read": false
+        },
+        {
+            "id": 130,
+            "name": "User_vZGQrc",
+            "subject": "Test_TxkBoekV",
+            "read": false
+        },
+        {
+            "id": 131,
+            "name": "User_fUubKf",
+            "subject": "Test_nQSRwnCg",
+            "read": false
+        },
+        {
+            "id": 132,
+            "name": "User_rFTLQT",
+            "subject": "Test_YpgocPXY",
+            "read": false
+        },
+        {
+            "id": 133,
+            "name": "User_ZViEpE",
+            "subject": "Test_xHNqkphf",
+            "read": false
+        },
+        {
+            "id": 134,
+            "name": "User_vQVOln",
+            "subject": "Test_LYUYkNht",
+            "read": false
+        },
+        {
+            "id": 135,
+            "name": "User_wDAHQl",
+            "subject": "Test_vbMZlAPG",
+            "read": false
+        },
+        {
+            "id": 136,
+            "name": "User_hBaeCW",
+            "subject": "Test_OrINXrLe",
+            "read": false
+        },
+        {
+            "id": 137,
+            "name": "User_HTLIkZ",
+            "subject": "Test_IXXmcPeM",
+            "read": false
+        },
+        {
+            "id": 138,
+            "name": "User_ZggcgO",
+            "subject": "Test_ptUBXzCP",
+            "read": false
+        },
+        {
+            "id": 139,
+            "name": "User_JdadfX",
+            "subject": "Test_elRlkQVR",
+            "read": false
+        },
+        {
+            "id": 140,
+            "name": "User_IydMjB",
+            "subject": "Test_uHAORZNY",
+            "read": false
+        },
+        {
+            "id": 141,
+            "name": "User_PzGQlW",
+            "subject": "Test_JvBushRN",
+            "read": false
+        },
+        {
+            "id": 142,
+            "name": "User_NCgIeF",
+            "subject": "Test_qRqCFdNS",
+            "read": false
+        },
+        {
+            "id": 143,
+            "name": "User_nXNtbs",
+            "subject": "Test_xjwbVVHj",
+            "read": false
+        },
+        {
+            "id": 144,
+            "name": "User_CjgPTG",
+            "subject": "Test_TUuJpwAt",
+            "read": false
+        },
+        {
+            "id": 145,
+            "name": "User_FKGRaW",
+            "subject": "Test_VuNrMzhe",
+            "read": false
+        },
+        {
+            "id": 146,
+            "name": "User_kBxkBG",
+            "subject": "Test_lwMTznon",
+            "read": false
+        },
+        {
+            "id": 147,
+            "name": "User_QsZNcY",
+            "subject": "Test_ZqDbXtag",
+            "read": false
+        },
+        {
+            "id": 148,
+            "name": "User_EIrDgF",
+            "subject": "Test_vxZvXeNy",
+            "read": false
+        },
+        {
+            "id": 149,
+            "name": "User_ZlczcM",
+            "subject": "Test_SooOZqis",
+            "read": false
+        },
+        {
+            "id": 150,
+            "name": "User_KhLnac",
+            "subject": "Test_CDfeTYkR",
+            "read": false
+        },
+        {
+            "id": 151,
+            "name": "User_JXpywX",
+            "subject": "Test_RiTvdYhj",
+            "read": false
+        },
+        {
+            "id": 152,
+            "name": "User_jumiNh",
+            "subject": "Test_apERvtPQ",
+            "read": false
+        },
+        {
+            "id": 153,
+            "name": "User_nYYjNQ",
+            "subject": "Test_wXjLxaEw",
+            "read": false
+        },
+        {
+            "id": 154,
+            "name": "User_GHhnkQ",
+            "subject": "Test_MhhNmkPT",
+            "read": false
+        },
+        {
+            "id": 155,
+            "name": "User_EHXDKA",
+            "subject": "Test_oqiKyNWp",
+            "read": false
+        },
+        {
+            "id": 156,
+            "name": "User_tKSGIq",
+            "subject": "Test_eGlSlIaK",
+            "read": false
+        },
+        {
+            "id": 157,
+            "name": "User_zXEugs",
+            "subject": "Test_EnWTxRZA",
+            "read": false
+        },
+        {
+            "id": 158,
+            "name": "User_lyXccM",
+            "subject": "Test_uVcpYsMK",
+            "read": false
+        },
+        {
+            "id": 159,
+            "name": "User_iFEDHz",
+            "subject": "Test_klnABlYn",
+            "read": false
+        },
+        {
+            "id": 160,
+            "name": "User_FZOycC",
+            "subject": "Test_hMXCfuhh",
+            "read": false
+        },
+        {
+            "id": 161,
+            "name": "User_KemUgV",
+            "subject": "Test_TAnLoKXH",
+            "read": false
+        },
+        {
+            "id": 162,
+            "name": "User_gvDrZi",
+            "subject": "Test_rwqBORci",
+            "read": false
+        },
+        {
+            "id": 163,
+            "name": "User_cILpIO",
+            "subject": "Test_eBPJPytI",
+            "read": false
+        },
+        {
+            "id": 164,
+            "name": "User_ESXnwA",
+            "subject": "Test_DAjvtfeX",
+            "read": false
+        },
+        {
+            "id": 165,
+            "name": "User_aEoSwe",
+            "subject": "Test_IRLTrVcn",
+            "read": false
+        },
+        {
+            "id": 166,
+            "name": "User_bbCORs",
+            "subject": "Test_tMHbJzkq",
+            "read": false
+        },
+        {
+            "id": 167,
+            "name": "User_Fdtcjk",
+            "subject": "Test_mIvrQsjt",
+            "read": false
+        },
+        {
+            "id": 168,
+            "name": "User_fqIafv",
+            "subject": "Test_vVQpAhsH",
+            "read": false
+        },
+        {
+            "id": 169,
+            "name": "User_uiAxup",
+            "subject": "Test_powgMqAm",
+            "read": false
+        },
+        {
+            "id": 170,
+            "name": "User_LodJsv",
+            "subject": "Test_OoDIUauF",
+            "read": false
+        },
+        {
+            "id": 171,
+            "name": "User_PWQHuY",
+            "subject": "Test_jfjRECGf",
+            "read": false
+        },
+        {
+            "id": 172,
+            "name": "User_vyiSqy",
+            "subject": "Test_WkCYpCVw",
+            "read": false
+        },
+        {
+            "id": 173,
+            "name": "User_VafjmF",
+            "subject": "Test_PdngsYqc",
+            "read": false
+        },
+        {
+            "id": 174,
+            "name": "User_OTplsT",
+            "subject": "Test_mrOesOuQ",
+            "read": false
+        },
+        {
+            "id": 175,
+            "name": "User_aGtGWx",
+            "subject": "Test_nGLkTQVS",
+            "read": false
+        },
+        {
+            "id": 176,
+            "name": "User_uEmjlk",
+            "subject": "Test_OipALnjC",
+            "read": false
+        },
+        {
+            "id": 177,
+            "name": "User_sGUcDs",
+            "subject": "Test_PGWDUiyS",
+            "read": false
+        },
+        {
+            "id": 178,
+            "name": "User_beHnSA",
+            "subject": "Test_hTpHcMiJ",
+            "read": false
+        },
+        {
+            "id": 179,
+            "name": "User_QkovjT",
+            "subject": "Test_TvNYltEl",
+            "read": false
+        },
+        {
+            "id": 180,
+            "name": "User_BgqVNz",
+            "subject": "Test_AoMKIyNX",
+            "read": false
+        },
+        {
+            "id": 181,
+            "name": "User_dUcrAc",
+            "subject": "Test_zgBwouTI",
+            "read": false
+        },
+        {
+            "id": 182,
+            "name": "User_OjdeNo",
+            "subject": "Test_aIfiqHYI",
+            "read": false
+        },
+        {
+            "id": 183,
+            "name": "User_TWMbFN",
+            "subject": "Test_XpaWbruY",
+            "read": false
+        },
+        {
+            "id": 184,
+            "name": "User_VYtAXn",
+            "subject": "Test_tqFRIKBn",
+            "read": false
+        },
+        {
+            "id": 185,
+            "name": "User_ThiKAl",
+            "subject": "Test_pEwaSCjJ",
+            "read": false
+        },
+        {
+            "id": 186,
+            "name": "User_TseVnL",
+            "subject": "Test_ZBZKRORO",
+            "read": false
+        },
+        {
+            "id": 187,
+            "name": "User_wBExJj",
+            "subject": "Test_CaQwpMYK",
+            "read": false
+        },
+        {
+            "id": 188,
+            "name": "User_NQWFwm",
+            "subject": "Test_hQBaGDXt",
+            "read": false
+        },
+        {
+            "id": 189,
+            "name": "User_kjDwIf",
+            "subject": "Test_NbzGVwwM",
+            "read": false
+        },
+        {
+            "id": 190,
+            "name": "User_hPAqYI",
+            "subject": "Test_XziSfOyY",
+            "read": false
+        },
+        {
+            "id": 191,
+            "name": "User_fEuFcX",
+            "subject": "Test_IGsbjRKS",
+            "read": false
+        },
+        {
+            "id": 192,
+            "name": "User_kMSgqt",
+            "subject": "Test_qKRfHxyQ",
+            "read": false
+        },
+        {
+            "id": 193,
+            "name": "User_IaaLTh",
+            "subject": "Test_zWshLKdU",
+            "read": false
+        },
+        {
+            "id": 194,
+            "name": "User_wjBJUz",
+            "subject": "Test_XeaHRPvJ",
+            "read": false
+        },
+        {
+            "id": 195,
+            "name": "User_fmwZnv",
+            "subject": "Test_CcjNYnRR",
+            "read": false
+        },
+        {
+            "id": 196,
+            "name": "User_Wtwlwo",
+            "subject": "Test_XvRqGTYO",
+            "read": false
+        },
+        {
+            "id": 197,
+            "name": "User_FJnKyo",
+            "subject": "Test_tqnzsJmz",
+            "read": false
+        },
+        {
+            "id": 198,
+            "name": "User_MzUzDs",
+            "subject": "Test_BWlPPiUO",
+            "read": false
+        },
+        {
+            "id": 199,
+            "name": "User_jjqKIq",
+            "subject": "Test_mWBLxgSe",
+            "read": false
+        },
+        {
+            "id": 200,
+            "name": "User_XuEFYH",
+            "subject": "Test_CBDPLVQD",
+            "read": false
+        },
+        {
+            "id": 201,
+            "name": "User_QgyfWb",
+            "subject": "Test_hVkvygtG",
+            "read": false
+        },
+        {
+            "id": 202,
+            "name": "User_aPoZwO",
+            "subject": "Test_kKjlXAwF",
+            "read": false
+        },
+        {
+            "id": 203,
+            "name": "Sourabh Kumar",
+            "subject": "You have a new booking!",
+            "read": false
+        },
+        {
+            "id": 204,
+            "name": "User_nrIxOy",
+            "subject": "Test_LPkgDBqX",
+            "read": false
+        },
+        {
+            "id": 205,
+            "name": "User_DtFEBP",
+            "subject": "Test_mziifCob",
+            "read": false
+        },
+        {
+            "id": 206,
+            "name": "User_ZZeFQM",
+            "subject": "Test_uloCCydY",
+            "read": false
+        },
+        {
+            "id": 207,
+            "name": "User_vngvMD",
+            "subject": "Test_khPUJslx",
+            "read": false
+        },
+        {
+            "id": 208,
+            "name": "User_mIOAdV",
+            "subject": "Test_PYcuygzR",
+            "read": false
+        },
+        {
+            "id": 209,
+            "name": "User_yBUFgW",
+            "subject": "Test_sPWpSAKo",
+            "read": false
+        },
+        {
+            "id": 210,
+            "name": "User_ZApsbf",
+            "subject": "Test_luLBRkXQ",
+            "read": false
+        },
+        {
+            "id": 211,
+            "name": "User_YiAvVZ",
+            "subject": "Test_QBVNmcNG",
+            "read": false
+        },
+        {
+            "id": 212,
+            "name": "User_XhEUwI",
+            "subject": "Test_pWzfxLCY",
+            "read": false
+        },
+        {
+            "id": 213,
+            "name": "User_TNSvTc",
+            "subject": "Test_DKWZmyJZ",
+            "read": false
+        },
+        {
+            "id": 214,
+            "name": "User_tgFfey",
+            "subject": "Test_WwZjEzMh",
+            "read": false
+        },
+        {
+            "id": 215,
+            "name": "User_XWEIIM",
+            "subject": "Test_eYlIDMig",
+            "read": false
+        },
+        {
+            "id": 216,
+            "name": "User_wQwcyG",
+            "subject": "Test_WPOFnFqK",
+            "read": false
+        },
+        {
+            "id": 217,
+            "name": "User_noTYiX",
+            "subject": "Test_fdgSWahc",
+            "read": false
+        },
+        {
+            "id": 218,
+            "name": "User_qPjYQz",
+            "subject": "Test_lpTWaqdE",
+            "read": false
+        },
+        {
+            "id": 219,
+            "name": "User_tLRHZp",
+            "subject": "Test_jmJbSPCP",
+            "read": false
+        },
+        {
+            "id": 220,
+            "name": "User_sneRzj",
+            "subject": "Test_GQyaucRl",
+            "read": false
+        },
+        {
+            "id": 221,
+            "name": "User_ahmAvp",
+            "subject": "Test_BOoSYvan",
+            "read": false
+        },
+        {
+            "id": 222,
+            "name": "User_JAAevg",
+            "subject": "Test_SvBvpYQi",
+            "read": false
+        },
+        {
+            "id": 223,
+            "name": "User_cSMMwn",
+            "subject": "Test_uuEujOtQ",
+            "read": false
+        },
+        {
+            "id": 224,
+            "name": "User_JqBYzG",
+            "subject": "Test_gnzAZpKw",
+            "read": false
+        },
+        {
+            "id": 225,
+            "name": "User_ggHiSQ",
+            "subject": "Test_bOiWCefz",
+            "read": false
+        },
+        {
+            "id": 226,
+            "name": "User_XSEDlx",
+            "subject": "Test_PNUPDwUC",
+            "read": false
+        },
+        {
+            "id": 227,
+            "name": "User_lewasu",
+            "subject": "Test_xcXfjSxf",
+            "read": false
+        },
+        {
+            "id": 228,
+            "name": "User_fYnvAy",
+            "subject": "Test_HQFWJQPv",
+            "read": false
+        },
+        {
+            "id": 229,
+            "name": "User_mgvhCh",
+            "subject": "Test_fpVJQqJG",
+            "read": false
+        },
+        {
+            "id": 230,
+            "name": "User_sQvYhQ",
+            "subject": "Test_akZwgstj",
+            "read": false
+        },
+        {
+            "id": 231,
+            "name": "User_IbAimJ",
+            "subject": "Test_VFDjxhlO",
+            "read": false
+        },
+        {
+            "id": 232,
+            "name": "User_QKiFjc",
+            "subject": "Test_Ruohwmty",
+            "read": false
+        },
+        {
+            "id": 233,
+            "name": "User_wstcOv",
+            "subject": "Test_rlafWAoP",
+            "read": false
+        },
+        {
+            "id": 234,
+            "name": "User_bctgAB",
+            "subject": "Test_JxVWInPC",
+            "read": false
+        },
+        {
+            "id": 235,
+            "name": "User_DqECEP",
+            "subject": "Test_fASDAlQk",
+            "read": false
+        },
+        {
+            "id": 236,
+            "name": "User_UtSjQp",
+            "subject": "Test_gEeIJFwE",
+            "read": false
+        },
+        {
+            "id": 237,
+            "name": "User_lnHaaw",
+            "subject": "Test_VqJwCuZE",
+            "read": false
+        },
+        {
+            "id": 238,
+            "name": "User_cHfmqk",
+            "subject": "Test_kYYmxmXI",
+            "read": false
+        },
+        {
+            "id": 239,
+            "name": "User_iaBgun",
+            "subject": "Test_vZSzMOrO",
+            "read": false
+        },
+        {
+            "id": 240,
+            "name": "User_zaCRRN",
+            "subject": "Test_haBzBqPg",
+            "read": false
+        },
+        {
+            "id": 241,
+            "name": "User_DDpHsp",
+            "subject": "Test_lpCjOqxk",
+            "read": false
+        },
+        {
+            "id": 242,
+            "name": "User_LZfaGE",
+            "subject": "Test_felDBfTi",
+            "read": false
+        },
+        {
+            "id": 243,
+            "name": "User_dRkJmX",
+            "subject": "Test_AculAeJd",
+            "read": false
+        },
+        {
+            "id": 244,
+            "name": "User_dmNtkq",
+            "subject": "Test_SPFcaWZs",
+            "read": false
+        },
+        {
+            "id": 245,
+            "name": "User_LLlzAM",
+            "subject": "Test_tXUkGNfy",
+            "read": false
+        },
+        {
+            "id": 246,
+            "name": "User_qJqhGV",
+            "subject": "Test_WtRTEiul",
+            "read": false
+        },
+        {
+            "id": 247,
+            "name": "User_PxsrhH",
+            "subject": "Test_GtxPKCFt",
+            "read": false
+        },
+        {
+            "id": 248,
+            "name": "User_gYTjbl",
+            "subject": "Test_dPjApKNz",
+            "read": false
+        },
+        {
+            "id": 249,
+            "name": "User_IKbbCv",
+            "subject": "Test_TljQeOyM",
+            "read": false
+        },
+        {
+            "id": 250,
+            "name": "User_itAuhw",
+            "subject": "Test_qDRvgjNm",
+            "read": false
+        },
+        {
+            "id": 251,
+            "name": "User_uAPwxy",
+            "subject": "Test_uRdZxspr",
+            "read": false
+        },
+        {
+            "id": 252,
+            "name": "User_QeTFwg",
+            "subject": "Test_TtFkKJzd",
+            "read": false
+        },
+        {
+            "id": 253,
+            "name": "User_prqyHG",
+            "subject": "Test_crbAfpFB",
+            "read": false
+        },
+        {
+            "id": 254,
+            "name": "User_BtcuMV",
+            "subject": "Test_ONdnQbgN",
+            "read": false
+        },
+        {
+            "id": 255,
+            "name": "User_GAqdKQ",
+            "subject": "Test_tHQRgscz",
+            "read": false
+        },
+        {
+            "id": 256,
+            "name": "User_inTYKe",
+            "subject": "Test_eXUGIwoY",
+            "read": false
+        },
+        {
+            "id": 257,
+            "name": "User_yjlEEA",
+            "subject": "Test_UufObwwS",
+            "read": false
+        },
+        {
+            "id": 258,
+            "name": "User_XklyzR",
+            "subject": "Test_vTCFDvbl",
+            "read": false
+        },
+        {
+            "id": 259,
+            "name": "User_OserFM",
+            "subject": "Test_qXkHZiEc",
+            "read": false
+        },
+        {
+            "id": 260,
+            "name": "User_KhVaQu",
+            "subject": "Test_CHaMoPHH",
+            "read": false
+        },
+        {
+            "id": 261,
+            "name": "User_SPvphQ",
+            "subject": "Test_wdMtcwlz",
+            "read": false
+        },
+        {
+            "id": 262,
+            "name": "User_xFyHhU",
+            "subject": "Test_WRssiRkL",
+            "read": false
+        },
+        {
+            "id": 263,
+            "name": "User_AhepwL",
+            "subject": "Test_XkhqoIkx",
+            "read": false
+        },
+        {
+            "id": 264,
+            "name": "User_zfQOOz",
+            "subject": "Test_wbGojhvj",
+            "read": false
+        },
+        {
+            "id": 265,
+            "name": "User_FxhIIJ",
+            "subject": "Test_HkTOupWZ",
+            "read": false
+        },
+        {
+            "id": 266,
+            "name": "User_YZiplj",
+            "subject": "Test_DQIUtmue",
+            "read": false
+        },
+        {
+            "id": 267,
+            "name": "User_cQwSEO",
+            "subject": "Test_egXkipPF",
+            "read": false
+        },
+        {
+            "id": 268,
+            "name": "User_jeKBkh",
+            "subject": "Test_kxCuoGys",
+            "read": false
+        },
+        {
+            "id": 269,
+            "name": "User_Hvxxmt",
+            "subject": "Test_yEjyfrGt",
+            "read": false
+        },
+        {
+            "id": 270,
+            "name": "User_Ehbtru",
+            "subject": "Test_bjcqAEyX",
+            "read": false
+        },
+        {
+            "id": 271,
+            "name": "User_BpSuRb",
+            "subject": "Test_YVMlGuKM",
+            "read": false
+        },
+        {
+            "id": 272,
+            "name": "User_pXImDK",
+            "subject": "Test_YDiqqNmJ",
+            "read": false
+        },
+        {
+            "id": 273,
+            "name": "User_AIBRjz",
+            "subject": "Test_AwBmPuVk",
+            "read": false
+        },
+        {
+            "id": 274,
+            "name": "User_jimIZe",
+            "subject": "Test_NqDvvozZ",
+            "read": false
+        },
+        {
+            "id": 275,
+            "name": "User_BRdEYG",
+            "subject": "Test_juogLUtg",
+            "read": false
+        },
+        {
+            "id": 276,
+            "name": "User_IwCWJY",
+            "subject": "Test_afNLpAdC",
+            "read": false
+        },
+        {
+            "id": 277,
+            "name": "User_kVGURu",
+            "subject": "Test_gGinTvLx",
+            "read": false
+        },
+        {
+            "id": 278,
+            "name": "User_VpxEgI",
+            "subject": "Test_jfwYHUns",
+            "read": false
+        },
+        {
+            "id": 279,
+            "name": "User_knYjrd",
+            "subject": "Test_wrIbDfpP",
+            "read": false
+        },
+        {
+            "id": 280,
+            "name": "User_WoZRts",
+            "subject": "Test_AOPXqzQy",
+            "read": false
+        },
+        {
+            "id": 281,
+            "name": "User_smErOY",
+            "subject": "Test_jMcYkhJF",
+            "read": false
+        },
+        {
+            "id": 282,
+            "name": "User_FlIYcK",
+            "subject": "Test_OdECUduA",
+            "read": false
+        },
+        {
+            "id": 283,
+            "name": "User_wsAqiF",
+            "subject": "Test_tCeXbnGu",
+            "read": false
+        },
+        {
+            "id": 284,
+            "name": "User_YfeynZ",
+            "subject": "Test_PkeoKiNA",
+            "read": false
+        },
+        {
+            "id": 285,
+            "name": "User_jltCcj",
+            "subject": "Test_jelGBlHT",
+            "read": false
+        },
+        {
+            "id": 286,
+            "name": "User_fFOHVh",
+            "subject": "Test_EDPqaCjs",
+            "read": false
+        },
+        {
+            "id": 287,
+            "name": "User_oxvfNR",
+            "subject": "Test_fZTupWHn",
+            "read": false
+        },
+        {
+            "id": 288,
+            "name": "User_hlqAAW",
+            "subject": "Test_xRpSyqUf",
+            "read": false
+        },
+        {
+            "id": 289,
+            "name": "User_VqxtNr",
+            "subject": "Test_sfCgxjTn",
+            "read": false
+        },
+        {
+            "id": 290,
+            "name": "User_NsDkgk",
+            "subject": "Test_dOBdTNZc",
+            "read": false
+        },
+        {
+            "id": 291,
+            "name": "User_qpMjFj",
+            "subject": "Test_KMhOBpqy",
+            "read": false
+        },
+        {
+            "id": 292,
+            "name": "User_lSykud",
+            "subject": "Test_zKiLooEG",
+            "read": false
+        },
+        {
+            "id": 293,
+            "name": "User_siLUuS",
+            "subject": "Test_UvULAPbZ",
+            "read": false
+        },
+        {
+            "id": 294,
+            "name": "User_qGAsQI",
+            "subject": "Test_nhmbRdGF",
+            "read": false
+        },
+        {
+            "id": 295,
+            "name": "User_BvUUuB",
+            "subject": "Test_dEEwxmVS",
+            "read": false
+        },
+        {
+            "id": 296,
+            "name": "User_bGvYMG",
+            "subject": "Test_ZmmJBPAN",
+            "read": false
+        },
+        {
+            "id": 297,
+            "name": "User_CGEzZM",
+            "subject": "Test_leNcjcnL",
+            "read": false
+        },
+        {
+            "id": 298,
+            "name": "User_IewQhn",
+            "subject": "Test_yOSCjaab",
+            "read": false
+        },
+        {
+            "id": 299,
+            "name": "User_yhkySp",
+            "subject": "Test_tcKCZuuX",
+            "read": false
+        },
+        {
+            "id": 300,
+            "name": "User_IlTzmK",
+            "subject": "Test_ydKylnGY",
+            "read": false
+        },
+        {
+            "id": 301,
+            "name": "User_xLsBgg",
+            "subject": "Test_IFdlfBLo",
+            "read": false
+        },
+        {
+            "id": 302,
+            "name": "User_Cvcgao",
+            "subject": "Test_XkRpBPvf",
+            "read": false
+        },
+        {
+            "id": 303,
+            "name": "User_hwALJk",
+            "subject": "Test_JOhYTlEC",
+            "read": false
+        },
+        {
+            "id": 304,
+            "name": "Sourabh Kumar",
+            "subject": "You have a new booking!",
+            "read": false
+        },
+        {
+            "id": 305,
+            "name": "User_pwVHov",
+            "subject": "Test_UOMCtGVp",
+            "read": false
+        },
+        {
+            "id": 306,
+            "name": "User_FhUtYy",
+            "subject": "Test_sfQYsWUX",
+            "read": false
+        },
+        {
+            "id": 307,
+            "name": "User_jjEtFO",
+            "subject": "Test_wdeqVqTr",
+            "read": false
+        },
+        {
+            "id": 308,
+            "name": "User_DCFnxy",
+            "subject": "Test_udATaNDn",
+            "read": false
+        },
+        {
+            "id": 309,
+            "name": "User_aKNBri",
+            "subject": "Test_KSwSpVWC",
+            "read": false
+        },
+        {
+            "id": 310,
+            "name": "User_sckEVH",
+            "subject": "Test_TKepfaVf",
+            "read": false
+        },
+        {
+            "id": 311,
+            "name": "User_mATjKm",
+            "subject": "Test_fBarMTFA",
+            "read": false
+        },
+        {
+            "id": 312,
+            "name": "User_hSsOTu",
+            "subject": "Test_eyNEjzwY",
+            "read": false
+        },
+        {
+            "id": 313,
+            "name": "User_XnVgrc",
+            "subject": "Test_NxFXRyYV",
+            "read": false
+        },
+        {
+            "id": 314,
+            "name": "User_mgjknI",
+            "subject": "Test_jlKDGSGW",
+            "read": false
+        },
+        {
+            "id": 315,
+            "name": "User_qZEmmB",
+            "subject": "Test_WydICFPh",
+            "read": false
+        },
+        {
+            "id": 316,
+            "name": "User_CPJSxP",
+            "subject": "Test_BjMJzdfn",
+            "read": false
+        },
+        {
+            "id": 317,
+            "name": "User_HOWhCS",
+            "subject": "Test_nzSezNcB",
+            "read": false
+        },
+        {
+            "id": 318,
+            "name": "User_EGZTUU",
+            "subject": "Test_aRAIRdLR",
+            "read": false
+        },
+        {
+            "id": 319,
+            "name": "User_dNLTfh",
+            "subject": "Test_dCTGTvPE",
+            "read": false
+        },
+        {
+            "id": 320,
+            "name": "User_XteIkw",
+            "subject": "Test_ZNhMruKu",
+            "read": false
+        },
+        {
+            "id": 321,
+            "name": "User_kqNlxi",
+            "subject": "Test_EUulkAvb",
+            "read": false
+        },
+        {
+            "id": 322,
+            "name": "User_MazHah",
+            "subject": "Test_zxgpVVva",
+            "read": false
+        },
+        {
+            "id": 323,
+            "name": "User_apYSxB",
+            "subject": "Test_qFczfTuk",
+            "read": false
+        },
+        {
+            "id": 324,
+            "name": "User_tqanmB",
+            "subject": "Test_pIFdEFlw",
+            "read": false
+        },
+        {
+            "id": 325,
+            "name": "User_nsQJpT",
+            "subject": "Test_UQCkSNnT",
+            "read": false
+        },
+        {
+            "id": 326,
+            "name": "User_BzmEQQ",
+            "subject": "Test_nfpZuURc",
+            "read": false
+        },
+        {
+            "id": 327,
+            "name": "User_rJOxjR",
+            "subject": "Test_aDfNkRYX",
+            "read": false
+        },
+        {
+            "id": 328,
+            "name": "User_FUTUtA",
+            "subject": "Test_tkAeuZQW",
+            "read": false
+        },
+        {
+            "id": 329,
+            "name": "User_pWmHfb",
+            "subject": "Test_YrFjILUf",
+            "read": false
+        },
+        {
+            "id": 330,
+            "name": "User_qMyoaw",
+            "subject": "Test_IUImMzPf",
+            "read": false
+        },
+        {
+            "id": 331,
+            "name": "User_hSLldl",
+            "subject": "Test_neTXeJPO",
+            "read": false
+        },
+        {
+            "id": 332,
+            "name": "User_vYljrk",
+            "subject": "Test_HyzEgQXQ",
+            "read": false
+        },
+        {
+            "id": 333,
+            "name": "User_gjrDef",
+            "subject": "Test_oTFQEPsT",
+            "read": false
+        },
+        {
+            "id": 334,
+            "name": "User_VQADqR",
+            "subject": "Test_saEWuvLo",
+            "read": false
+        },
+        {
+            "id": 335,
+            "name": "User_FQBcJi",
+            "subject": "Test_hktDFbAK",
+            "read": false
+        },
+        {
+            "id": 336,
+            "name": "User_VKNlxn",
+            "subject": "Test_nAVcJWaS",
+            "read": false
+        },
+        {
+            "id": 337,
+            "name": "User_xSQwwf",
+            "subject": "Test_onMoHYhX",
+            "read": false
+        },
+        {
+            "id": 338,
+            "name": "User_JLltfl",
+            "subject": "Test_kMEKbmVL",
+            "read": false
+        },
+        {
+            "id": 339,
+            "name": "User_rFaHiy",
+            "subject": "Test_jLWFrhBA",
+            "read": false
+        },
+        {
+            "id": 340,
+            "name": "User_zamkZU",
+            "subject": "Test_RXCJBJhQ",
+            "read": false
+        },
+        {
+            "id": 341,
+            "name": "User_YyaMtS",
+            "subject": "Test_yQoBRlKo",
+            "read": false
+        },
+        {
+            "id": 342,
+            "name": "User_AuisLS",
+            "subject": "Test_QulstoGG",
+            "read": false
+        },
+        {
+            "id": 343,
+            "name": "User_NAAyeL",
+            "subject": "Test_EOzCxNUc",
+            "read": false
+        },
+        {
+            "id": 344,
+            "name": "User_PFDgmz",
+            "subject": "Test_KdltuBSZ",
+            "read": false
+        },
+        {
+            "id": 345,
+            "name": "User_GUSrGh",
+            "subject": "Test_XgcDNpxx",
+            "read": false
+        },
+        {
+            "id": 346,
+            "name": "User_HqcfRV",
+            "subject": "Test_WeikfZLM",
+            "read": false
+        },
+        {
+            "id": 347,
+            "name": "User_WQUHax",
+            "subject": "Test_tUEmGznZ",
+            "read": false
+        },
+        {
+            "id": 348,
+            "name": "User_kqblhc",
+            "subject": "Test_LLuRnhjQ",
+            "read": false
+        },
+        {
+            "id": 349,
+            "name": "User_wtPeDM",
+            "subject": "Test_WIhRhNAE",
+            "read": false
+        },
+        {
+            "id": 350,
+            "name": "User_AbzQct",
+            "subject": "Test_zAZlPoJh",
+            "read": false
+        },
+        {
+            "id": 351,
+            "name": "User_AKJUuh",
+            "subject": "Test_rIQvcrjK",
+            "read": false
+        },
+        {
+            "id": 352,
+            "name": "User_revJZJ",
+            "subject": "Test_QGfzZlEo",
+            "read": false
+        },
+        {
+            "id": 353,
+            "name": "User_bqxhbj",
+            "subject": "Test_OtIXwywv",
+            "read": false
+        },
+        {
+            "id": 354,
+            "name": "User_tPUUmf",
+            "subject": "Test_wZefJMWb",
+            "read": false
+        },
+        {
+            "id": 355,
+            "name": "User_UBqgCd",
+            "subject": "Test_XcDDQubx",
+            "read": false
+        },
+        {
+            "id": 356,
+            "name": "User_bUesny",
+            "subject": "Test_YMLXgrSe",
+            "read": false
+        },
+        {
+            "id": 357,
+            "name": "User_NemhPp",
+            "subject": "Test_RiijNXwB",
+            "read": false
+        },
+        {
+            "id": 358,
+            "name": "User_ZkHGyE",
+            "subject": "Test_fdKskmwJ",
+            "read": false
+        },
+        {
+            "id": 359,
+            "name": "User_EnkBDF",
+            "subject": "Test_wyouCbgS",
+            "read": false
+        },
+        {
+            "id": 360,
+            "name": "User_cuWxBW",
+            "subject": "Test_CpdHlRMt",
+            "read": false
+        },
+        {
+            "id": 361,
+            "name": "User_qxOGKI",
+            "subject": "Test_KPsjrHpz",
+            "read": false
+        },
+        {
+            "id": 362,
+            "name": "User_MJUHBz",
+            "subject": "Test_zrlymypA",
+            "read": false
+        },
+        {
+            "id": 363,
+            "name": "User_dkabqp",
+            "subject": "Test_QaxmyXfN",
+            "read": false
+        },
+        {
+            "id": 364,
+            "name": "User_ItIhXn",
+            "subject": "Test_ApMwPkya",
+            "read": false
+        },
+        {
+            "id": 365,
+            "name": "User_tMwYkp",
+            "subject": "Test_doCOtAdK",
+            "read": false
+        },
+        {
+            "id": 366,
+            "name": "User_GdURue",
+            "subject": "Test_aBTDyWcD",
+            "read": false
+        },
+        {
+            "id": 367,
+            "name": "User_GMkCRb",
+            "subject": "Test_sObQZdQJ",
+            "read": false
+        },
+        {
+            "id": 368,
+            "name": "User_qfzORr",
+            "subject": "Test_oUMokPzL",
+            "read": false
+        },
+        {
+            "id": 369,
+            "name": "User_kOfjDk",
+            "subject": "Test_kwMnDgWF",
+            "read": false
+        },
+        {
+            "id": 370,
+            "name": "User_xzRzAz",
+            "subject": "Test_qUcsHGJg",
+            "read": false
+        },
+        {
+            "id": 371,
+            "name": "User_bZCAKw",
+            "subject": "Test_UvAFNMoe",
+            "read": false
+        },
+        {
+            "id": 372,
+            "name": "User_JTZAIc",
+            "subject": "Test_GtIeNuZM",
+            "read": false
+        },
+        {
+            "id": 373,
+            "name": "User_EPWGjZ",
+            "subject": "Test_tdMKWbVQ",
+            "read": false
+        },
+        {
+            "id": 374,
+            "name": "User_Gbfhld",
+            "subject": "Test_CfOhEheb",
+            "read": false
+        },
+        {
+            "id": 375,
+            "name": "User_XiDesq",
+            "subject": "Test_EHnfFpCC",
+            "read": false
+        },
+        {
+            "id": 376,
+            "name": "User_YTcPPR",
+            "subject": "Test_yTwGXGGz",
+            "read": false
+        },
+        {
+            "id": 377,
+            "name": "User_XzronU",
+            "subject": "Test_PvSSyiIy",
+            "read": false
+        },
+        {
+            "id": 378,
+            "name": "User_SEqKNE",
+            "subject": "Test_UYVuIqPp",
+            "read": false
+        },
+        {
+            "id": 379,
+            "name": "User_dPVuil",
+            "subject": "Test_gbygUtHU",
+            "read": false
+        },
+        {
+            "id": 380,
+            "name": "User_VvNDeT",
+            "subject": "Test_AxNSLymQ",
+            "read": false
+        },
+        {
+            "id": 381,
+            "name": "User_QTgNhk",
+            "subject": "Test_HLFZKsbZ",
+            "read": false
+        },
+        {
+            "id": 382,
+            "name": "User_CukAdd",
+            "subject": "Test_IroQhtAJ",
+            "read": false
+        },
+        {
+            "id": 383,
+            "name": "User_ZVfUOY",
+            "subject": "Test_athFdacC",
+            "read": false
+        },
+        {
+            "id": 384,
+            "name": "User_KTtYJe",
+            "subject": "Test_BlqXnGrX",
+            "read": false
+        },
+        {
+            "id": 385,
+            "name": "User_xDBxFp",
+            "subject": "Test_ORMKRjAb",
+            "read": false
+        },
+        {
+            "id": 386,
+            "name": "User_tYMFGr",
+            "subject": "Test_vIXXtPXF",
+            "read": false
+        },
+        {
+            "id": 387,
+            "name": "User_rbJVSJ",
+            "subject": "Test_pdrlzUpM",
+            "read": false
+        },
+        {
+            "id": 388,
+            "name": "User_QiGmUS",
+            "subject": "Test_xYYDHtDX",
+            "read": false
+        },
+        {
+            "id": 389,
+            "name": "User_NTazHp",
+            "subject": "Test_yJoGlSxL",
+            "read": false
+        },
+        {
+            "id": 390,
+            "name": "User_BTICMB",
+            "subject": "Test_yKINFJqE",
+            "read": false
+        },
+        {
+            "id": 391,
+            "name": "User_QAvIHP",
+            "subject": "Test_QJnaHYcX",
+            "read": false
+        },
+        {
+            "id": 392,
+            "name": "User_bcHMRb",
+            "subject": "Test_URDmuFBI",
+            "read": false
+        },
+        {
+            "id": 393,
+            "name": "User_JYwxsZ",
+            "subject": "Test_TyPOBQkj",
+            "read": false
+        },
+        {
+            "id": 394,
+            "name": "User_QhVlry",
+            "subject": "Test_IjQYvRtR",
+            "read": false
+        },
+        {
+            "id": 395,
+            "name": "User_hUNSSd",
+            "subject": "Test_ucMguDfN",
+            "read": false
+        },
+        {
+            "id": 396,
+            "name": "User_JHRhKn",
+            "subject": "Test_PdmYmCIR",
+            "read": false
+        },
+        {
+            "id": 397,
+            "name": "User_OfXDfE",
+            "subject": "Test_fWVRxTMd",
+            "read": false
+        },
+        {
+            "id": 398,
+            "name": "User_unJlcl",
+            "subject": "Test_lKRCxSiT",
+            "read": false
+        },
+        {
+            "id": 399,
+            "name": "User_slaSfM",
+            "subject": "Test_kCRFNnUF",
+            "read": false
+        },
+        {
+            "id": 400,
+            "name": "User_jPyLRb",
+            "subject": "Test_hKFAksuA",
+            "read": false
+        },
+        {
+            "id": 401,
+            "name": "User_gvZOmr",
+            "subject": "Test_BuefbjsF",
+            "read": false
+        },
+        {
+            "id": 402,
+            "name": "User_WqFetm",
+            "subject": "Test_lYswZChR",
+            "read": false
+        },
+        {
+            "id": 403,
+            "name": "User_mVjfsQ",
+            "subject": "Test_lLVuYRkv",
+            "read": false
+        },
+        {
+            "id": 404,
+            "name": "User_KAHaaO",
+            "subject": "Test_TmvIbRfc",
+            "read": false
+        },
+        {
+            "id": 405,
             "name": "TestName001",
             "subject": "Book a room",
             "read": false
@@ -88,54 +2500,54 @@ Browser launched and application opened.</msg>
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.717509" elapsed="0.000457"/>
+<status status="PASS" start="2025-11-12T11:06:27.638624" elapsed="0.002627"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:00.718406" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:00 GMT",
+<msg time="2025-11-12T11:06:27.642205" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 11:06:27 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
     "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "FdTGVHsCRbCurs15w9P4nw",
+    "x-railway-request-id": "TjGkA40KQ6-85a5fN8N_Fg",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IBMbc8bo%2FggoEvKhzV%2F6pEsu4%2BZute0OC1BCkaOhczpH6gK7b9%2FGaILaySrA7KIB1m9w0iTJlws%2BNt%2FveXc2c8D0Q8%2FKJDNaG0gKqWIZ8pHpvmPE6hwyGZCg\"}]}",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Ciad1OZS8yUUdvbNsD7B2SmhR79F7tIBtDmHHZ3TdlN7e1NnpfYoBLjZg0vps%2BhJuAmwPy9zybYjXHnxibVg90RLvlMTXhOwqnuPBHZA47coSPhSTPnuaHSM\"}]}",
     "Content-Encoding": "gzip",
-    "CF-RAY": "99d3b9f96bc465a8-FRA",
+    "CF-RAY": "99d58f611c3adcba-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.718104" elapsed="0.000338"/>
+<status status="PASS" start="2025-11-12T11:06:27.641596" elapsed="0.000668"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:00.718791" level="INFO">200</msg>
+<msg time="2025-11-12T11:06:27.642822" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.718523" elapsed="0.000298"/>
+<status status="PASS" start="2025-11-12T11:06:27.642405" elapsed="0.000466"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.116694" elapsed="0.602164"/>
+<status status="PASS" start="2025-11-12T11:06:27.015060" elapsed="0.627849"/>
 </kw>
-<msg time="2025-11-12T05:46:00.718944" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
+<msg time="2025-11-12T11:06:27.643013" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24ab7140&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.719211" elapsed="0.000082"/>
+<status status="PASS" start="2025-11-12T11:06:27.643290" elapsed="0.000080"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:00.719126" elapsed="0.000200"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x70fb24ab7140&gt;</arg>
+<status status="PASS" start="2025-11-12T11:06:27.643209" elapsed="0.000196"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.719012" elapsed="0.000340"/>
+<status status="PASS" start="2025-11-12T11:06:27.643093" elapsed="0.000339"/>
 </kw>
-<msg time="2025-11-12T05:46:00.719404" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53ad580&gt;</msg>
+<msg time="2025-11-12T11:06:27.643488" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24ab7140&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all messages</arg>
 <arg>https://automationintesting.online/api/message</arg>
@@ -154,16 +2566,23 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.112951" elapsed="0.606468"/>
+<status status="PASS" start="2025-11-12T11:06:27.011734" elapsed="0.631770"/>
 </kw>
 <kw name="Execute RC" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:00.738937" level="INFO">data_manager.RC('''get all messages''','''body''','''$.messages[*].name''')
-['James Dean', 'Sourabh Kumar', 'TestName001']</msg>
-<msg time="2025-11-12T05:46:00.739053" level="INFO">${name_api} = [
+<msg time="2025-11-12T11:06:27.670436" level="INFO">data_manager.RC('''get all messages''','''body''','''$.messages[*].name''')
+['James Dean', 'Sourabh Kumar', 'User_oEdUJM', 'User_uaxsgL', 'User_OksdyZ', 'User_eVylnA', 'User_BVNKDX', 'User_dyMjWr', 'User_xnMvqq', 'User_nOcBVf', 'User_aOjmtt', 'User_gQSHDP', 'User_eMHVAK', 'User_fhjlTs', 'User_MhYfGY', 'User_FGCxov', 'User_RkWCYV', 'User_fNqqoC', 'User_MYVWDC', 'User_csZRDt', 'User_JkpALl', 'User_GWLtjp', 'User_HlDhwu', 'User_RMUaaV', 'User_srpSKE', 'User_oxMByC', 'User_prUkMG', 'User_FjFuaT', 'User_nVhZpo', 'User_nNAxCx', 'User_asbugG', 'User_mthixF', 'User_IHgyDC', 'User_dyqTLH', 'User_EcOYlK', 'User_VvVtxC', 'User_UwsdAg', 'User_licPSg', 'User_dpSZjE', 'User_NYhHsP', 'User_eIFXcX', 'User_HmKVUf', 'User_GeuWld', 'User_dWtbQJ', 'User_XxUiWn', 'User_DtdFjN', 'User_VCTmUj', 'User_OXYZdJ', 'User_mqCSKr', 'User_ofbOZP', 'User_qXSVSl', 'User_dWTFuo', 'User_GoLmuT', 'User_IZYfvp', 'User_ARswBp', 'User_uIMgDN', 'User_WjVXWr', 'User_OsVVmT', 'User_ZbKOKg', 'User_fMQWYA', 'User_NSeULb', 'User_XKVKXT', 'User_znOOJo', 'User_jiraky', 'User_CrZjxr', 'User_zIwKEo', 'User_rcWbtf', 'User_BKWKnc', 'User_RRkyOD', 'User_ChRfVs', 'User_ThhYTM', 'User_XUsslJ', 'User_lBKFVv', 'User_HXWFkM', 'User_YvPGUE', 'User_KcHblx', 'User_eXsjIk', 'User_ZRigWb', 'User_yPZfEa', 'User_ZGuvIP', 'User_qOQVXz', 'User_vDtrAb', 'User_urwesJ', 'User_hbwngL', 'User_gpXvsU', 'User_DRUnkR', 'User_xbnopN', 'User_rWOknt', 'User_rFhaJS', 'User_HKKwiW', 'User_YBMJPL', 'User_eNLvpD', 'User_JRKPaA', 'User_qvpVyf', 'User_KMWZax', 'User_dbXEXX', 'User_BlyfrU', 'User_jUQzBg', 'User_fltXsm', 'User_yfqeoE', 'User_WOnlzM', 'User_YjYrEN', 'User_MNjqqN', 'User_yXgBBk', 'User_WCMByF', 'User_HvVbbK', 'User_JPbVWG', 'User_IpKpWf', 'User_fKkswG', 'User_CGZXPN', 'User_vKyvNj', 'User_SjUVdo', 'User_CcUBKB', 'User_HUtClA', 'User_nCEakv', 'User_ekQpNN', 'User_hOcpFO', 'User_NxcnsE', 'User_JIUoUY', 'User_lgALQy', 'User_NTytsm', 'User_MHgsJj', 'User_JqoZPd', 'User_xdfETH', 'User_BnBrVu', 'User_dGjNqp', 'User_sOMMWI', 'User_ozOHSP', 'User_BJLpkK', 'User_vZGQrc', 'User_fUubKf', 'User_rFTLQT', 'User_ZViEpE', 'User_vQVOln', 'User_wDAHQl', 'User_hBaeCW', 'User_HTLIkZ', 'User_ZggcgO', 'User_JdadfX', 'User_IydMjB', 'User_PzGQlW', 'User_NCgIeF', 'User_nXNtbs', 'User_CjgPTG', 'User_FKGRaW', 'User_kBxkBG', 'User_QsZNcY', 'User_EIrDgF', 'User_ZlczcM', 'User_KhLnac', 'User_JXpywX', 'User_jumiNh', 'User_nYYjNQ', 'User_GHhnkQ', 'User_EHXDKA', 'User_tKSGIq', 'User_zXEugs', 'User_lyXccM', 'User_iFEDHz', 'User_FZOycC', 'User_KemUgV', 'User_gvDrZi', 'User_cILpIO', 'User_ESXnwA', 'User_aEoSwe', 'User_bbCORs', 'User_Fdtcjk', 'User_fqIafv', 'User_uiAxup', 'User_LodJsv', 'User_PWQHuY', 'User_vyiSqy', 'User_VafjmF', 'User_OTplsT', 'User_aGtGWx', 'User_uEmjlk', 'User_sGUcDs', 'User_beHnSA', 'User_QkovjT', 'User_BgqVNz', 'User_dUcrAc', 'User_OjdeNo', 'User_TWMbFN', 'User_VYtAXn', 'User_ThiKAl', 'User_TseVnL', 'User_wBExJj', 'User_NQWFwm', 'User_kjDwIf', 'User_hPAqYI', 'User_fEuFcX', 'User_kMSgqt', 'User_IaaLTh', 'User_wjBJUz', 'User_fmwZnv', 'User_Wtwlwo', 'User_FJnKyo', 'User_MzUzDs', 'User_jjqKIq', 'User_XuEFYH', 'User_QgyfWb', 'User_aPoZwO', 'Sourabh Kumar', 'User_nrIxOy', 'User_DtFEBP', 'User_ZZeFQM', 'User_vngvMD', 'User_mIOAdV', 'User_yBUFgW', 'User_ZApsbf', 'User_YiAvVZ', 'User_XhEUwI', 'User_TNSvTc', 'User_tgFfey', 'User_XWEIIM', 'User_wQwcyG', 'User_noTYiX', 'User_qPjYQz', 'User_tLRHZp', 'User_sneRzj', 'User_ahmAvp', 'User_JAAevg', 'User_cSMMwn', 'User_JqBYzG', 'User_ggHiSQ', 'User_XSEDlx', 'User_lewasu', 'User_fYnvAy', 'User_mgvhCh', 'User_sQvYhQ', 'User_IbAimJ', 'User_QKiFjc', 'User_wstcOv', 'User_bctgAB', 'User_DqECEP', 'User_UtSjQp', 'User_lnHaaw', 'User_cHfmqk', 'User_iaBgun', 'User_zaCRRN', 'User_DDpHsp', 'User_LZfaGE', 'User_dRkJmX', 'User_dmNtkq', 'User_LLlzAM', 'User_qJqhGV', 'User_PxsrhH', 'User_gYTjbl', 'User_IKbbCv', 'User_itAuhw', 'User_uAPwxy', 'User_QeTFwg', 'User_prqyHG', 'User_BtcuMV', 'User_GAqdKQ', 'User_inTYKe', 'User_yjlEEA', 'User_XklyzR', 'User_OserFM', 'User_KhVaQu', 'User_SPvphQ', 'User_xFyHhU', 'User_AhepwL', 'User_zfQOOz', 'User_FxhIIJ', 'User_YZiplj', 'User_cQwSEO', 'User_jeKBkh', 'User_Hvxxmt', 'User_Ehbtru', 'User_BpSuRb', 'User_pXImDK', 'User_AIBRjz', 'User_jimIZe', 'User_BRdEYG', 'User_IwCWJY', 'User_kVGURu', 'User_VpxEgI', 'User_knYjrd', 'User_WoZRts', 'User_smErOY', 'User_FlIYcK', 'User_wsAqiF', 'User_YfeynZ', 'User_jltCcj', 'User_fFOHVh', 'User_oxvfNR', 'User_hlqAAW', 'User_VqxtNr', 'User_NsDkgk', 'User_qpMjFj', 'User_lSykud', 'User_siLUuS', 'User_qGAsQI', 'User_BvUUuB', 'User_bGvYMG', 'User_CGEzZM', 'User_IewQhn', 'User_yhkySp', 'User_IlTzmK', 'User_xLsBgg', 'User_Cvcgao', 'User_hwALJk', 'Sourabh Kumar', 'User_pwVHov', 'User_FhUtYy', 'User_jjEtFO', 'User_DCFnxy', 'User_aKNBri', 'User_sckEVH', 'User_mATjKm', 'User_hSsOTu', 'User_XnVgrc', 'User_mgjknI', 'User_qZEmmB', 'User_CPJSxP', 'User_HOWhCS', 'User_EGZTUU', 'User_dNLTfh', 'User_XteIkw', 'User_kqNlxi', 'User_MazHah', 'User_apYSxB', 'User_tqanmB', 'User_nsQJpT', 'User_BzmEQQ', 'User_rJOxjR', 'User_FUTUtA', 'User_pWmHfb', 'User_qMyoaw', 'User_hSLldl', 'User_vYljrk', 'User_gjrDef', 'User_VQADqR', 'User_FQBcJi', 'User_VKNlxn', 'User_xSQwwf', 'User_JLltfl', 'User_rFaHiy', 'User_zamkZU', 'User_YyaMtS', 'User_AuisLS', 'User_NAAyeL', 'User_PFDgmz', 'User_GUSrGh', 'User_HqcfRV', 'User_WQUHax', 'User_kqblhc', 'User_wtPeDM', 'User_AbzQct', 'User_AKJUuh', 'User_revJZJ', 'User_bqxhbj', 'User_tPUUmf', 'User_UBqgCd', 'User_bUesny', 'User_NemhPp', 'User_ZkHGyE', 'User_EnkBDF', 'User_cuWxBW', 'User_qxOGKI', 'User_MJUHBz', 'User_dkabqp', 'User_ItIhXn', 'User_tMwYkp', 'User_GdURue', 'User_GMkCRb', 'User_qfzORr', 'User_kOfjDk', 'User_xzRzAz', 'User_bZCAKw', 'User_JTZAIc', 'User_EPWGjZ', 'User_Gbfhld', 'User_XiDesq', 'User_YTcPPR', 'User_XzronU', 'User_SEqKNE', 'User_dPVuil', 'User_VvNDeT', 'User_QTgNhk', 'User_CukAdd', 'User_ZVfUOY', 'User_KTtYJe', 'User_xDBxFp', 'User_tYMFGr', 'User_rbJVSJ', 'User_QiGmUS', 'User_NTazHp', 'User_BTICMB', 'User_QAvIHP', 'User_bcHMRb', 'User_JYwxsZ', 'User_QhVlry', 'User_hUNSSd', 'User_JHRhKn', 'User_OfXDfE', 'User_unJlcl', 'User_slaSfM', 'User_jPyLRb', 'User_gvZOmr', 'User_WqFetm', 'User_mVjfsQ', 'User_KAHaaO', 'TestName001']</msg>
+<msg time="2025-11-12T11:06:27.671312" level="INFO">${name_api} = [
     "James Dean",
     "Sourabh Kumar",
-    "TestName001"
-]</msg>
+    "User_oEdUJM",
+    "User_uaxsgL",
+    "User_OksdyZ",
+    "User_eVylnA",
+    "User_BVNKDX",
+    "User_dyMjWr",
+    "User_xnMvqq",
+    "User_nOcBVf",
+    "Us...</msg>
 <var>${name_api}</var>
 <arg>&lt;&lt;&lt;rc, get all messages, body,$.messages[*].name&gt;&gt;&gt;</arg>
 <doc>input : lets you evaluate all the RC macros, including multiple RCs and NOW immediately and run the response channelization, you can store the value in any variable and use it as required
@@ -176,136 +2595,93 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
                             &lt;&lt;&lt;RC, src request id, body, patch json&gt;&gt;&gt;
 Returns:
     returns the value after running the response channelization, it could be a single node value or entire json, depending on whether it is normal RC or entire</doc>
-<status status="PASS" start="2025-11-12T05:46:00.720550" elapsed="0.018519"/>
+<status status="PASS" start="2025-11-12T11:06:27.643580" elapsed="0.027758"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${name_api}</arg>
 <arg>${name}</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.739193" elapsed="0.000136"/>
+<status status="PASS" start="2025-11-12T11:06:27.671471" elapsed="0.000144"/>
 </kw>
-<status status="PASS" start="2025-11-12T05:46:00.112168" elapsed="0.627241"/>
+<status status="PASS" start="2025-11-12T11:06:27.011131" elapsed="0.660565"/>
 </test>
 <test id="s1-t3" name="Positive Scenario: Get available hotel rooms details" line="31">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:00.740204" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
+<msg time="2025-11-12T11:06:27.672554" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495ce90&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:00.740841" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T11:06:27.673256" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.740516" elapsed="0.000357"/>
+<status status="PASS" start="2025-11-12T11:06:27.672958" elapsed="0.000329"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.740397" elapsed="0.000520"/>
+<status status="PASS" start="2025-11-12T11:06:27.672795" elapsed="0.000527"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.740979" elapsed="0.000109"/>
+<status status="PASS" start="2025-11-12T11:06:27.673383" elapsed="0.000074"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.740279" elapsed="0.000903"/>
+<status status="PASS" start="2025-11-12T11:06:27.672648" elapsed="0.000836"/>
 </kw>
-<msg time="2025-11-12T05:46:00.741308" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
+<msg time="2025-11-12T11:06:27.673555" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495ce90&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:01.678563" level="INFO">{
-    "rooms": [
-        {
-            "roomid": 1,
-            "roomName": "101",
-            "type": "Single",
-            "accessible": true,
-            "image": "/images/room1.jpg",
-            "description": "Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.",
-            "features": [
-                "TV",
-                "WiFi",
-                "Safe"
-            ],
-            "roomPrice": 100
-        },
-        {
-            "roomid": 2,
-            "roomName": "102",
-            "type": "Double",
-            "accessible": true,
-            "image": "/images/room2.jpg",
-            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
-            "features": [
-                "TV",
-                "Radio",
-                "Safe"
-            ],
-            "roomPrice": 150
-        },
-        {
-            "roomid": 3,
-            "roomName": "103",
-            "type": "Suite",
-            "accessible": true,
-            "image": "/images/room3.jpg",
-            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
-            "features": [
-                "Radio",
-                "WiFi",
-                "Safe"
-            ],
-            "roomPrice": 225
-        }
-    ]
+<msg time="2025-11-12T11:06:28.634464" level="INFO">{
+    "rooms": []
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:01.678166" elapsed="0.000451"/>
+<status status="PASS" start="2025-11-12T11:06:28.633935" elapsed="0.000581"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:01.679100" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:01 GMT",
+<msg time="2025-11-12T11:06:28.635050" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 11:06:28 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
     "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "62ywvJi3SwCkhBRhm3z_FQ",
+    "x-railway-request-id": "Fd2bCMevQHunrEdVm3z_FQ",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=KFKNyutElD9nPeJUviGAR2xymdN9oEyQLvu2%2BL6gXFFGGSS65kI1bTSMdO2VFK0cmh5%2B14BXNkiKo3OWv2INcqLjtqID37fsYXxpkWPbEXa4dcSRq4fwO79Z\"}]}",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VX6TfMCI7zucXo009bOBgusYqPY0gFWgacND97Emthj51uimCvMLOq8MFqfNYq7hDchYoCfSjMl2QkiC%2BV5EduASLtTyMgoGkdVtDiF3Frf0B6EMi49p7tRK\"}]}",
     "Content-Encoding": "gzip",
-    "CF-RAY": "99d3b9fdad742b41-FRA",
+    "CF-RAY": "99d58f6589fb3666-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:01.678766" elapsed="0.000379"/>
+<status status="PASS" start="2025-11-12T11:06:28.634677" elapsed="0.000415"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:01.679541" level="INFO">200</msg>
+<msg time="2025-11-12T11:06:28.635483" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:01.679238" elapsed="0.000336"/>
+<status status="PASS" start="2025-11-12T11:06:28.635190" elapsed="0.000322"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:00.741411" elapsed="0.938202"/>
+<status status="PASS" start="2025-11-12T11:06:27.673610" elapsed="0.961939"/>
 </kw>
-<msg time="2025-11-12T05:46:01.679711" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
+<msg time="2025-11-12T11:06:28.635637" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495ce90&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:01.680001" elapsed="0.000092"/>
+<status status="PASS" start="2025-11-12T11:06:28.635909" elapsed="0.000086"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:01.679908" elapsed="0.000229"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x70fb2495ce90&gt;</arg>
+<status status="PASS" start="2025-11-12T11:06:28.635821" elapsed="0.000211"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:01.679788" elapsed="0.000384"/>
+<status status="PASS" start="2025-11-12T11:06:28.635708" elapsed="0.000353"/>
 </kw>
-<msg time="2025-11-12T05:46:01.680230" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53af200&gt;</msg>
+<msg time="2025-11-12T11:06:28.636116" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495ce90&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -324,12 +2700,12 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:00.739942" elapsed="0.940306"/>
+<status status="PASS" start="2025-11-12T11:06:27.672303" elapsed="0.963829"/>
 </kw>
 <kw name="Execute RC" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:01.695269" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
-1</msg>
-<msg time="2025-11-12T05:46:01.695373" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T11:06:28.655626" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
+No matches found for given json path, please review: $.rooms[0].roomid</msg>
+<msg time="2025-11-12T11:06:28.655741" level="INFO">${room_id} = &lt;&lt;&lt;rc, get all rooms, body,$.rooms[0].roomid&gt;&gt;&gt;</msg>
 <var>${room_id}</var>
 <arg>&lt;&lt;&lt;rc, get all rooms, body,${JSON_QUERY}&gt;&gt;&gt;</arg>
 <doc>input : lets you evaluate all the RC macros, including multiple RCs and NOW immediately and run the response channelization, you can store the value in any variable and use it as required
@@ -342,29 +2718,29 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
                             &lt;&lt;&lt;RC, src request id, body, patch json&gt;&gt;&gt;
 Returns:
     returns the value after running the response channelization, it could be a single node value or entire json, depending on whether it is normal RC or entire</doc>
-<status status="PASS" start="2025-11-12T05:46:01.680956" elapsed="0.014434"/>
+<status status="PASS" start="2025-11-12T11:06:28.636809" elapsed="0.018951"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-12T05:46:01.695713" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T11:06:28.656060" level="INFO">${room_id} = &lt;&lt;&lt;rc, get all rooms, body,$.rooms[0].roomid&gt;&gt;&gt;</msg>
 <var>${room_id}</var>
 <arg>${room_id}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-12T05:46:01.695529" elapsed="0.000202"/>
+<status status="PASS" start="2025-11-12T11:06:28.655910" elapsed="0.000167"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-11-12T05:46:01.695934" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T11:06:28.656288" level="INFO">${room_id} = &lt;&lt;&lt;rc, get all rooms, body,$.rooms[0].roomid&gt;&gt;&gt;</msg>
 <arg>${room_id}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-11-12T05:46:01.695816" elapsed="0.000142"/>
+<status status="PASS" start="2025-11-12T11:06:28.656158" elapsed="0.000156"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:00.739595" elapsed="0.956424"/>
+<status status="PASS" start="2025-11-12T11:06:27.671893" elapsed="0.984483"/>
 </test>
 <test id="s1-t4" name="Positive Scenario: Create booking from UI" line="48">
 <kw name="Execute RC" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:01.714831" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
-1</msg>
-<msg time="2025-11-12T05:46:01.714950" level="INFO">${room_id} = 1</msg>
+<msg time="2025-11-12T11:06:28.677981" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
+No matches found for given json path, please review: $.rooms[0].roomid</msg>
+<msg time="2025-11-12T11:06:28.678118" level="INFO">${room_id} = &lt;&lt;&lt;rc, get all rooms, body,$.rooms[0].roomid&gt;&gt;&gt;</msg>
 <var>${room_id}</var>
 <arg>&lt;&lt;&lt;rc, get all rooms, body,${JSON_QUERY}&gt;&gt;&gt;</arg>
 <doc>input : lets you evaluate all the RC macros, including multiple RCs and NOW immediately and run the response channelization, you can store the value in any variable and use it as required
@@ -377,24 +2753,24 @@ Returns:
                             &lt;&lt;&lt;RC, src request id, body, patch json&gt;&gt;&gt;
 Returns:
     returns the value after running the response channelization, it could be a single node value or entire json, depending on whether it is normal RC or entire</doc>
-<status status="PASS" start="2025-11-12T05:46:01.696506" elapsed="0.018464"/>
+<status status="PASS" start="2025-11-12T11:06:28.657199" elapsed="0.020939"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>====&gt;&gt; Using RC room id for booking from UI: ${room_id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:01.715119" elapsed="0.000244"/>
+<status status="PASS" start="2025-11-12T11:06:28.678298" elapsed="0.000242"/>
 </kw>
 <kw name="Launch Browser Application" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:05.093457" level="INFO">Launching browser: firefox
+<msg time="2025-11-12T11:06:32.054420" level="INFO">Launching browser: firefox
 Browser launched and application opened.</msg>
 <arg>firefox</arg>
-<status status="PASS" start="2025-11-12T05:46:01.715470" elapsed="3.378140"/>
+<status status="PASS" start="2025-11-12T11:06:28.678631" elapsed="3.375900"/>
 </kw>
 <kw name="Login As Admin" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:05.107654" level="INFO">.env file loaded: True</msg>
-<msg time="2025-11-12T05:46:05.849878" level="INFO">Secrets fetched successfully:</msg>
-<msg time="2025-11-12T05:46:11.793881" level="INFO">Admin login successful.</msg>
-<msg time="2025-11-12T05:46:11.794055" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
+<msg time="2025-11-12T11:06:32.070204" level="INFO">.env file loaded: True</msg>
+<msg time="2025-11-12T11:06:32.755660" level="INFO">Secrets fetched successfully:</msg>
+<msg time="2025-11-12T11:06:38.745259" level="INFO">Admin login successful.</msg>
+<msg time="2025-11-12T11:06:38.745405" level="INFO">dp.st.dev.HwEdK7f9C1OoOQkd7R98w2VOIUNicpbq746fLh5aXdb
 {
   "DOPPLER_CONFIG": "dev",
   "DOPPLER_ENVIRONMENT": "dev",
@@ -402,155 +2778,130 @@ Browser launched and application opened.</msg>
   "PASSWORD": "password",
   "USER": "admin"
 }</msg>
-<status status="PASS" start="2025-11-12T05:46:05.094021" elapsed="6.700124"/>
+<status status="PASS" start="2025-11-12T11:06:32.054791" elapsed="6.690702"/>
 </kw>
 <kw name="Go Back To Front Page" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:12.614359" level="INFO">clicked on Home/Front Page.</msg>
-<status status="PASS" start="2025-11-12T05:46:11.794433" elapsed="0.820172"/>
+<msg time="2025-11-12T11:06:39.659621" level="INFO">clicked on Home/Front Page.</msg>
+<status status="PASS" start="2025-11-12T11:06:38.745754" elapsed="0.914014"/>
 </kw>
 <kw name="Select Dates For Booking" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:14.484432" level="INFO">CheckIn Date selected as : Choose Tuesday, 16 December</msg>
-<msg time="2025-11-12T05:46:16.273549" level="INFO">CheckIn Date selected as : Choose Wednesday, 17 December</msg>
-<msg time="2025-11-12T05:46:16.847169" level="INFO">Clicked on checked availability</msg>
+<msg time="2025-11-12T11:06:41.548130" level="INFO">CheckIn Date selected as : Choose Tuesday, 16 December</msg>
+<msg time="2025-11-12T11:06:43.384310" level="INFO">CheckIn Date selected as : Choose Wednesday, 17 December</msg>
+<msg time="2025-11-12T11:06:43.952565" level="INFO">Clicked on checked availability</msg>
 <arg>${checkin}</arg>
 <arg>${checkout}</arg>
-<status status="PASS" start="2025-11-12T05:46:12.614976" elapsed="4.232351"/>
+<status status="PASS" start="2025-11-12T11:06:39.660010" elapsed="4.292738"/>
 </kw>
 <kw name="Select Room Type" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:19.295002" level="INFO">Clicked on Book Now</msg>
+<msg time="2025-11-12T11:07:15.465403" level="FAIL">TimeoutError: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("xpath=(//a[contains(@class, 'btn') and contains(@class, 'btn-primary') and normalize-space(text())='Book now'])[1]")
+</msg>
 <arg>${room_id}</arg>
-<status status="PASS" start="2025-11-12T05:46:16.847643" elapsed="2.447555"/>
+<status status="FAIL" start="2025-11-12T11:06:43.953194" elapsed="31.518051">TimeoutError: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("xpath=(//a[contains(@class, 'btn') and contains(@class, 'btn-primary') and normalize-space(text())='Book now'])[1]")
+</status>
 </kw>
 <kw name="Fill Reservation Details" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:21.455204" level="INFO">Reservation details entered</msg>
 <arg>${FIRSTNAME}</arg>
 <arg>${LASTNAME}</arg>
 <arg>${EMAIL}</arg>
 <arg>${PHONE}</arg>
-<status status="PASS" start="2025-11-12T05:46:19.295478" elapsed="2.159905"/>
+<status status="NOT RUN" start="2025-11-12T11:07:15.471636" elapsed="0.000093"/>
 </kw>
 <kw name="Confirm Reservation" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:23.027685" level="INFO">clicked on confirm reservation</msg>
-<msg time="2025-11-12T05:46:23.040476" level="INFO">Booking confirmation validated</msg>
-<status status="PASS" start="2025-11-12T05:46:21.455788" elapsed="1.584774"/>
+<status status="NOT RUN" start="2025-11-12T11:07:15.471925" elapsed="0.000038"/>
 </kw>
 <kw name="Capture Screenshot" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:23.178233" level="INFO">Screenshot saved: screenshots/screenshot_20251112_054623.png</msg>
-<status status="PASS" start="2025-11-12T05:46:23.040683" elapsed="0.137637"/>
+<status status="NOT RUN" start="2025-11-12T11:07:15.472109" elapsed="0.000051"/>
 </kw>
 <kw name="Close Browser" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:23.794237" level="INFO">Browser and context closed.</msg>
-<status status="PASS" start="2025-11-12T05:46:23.178491" elapsed="0.615868"/>
+<status status="NOT RUN" start="2025-11-12T11:07:15.472399" elapsed="0.000070"/>
 </kw>
 <tag>UI TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:01.696216" elapsed="22.098316"/>
+<status status="FAIL" start="2025-11-12T11:06:28.656560" elapsed="46.816470">TimeoutError: Page.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("xpath=(//a[contains(@class, 'btn') and contains(@class, 'btn-primary') and normalize-space(text())='Book now'])[1]")
+</status>
 </test>
 <test id="s1-t5" name="Positive Scenario: Check available rooms after booking" line="66">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:23.796738" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
+<msg time="2025-11-12T11:07:15.476663" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495b140&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:23.798354" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T11:07:15.477813" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:23.797560" elapsed="0.000876"/>
+<status status="PASS" start="2025-11-12T11:07:15.477427" elapsed="0.000432"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:23.797288" elapsed="0.003585"/>
+<status status="PASS" start="2025-11-12T11:07:15.477039" elapsed="0.000888"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:23.801084" elapsed="0.000354"/>
+<status status="PASS" start="2025-11-12T11:07:15.478024" elapsed="0.000113"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:23.796945" elapsed="0.004578"/>
+<status status="PASS" start="2025-11-12T11:07:15.476821" elapsed="0.001365"/>
 </kw>
-<msg time="2025-11-12T05:46:23.801673" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
+<msg time="2025-11-12T11:07:15.478280" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495b140&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.354430" level="INFO">{
-    "rooms": [
-        {
-            "roomid": 2,
-            "roomName": "102",
-            "type": "Double",
-            "accessible": true,
-            "image": "/images/room2.jpg",
-            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
-            "features": [
-                "TV",
-                "Radio",
-                "Safe"
-            ],
-            "roomPrice": 150
-        },
-        {
-            "roomid": 3,
-            "roomName": "103",
-            "type": "Suite",
-            "accessible": true,
-            "image": "/images/room3.jpg",
-            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
-            "features": [
-                "Radio",
-                "WiFi",
-                "Safe"
-            ],
-            "roomPrice": 225
-        }
-    ]
+<msg time="2025-11-12T11:07:16.199278" level="INFO">{
+    "rooms": []
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.353949" elapsed="0.000614"/>
+<status status="PASS" start="2025-11-12T11:07:16.198652" elapsed="0.000691"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.355847" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:24 GMT",
+<msg time="2025-11-12T11:07:16.199935" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 11:07:16 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
     "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "OsChRdptTXi2mSOgm3z_FQ",
+    "x-railway-request-id": "HoUz9m0ATqG_nt6CN8N_Fg",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=M%2FWkBqWX7lQdUCqhLyQlTOk4ndqr8%2FlC9LkyvXyQthP%2BDZAvbnUwwMdkYLJwhm6vea32nSpQPxBx36CWlHAITbHWTHnCT0II7s05s37Mv3jMxswMEkj%2FC1Cv\"}]}",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wkM6wughEoNIbmwAHkaAEJFEZIrR5Y72di3DmFBd9Bs8UUxtsU5%2Bni4RQrfC8oWh8DZbX5dm0rvqETAxEyld40rOUnCT3gHQUV2Le6kST36kh0YvsyJAV3JW\"}]}",
     "Content-Encoding": "gzip",
-    "CF-RAY": "99d3ba8d68019e0d-FRA",
+    "CF-RAY": "99d590906fd09255-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.355019" elapsed="0.001020"/>
+<status status="PASS" start="2025-11-12T11:07:16.199552" elapsed="0.000430"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.356645" level="INFO">200</msg>
+<msg time="2025-11-12T11:07:16.200486" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.356259" elapsed="0.000428"/>
+<status status="PASS" start="2025-11-12T11:07:16.200100" elapsed="0.000493"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:23.801798" elapsed="0.554935"/>
+<status status="PASS" start="2025-11-12T11:07:15.478349" elapsed="0.722332"/>
 </kw>
-<msg time="2025-11-12T05:46:24.356843" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
+<msg time="2025-11-12T11:07:16.200801" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495b140&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.357345" elapsed="0.000444"/>
+<status status="PASS" start="2025-11-12T11:07:16.201168" elapsed="0.000146"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:24.357210" elapsed="0.000635"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x70fb2495b140&gt;</arg>
+<status status="PASS" start="2025-11-12T11:07:16.201059" elapsed="0.000304"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.356962" elapsed="0.000931"/>
+<status status="PASS" start="2025-11-12T11:07:16.200908" elapsed="0.000491"/>
 </kw>
-<msg time="2025-11-12T05:46:24.357983" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5366630&gt;</msg>
+<msg time="2025-11-12T11:07:16.201474" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb2495b140&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -569,146 +2920,117 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:23.795999" elapsed="0.562010"/>
+<status status="PASS" start="2025-11-12T11:07:15.474978" elapsed="0.726516"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.358863" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
+<msg time="2025-11-12T11:07:16.202142" level="INFO">${data} = {'rooms': []}</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.358152" elapsed="0.000753"/>
+<status status="PASS" start="2025-11-12T11:07:16.201608" elapsed="0.000555"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-12T05:46:24.359231" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
+<msg time="2025-11-12T11:07:16.202418" level="INFO">${rooms} = []</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.359056" elapsed="0.000198"/>
+<status status="PASS" start="2025-11-12T11:07:16.202262" elapsed="0.000179"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.359452" level="INFO">Length is 2.</msg>
-<msg time="2025-11-12T05:46:24.359530" level="INFO">${total} = 2</msg>
+<msg time="2025-11-12T11:07:16.202651" level="INFO">Length is 0.</msg>
+<msg time="2025-11-12T11:07:16.202720" level="INFO">${total} = 0</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.359345" elapsed="0.000204"/>
+<status status="PASS" start="2025-11-12T11:07:16.202538" elapsed="0.000202"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after booking : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.359640" elapsed="0.000197"/>
+<status status="PASS" start="2025-11-12T11:07:16.202856" elapsed="0.000203"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:23.795183" elapsed="0.565471"/>
+<status status="PASS" start="2025-11-12T11:07:15.473786" elapsed="0.729376"/>
 </test>
 <test id="s1-t6" name="Positive Scenario: Get available hotel rooms details after booking from UI" line="79">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:24.361630" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
+<msg time="2025-11-12T11:07:16.204143" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24964470&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.362254" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T11:07:16.205062" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.361970" elapsed="0.000335"/>
+<status status="PASS" start="2025-11-12T11:07:16.204595" elapsed="0.000907"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.361865" elapsed="0.000477"/>
+<status status="PASS" start="2025-11-12T11:07:16.204423" elapsed="0.001148"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.362418" elapsed="0.000083"/>
+<status status="PASS" start="2025-11-12T11:07:16.205676" elapsed="0.000137"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.361733" elapsed="0.000814"/>
+<status status="PASS" start="2025-11-12T11:07:16.204253" elapsed="0.001601"/>
 </kw>
-<msg time="2025-11-12T05:46:24.362641" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
+<msg time="2025-11-12T11:07:16.205960" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24964470&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.953938" level="INFO">{
-    "rooms": [
-        {
-            "roomid": 2,
-            "roomName": "102",
-            "type": "Double",
-            "accessible": true,
-            "image": "/images/room2.jpg",
-            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
-            "features": [
-                "TV",
-                "Radio",
-                "Safe"
-            ],
-            "roomPrice": 150
-        },
-        {
-            "roomid": 3,
-            "roomName": "103",
-            "type": "Suite",
-            "accessible": true,
-            "image": "/images/room3.jpg",
-            "description": "Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ",
-            "features": [
-                "Radio",
-                "WiFi",
-                "Safe"
-            ],
-            "roomPrice": 225
-        }
-    ]
+<msg time="2025-11-12T11:07:16.817146" level="INFO">{
+    "rooms": []
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.952903" elapsed="0.001156"/>
+<status status="PASS" start="2025-11-12T11:07:16.816225" elapsed="0.000993"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.955304" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:24 GMT",
+<msg time="2025-11-12T11:07:16.817988" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 11:07:16 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
     "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "PTTlFz6tQFKMbxl1ss7a6g",
+    "x-railway-request-id": "u2bTGaJtREKlxUIUN8N_Fg",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zooyZ4gwX7L7l3Flg89TT%2Bovv0jXVp1LZzl2KjyXUDqeYlMW6UX34W9%2Bd%2FTdMDOsd6nXyCi7TcZG0YpcBDJ8vurgofM48WmGvhAHnSG8loFlofVSgO8IaQox\"}]}",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pe4Z6YyfvLYIHSba63DCDs7LaTppx%2BtyeZ6r8tc2%2BDZ3Gpd9Dmfb2jAXD7qRp1wjaJ%2FwZuw9b164hL0HZWdnxOP3tfL1vyB74TJTfoOTcsz2GOqgMuwX2Y7Q\"}]}",
     "Content-Encoding": "gzip",
-    "CF-RAY": "99d3ba90dcded3a8-FRA",
+    "CF-RAY": "99d59094afa9dcba-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.954454" elapsed="0.000974"/>
+<status status="PASS" start="2025-11-12T11:07:16.817472" elapsed="0.000573"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.956397" level="INFO">200</msg>
+<msg time="2025-11-12T11:07:16.819022" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.955654" elapsed="0.000829"/>
+<status status="PASS" start="2025-11-12T11:07:16.818219" elapsed="0.000945"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.362734" elapsed="0.593851"/>
+<status status="PASS" start="2025-11-12T11:07:16.206057" elapsed="0.613176"/>
 </kw>
-<msg time="2025-11-12T05:46:24.956885" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
+<msg time="2025-11-12T11:07:16.819389" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24964470&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.957704" elapsed="0.000234"/>
+<status status="PASS" start="2025-11-12T11:07:16.820128" elapsed="0.000143"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:24.957457" elapsed="0.000582"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x70fb24964470&gt;</arg>
+<status status="PASS" start="2025-11-12T11:07:16.819700" elapsed="0.000635"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.957093" elapsed="0.001027"/>
+<status status="PASS" start="2025-11-12T11:07:16.819508" elapsed="0.000878"/>
 </kw>
-<msg time="2025-11-12T05:46:24.958265" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc53672f0&gt;</msg>
+<msg time="2025-11-12T11:07:16.820503" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb24964470&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -727,260 +3049,140 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.361340" elapsed="0.596980"/>
+<status status="PASS" start="2025-11-12T11:07:16.203848" elapsed="0.616706"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.958576" elapsed="0.001033"/>
+<status status="PASS" start="2025-11-12T11:07:16.820695" elapsed="0.000471"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.961602" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
+<msg time="2025-11-12T11:07:16.822039" level="INFO">${data} = {'rooms': []}</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.959940" elapsed="0.001761"/>
+<status status="PASS" start="2025-11-12T11:07:16.821327" elapsed="0.000743"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-12T05:46:24.963889" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
+<msg time="2025-11-12T11:07:16.822430" level="INFO">${rooms} = []</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.963319" elapsed="0.000635"/>
+<status status="PASS" start="2025-11-12T11:07:16.822223" elapsed="0.000264"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.964433" level="INFO">Length is 2.</msg>
-<msg time="2025-11-12T05:46:24.964566" level="INFO">${total} = 2</msg>
+<msg time="2025-11-12T11:07:16.822759" level="INFO">Length is 0.</msg>
+<msg time="2025-11-12T11:07:16.822851" level="INFO">${total} = 0</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.964208" elapsed="0.000396"/>
+<status status="PASS" start="2025-11-12T11:07:16.822628" elapsed="0.000250"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.965065" level="INFO">Before Booking- Total available rooms in hotel: 2</msg>
+<msg time="2025-11-12T11:07:16.823144" level="INFO">Before Booking- Total available rooms in hotel: 0</msg>
 <arg>Before Booking- Total available rooms in hotel: ${total}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.964785" elapsed="0.000517"/>
+<status status="PASS" start="2025-11-12T11:07:16.822997" elapsed="0.000193"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after booking : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.965512" elapsed="0.000420"/>
+<status status="PASS" start="2025-11-12T11:07:16.823296" elapsed="0.000210"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Fail" owner="BuiltIn">
+<msg time="2025-11-12T11:07:16.824115" level="FAIL">No rooms available in JSON Response, Check for other date.</msg>
+<arg>No rooms available in JSON Response, Check for other date.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2025-11-12T11:07:16.823917" elapsed="0.000294">No rooms available in JSON Response, Check for other date.</status>
+</kw>
 <arg>${total} == 0</arg>
 <arg>Fail</arg>
 <arg>No rooms available in JSON Response, Check for other date.</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.966244" elapsed="0.000411"/>
+<status status="FAIL" start="2025-11-12T11:07:16.823669" elapsed="0.000628">No rooms available in JSON Response, Check for other date.</status>
 </kw>
 <kw name="Pick Random Room from List">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.969971" level="INFO">${rand_index} = 1</msg>
-<var>${rand_index}</var>
-<arg>random.randint(0, ${total}-1)</arg>
-<arg>random</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.968822" elapsed="0.001309"/>
-</kw>
-<kw name="Get From List" owner="Collections">
-<msg time="2025-11-12T05:46:24.970854" level="INFO">${random_room} = {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis ...</msg>
-<var>${random_room}</var>
-<arg>${rooms}</arg>
-<arg>${rand_index}</arg>
-<doc>Returns the value specified with an ``index`` from ``list``.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.970430" elapsed="0.000463"/>
-</kw>
-<return>
-<value>${random_room}</value>
-<status status="PASS" start="2025-11-12T05:46:24.970980" elapsed="0.000099"/>
-</return>
-<msg time="2025-11-12T05:46:24.971334" level="INFO">${random_room} = {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis ...</msg>
 <var>${random_room}</var>
 <arg>${rooms}</arg>
 <arg>${total}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.967663" elapsed="0.003715"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.825619" elapsed="0.000062"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.971834" level="INFO">random room details : {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis nisl nec posuere. Etiam at accumsan ex. ', 'features': ['Radio', 'WiFi', 'Safe'], 'roomPrice': 225}</msg>
 <arg>random room details : ${random_room}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.971563" elapsed="0.000349"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.825905" elapsed="0.000029"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.972890" level="INFO">${random_room} = {'roomid': 3, 'roomName': '103', 'type': 'Suite', 'accessible': True, 'image': '/images/room3.jpg', 'description': 'Etiam metus metus, fringilla ac sagittis id, consequat vel neque. Nunc commodo quis ...</msg>
 <var>${random_room}</var>
 <arg>dict(${random_room})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.972077" elapsed="0.000860"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826057" elapsed="0.000020"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-12T05:46:24.973429" level="INFO">${room_id} = 3</msg>
 <var>${room_id}</var>
 <arg>${random_room}</arg>
 <arg>roomid</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.973198" elapsed="0.000263"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826193" elapsed="0.000020"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Picked random room id: ${room_id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.973590" elapsed="0.000273"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826321" elapsed="0.000023"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Evaluate</arg>
 <arg>type(${room_id})</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.974018" elapsed="0.000315"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826430" elapsed="0.000018"/>
 </kw>
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.974696" level="INFO">${room_id} = 3</msg>
 <var>${room_id}</var>
 <arg>${room_id}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.974497" elapsed="0.000225"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826538" elapsed="0.000020"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-12T05:46:24.974971" level="INFO">${room_type} = Suite</msg>
 <var>${room_type}</var>
 <arg>${random_room}</arg>
 <arg>type</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.974822" elapsed="0.000174"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826646" elapsed="0.000019"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.975224" level="INFO">selected room type for boking : Suite</msg>
 <arg>selected room type for boking : ${room_type}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.975097" elapsed="0.000171"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826772" elapsed="0.000026"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.975526" level="INFO">${room_id} = 3</msg>
 <var>${room_id}</var>
 <arg>${room_id}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.975372" elapsed="0.000176"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.826930" elapsed="0.000051"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.975802" level="INFO">${room_id} = 3</msg>
 <arg>${room_id}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.975624" elapsed="0.000217"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.827179" elapsed="0.000032"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:24.360880" elapsed="0.615045"/>
+<status status="FAIL" start="2025-11-12T11:07:16.203382" elapsed="0.624121">No rooms available in JSON Response, Check for other date.</status>
 </test>
 <test id="s1-t7" name="Positive scenario : Create another new booking from API" line="113">
+<kw name="Skip" owner="BuiltIn">
+<msg time="2025-11-12T11:07:16.829742" level="SKIP">Skipped with Skip keyword.</msg>
+<doc>Skips the rest of the current test.</doc>
+<status status="SKIP" start="2025-11-12T11:07:16.829537" elapsed="0.000292">Skipped with Skip keyword.</status>
+</kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>===&gt; global room id ${room_id}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.976482" elapsed="0.000222"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.829961" elapsed="0.000290"/>
 </kw>
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:24.977494" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
-<kw name="Generate HTTP Request" owner="RESTLibrary">
-<kw name="Generate Url" owner="RESTLibrary">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.978421" level="INFO">https://automationintesting.online/api/booking</msg>
-<arg>${_requestInfo.url}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.978041" elapsed="0.000424"/>
-</kw>
-<arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.977855" elapsed="0.000666"/>
-</kw>
-<kw name="Process Authentication" owner="RESTLibrary">
-<arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.978618" elapsed="0.000113"/>
-</kw>
-<kw name="Generate Request Headers" owner="RESTLibrary">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.980447" level="INFO">{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-api-key': ''}</msg>
-<arg>${_requestInfo.requestHeaders}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.979928" elapsed="0.000583"/>
-</kw>
-<arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.979677" elapsed="0.000902"/>
-</kw>
-<kw name="Generate Request Body" owner="RESTLibrary">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:24.982115" level="INFO">{"roomid": 3,"firstname":"Sourabh","lastname":"Kumar","depositpaid":false,"bookingdates":{"checkin":"2025-12-16","checkout":"2025-12-17"},"email":"sourabhsuman29@gmail.com","phone":"09576573031"}</msg>
-<arg>${_requestInfo.requestBody}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.981591" elapsed="0.000590"/>
-</kw>
-<arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.980701" elapsed="0.001548"/>
-</kw>
-<arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.977633" elapsed="0.004665"/>
-</kw>
-<msg time="2025-11-12T05:46:24.982452" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
-<kw name="Process Http Request" owner="RESTLibrary">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:25.584213" level="INFO">{
-    "bookingid": 5,
-    "roomid": 3,
-    "firstname": "Sourabh",
-    "lastname": "Kumar",
-    "depositpaid": false,
-    "bookingdates": {
-        "checkin": "2025-12-16",
-        "checkout": "2025-12-17"
-    }
-}</msg>
-<arg>${_requestInfo.responseBody}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.583503" elapsed="0.000783"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:25.584885" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:25 GMT",
-    "Content-Type": "application/json",
-    "Transfer-Encoding": "chunked",
-    "Connection": "keep-alive",
-    "Server": "cloudflare",
-    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "Ktfif3TnTYqxS6-iw9P4nw",
-    "cf-cache-status": "DYNAMIC",
-    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=SZYOlu0F%2FYNw03xDFj5v4xDz1un%2F%2B%2BK2LEuQfjnoQ%2BCZa6O%2BadOJwDmjtJiFj21HBqYQV3iaxfuvIt8KlYUe2WZsIXnxv3kuxzdBpHusD092swuOkzs3BrK4\"}]}",
-    "CF-RAY": "99d3ba94bc6fa037-FRA",
-    "alt-svc": "h3=\":443\"; ma=86400"
-}</msg>
-<arg>${_requestInfo.responseHeaders}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.584464" elapsed="0.000466"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:25.585490" level="INFO">201</msg>
-<arg>${_requestInfo.responseStatusCode}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.585042" elapsed="0.000501"/>
-</kw>
-<arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:24.982561" elapsed="0.603037"/>
-</kw>
-<msg time="2025-11-12T05:46:25.585732" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
-<kw name="Verify Response Against Baselines" owner="RESTLibrary">
-<kw name="Verify Status Code" owner="RESTLibrary">
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>201</arg>
-<arg>201</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.586064" elapsed="0.000092"/>
-</kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:25.585966" elapsed="0.000229"/>
-</kw>
-<arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:25.585819" elapsed="0.000408"/>
-</kw>
-<msg time="2025-11-12T05:46:25.586287" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190f80&gt;</msg>
 <var>${requestInfo}</var>
 <arg>create a new booking</arg>
 <arg>https://automationintesting.online/api/booking</arg>
@@ -1004,111 +3206,130 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:24.976840" elapsed="0.609465"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.830451" elapsed="0.000028"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.586402" elapsed="0.000358"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.830698" elapsed="0.000031"/>
 </kw>
-<status status="PASS" start="2025-11-12T05:46:24.976125" elapsed="0.610715"/>
+<status status="SKIP" start="2025-11-12T11:07:16.828022" elapsed="0.002939">Skipped with Skip keyword.</status>
 </test>
 <test id="s1-t8" name="Negative scenarios: create booking with wrong payload data" line="129">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:25.588140" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
+<msg time="2025-11-12T11:07:16.834382" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb249bc500&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:25.589425" level="INFO">https://automationintesting.online/api/booking</msg>
+<msg time="2025-11-12T11:07:16.835442" level="INFO">https://automationintesting.online/api/booking</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.588912" elapsed="0.000567"/>
+<status status="PASS" start="2025-11-12T11:07:16.834930" elapsed="0.000568"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:25.588717" elapsed="0.000822"/>
+<status status="PASS" start="2025-11-12T11:07:16.834751" elapsed="0.000813"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:25.590303" elapsed="0.000323"/>
+<status status="PASS" start="2025-11-12T11:07:16.835666" elapsed="0.000155"/>
 </kw>
 <kw name="Generate Request Headers" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:25.591210" level="INFO">{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-api-key': ''}</msg>
+<msg time="2025-11-12T11:07:16.836558" level="INFO">{'Content-Type': 'application/json', 'Accept': 'application/json', 'x-api-key': ''}</msg>
 <arg>${_requestInfo.requestHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.590907" elapsed="0.000335"/>
+<status status="PASS" start="2025-11-12T11:07:16.836108" elapsed="0.000503"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:25.590735" elapsed="0.000540"/>
+<status status="PASS" start="2025-11-12T11:07:16.835928" elapsed="0.000739"/>
 </kw>
 <kw name="Generate Request Body" owner="RESTLibrary">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:25.592576" level="INFO">{"roomid": 3,"firstname":"Sourabh","lastname":"Kumar","depositpaid":false,"bookingdates":{"checkin":"2025-12-16","checkout":"2025-12-17"},"email":"sourabhsuman29@gmail.com","phone":"09576573031"}</msg>
-<arg>${_requestInfo.requestBody}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.592028" elapsed="0.000598"/>
-</kw>
+<msg time="2025-11-12T11:07:16.860120" level="INFO">data_manager.RC('''get all rooms''','''body''','''$.rooms[0].roomid''')
+No matches found for given json path, please review: $.rooms[0].roomid
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/data_manager.py", line 38, in process_data
+    data = json.loads(data)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 12 (char 11)
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/input_generator.py", line 25, in Generate_Request_Body
+    _requestInfo.requestBody = data_manager.process_data(_requestInfo.requestBodyFilePath, _requestInfo.requestDataType)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/data_manager.py", line 52, in process_data
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/data_manager.py", line 38, in process_data
+    data = json.loads(data)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 12 (char 11)</msg>
+<msg time="2025-11-12T11:07:16.860227" level="FAIL">JSONDecodeError: Expecting value: line 1 column 12 (char 11)</msg>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:25.591341" elapsed="0.001341"/>
+<status status="FAIL" start="2025-11-12T11:07:16.837454" elapsed="0.023321">JSONDecodeError: Expecting value: line 1 column 12 (char 11)</status>
 </kw>
+<msg time="2025-11-12T11:07:16.866207" level="INFO">Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/input_generator.py", line 30, in Generate_Request_Body
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/input_generator.py", line 25, in Generate_Request_Body
+    _requestInfo.requestBody = data_manager.process_data(_requestInfo.requestBodyFilePath, _requestInfo.requestDataType)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/data_manager.py", line 52, in process_data
+    raise e
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/data_manager.py", line 38, in process_data
+    data = json.loads(data)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 12 (char 11)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/input_generator.py", line 97, in Generate_HTTP_Request
+    _requestInfo = libcommons.run_keyword('Generate Request Body', "${_requestInfo}")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/RESTLibrary/libcommons.py", line 17, in run_keyword
+    return libcommons.robotBuiltIn.run_keyword(name, *kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/robot/libraries/BuiltIn.py", line 2169, in run_keyword
+    return kw.run(result, ctx)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/robot/running/model.py", line 173, in run
+    return KeywordRunner(context, run).run(self, result.body.create_keyword())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/robot/running/bodyrunner.py", line 92, in run
+    return runner.run(data, result, context, self._run)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/robot/running/librarykeywordrunner.py", line 52, in run
+    with StatusReporter(data, result, context, run, implementation=kw):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/robot/running/statusreporter.py", line 84, in __exit__
+    raise failure
+robot.errors.HandlerExecutionFailed: JSONDecodeError: Expecting value: line 1 column 12 (char 11)</msg>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:25.588246" elapsed="0.004496"/>
+<status status="FAIL" start="2025-11-12T11:07:16.834538" elapsed="0.031825">JSONDecodeError: Expecting value: line 1 column 12 (char 11)</status>
 </kw>
-<msg time="2025-11-12T05:46:25.592881" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
-<kw name="Process Http Request" owner="RESTLibrary">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.183254" level="INFO">{
-    "error": "Failed to create booking"
-}</msg>
-<arg>${_requestInfo.responseBody}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.182700" elapsed="0.000614"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.184124" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:26 GMT",
-    "Content-Type": "application/json",
-    "Transfer-Encoding": "chunked",
-    "Connection": "keep-alive",
-    "Server": "cloudflare",
-    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
-    "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "3fqAwNmBQByRTRd65nX1uw",
-    "cf-cache-status": "DYNAMIC",
-    "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=TUk0LABeXHHK1oNynLbjYx3xhG6GW4jgwEh2IgeagMh2dQhmxrvWEoWmLdVOdivNlIq7pusNr4QGsqK6dZaWLwiFchWNMjx3vOxkRS04h2ALvdNoJyXLd37o\"}]}",
-    "CF-RAY": "99d3ba988fab9279-FRA",
-    "alt-svc": "h3=\":443\"; ma=86400"
-}</msg>
-<arg>${_requestInfo.responseHeaders}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.183550" elapsed="0.000646"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.184874" level="INFO">409</msg>
-<arg>${_requestInfo.responseStatusCode}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.184355" elapsed="0.000579"/>
-</kw>
-<arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:25.592978" elapsed="0.592029"/>
-</kw>
-<msg time="2025-11-12T05:46:26.185294" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
-<kw name="Verify Response Against Baselines" owner="RESTLibrary">
-<kw name="Verify Status Code" owner="RESTLibrary">
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>409</arg>
-<arg>409</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.187538" elapsed="0.000198"/>
-</kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:26.185748" elapsed="0.002055"/>
-</kw>
-<arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:26.185490" elapsed="0.002361"/>
-</kw>
-<msg time="2025-11-12T05:46:26.188261" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5193500&gt;</msg>
 <var>${requestInfo}</var>
 <arg>create a new booking</arg>
 <arg>https://automationintesting.online/api/booking</arg>
@@ -1132,108 +3353,93 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:25.587531" elapsed="0.600771"/>
+<status status="FAIL" start="2025-11-12T11:07:16.833558" elapsed="0.032926">JSONDecodeError: Expecting value: line 1 column 12 (char 11)</status>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.188472" elapsed="0.000527"/>
+<status status="NOT RUN" start="2025-11-12T11:07:16.867394" elapsed="0.000131"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:25.587060" elapsed="0.602133"/>
+<status status="FAIL" start="2025-11-12T11:07:16.832008" elapsed="0.036300">JSONDecodeError: Expecting value: line 1 column 12 (char 11)</status>
 </test>
 <test id="s1-t9" name="Positioe Scenario: Check available rooms after booking from API" line="143">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:26.190625" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
+<msg time="2025-11-12T11:07:16.870369" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb249bec90&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.191937" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T11:07:16.871509" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.191246" elapsed="0.000763"/>
+<status status="PASS" start="2025-11-12T11:07:16.870947" elapsed="0.000635"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:26.191020" elapsed="0.001069"/>
+<status status="PASS" start="2025-11-12T11:07:16.870757" elapsed="0.000897"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:26.192858" elapsed="0.000159"/>
+<status status="PASS" start="2025-11-12T11:07:16.871786" elapsed="0.000201"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:26.190791" elapsed="0.002284"/>
+<status status="PASS" start="2025-11-12T11:07:16.870547" elapsed="0.001509"/>
 </kw>
-<msg time="2025-11-12T05:46:26.193320" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
+<msg time="2025-11-12T11:07:16.872196" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb249bec90&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.786368" level="INFO">{
-    "rooms": [
-        {
-            "roomid": 2,
-            "roomName": "102",
-            "type": "Double",
-            "accessible": true,
-            "image": "/images/room2.jpg",
-            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
-            "features": [
-                "TV",
-                "Radio",
-                "Safe"
-            ],
-            "roomPrice": 150
-        }
-    ]
+<msg time="2025-11-12T11:07:17.430177" level="INFO">{
+    "rooms": []
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.785864" elapsed="0.000553"/>
+<status status="PASS" start="2025-11-12T11:07:17.429512" elapsed="0.000732"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.787420" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:26 GMT",
+<msg time="2025-11-12T11:07:17.430967" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 11:07:17 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
     "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "B_pGFu_bQWum_ZQ_w9P4nw",
+    "x-railway-request-id": "pYvHQoXWQcasWvqLYqdHTg",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=cM32uQPvtGP3S2Bc%2FN1435YfQIYOUYioTgjHVkgjKZ6FZ2KhORJwaUnqO31Zk6Kd15qrWJHr66H8Wnhd%2BKfKtyva3H40XvOybTKHBlXMiSa1gSpL8YfaZLuQ\"}]}",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Drsfu%2BaA1Ksnl8ZsCYqkLPhrJ3sOfSOjwfjiCSfDgtoL5Df1%2Bv3Pa0%2B3rgXZWyHyjxXepd8JDYDe6xKKgh%2Fr5BIdAfa4Gwy9UT0T1eb3V%2F66rTP9Uz%2BQ3Q%3D%3D\"}]}",
     "Content-Encoding": "gzip",
-    "CF-RAY": "99d3ba9c39cedc86-FRA",
+    "CF-RAY": "99d59098a92e996e-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.786604" elapsed="0.000922"/>
+<status status="PASS" start="2025-11-12T11:07:17.430468" elapsed="0.000551"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.788730" level="INFO">200</msg>
+<msg time="2025-11-12T11:07:17.431571" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.787818" elapsed="0.001057"/>
+<status status="PASS" start="2025-11-12T11:07:17.431150" elapsed="0.000465"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:26.193421" elapsed="0.595575"/>
+<status status="PASS" start="2025-11-12T11:07:16.872309" elapsed="0.559358"/>
 </kw>
-<msg time="2025-11-12T05:46:26.789298" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
+<msg time="2025-11-12T11:07:17.431795" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb249bec90&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.790337" elapsed="0.000706"/>
+<status status="PASS" start="2025-11-12T11:07:17.432226" elapsed="0.000119"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:26.789979" elapsed="0.001181"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x70fb249bec90&gt;</arg>
+<status status="PASS" start="2025-11-12T11:07:17.432095" elapsed="0.000318"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:26.789518" elapsed="0.001728"/>
+<status status="PASS" start="2025-11-12T11:07:17.431914" elapsed="0.000541"/>
 </kw>
-<msg time="2025-11-12T05:46:26.791406" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5190260&gt;</msg>
+<msg time="2025-11-12T11:07:17.432571" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb249bec90&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -1252,203 +3458,150 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.190183" elapsed="0.601270"/>
+<status status="PASS" start="2025-11-12T11:07:16.869809" elapsed="0.562792"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.792552" level="INFO">Response Code: 200</msg>
+<msg time="2025-11-12T11:07:17.433142" level="INFO">Response Code: 200</msg>
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.791682" elapsed="0.000951"/>
+<status status="PASS" start="2025-11-12T11:07:17.432763" elapsed="0.000420"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.793625" level="INFO">Response Body: {
-    "rooms": [
-        {
-            "roomid": 2,
-            "roomName": "102",
-            "type": "Double",
-            "accessible": true,
-            "image": "/images/room2.jpg",
-            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
-            "features": [
-                "TV",
-                "Radio",
-                "Safe"
-            ],
-            "roomPrice": 150
-        }
-    ]
+<msg time="2025-11-12T11:07:17.433669" level="INFO">Response Body: {
+    "rooms": []
 }</msg>
 <arg>Response Body: ${requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.792823" elapsed="0.000886"/>
+<status status="PASS" start="2025-11-12T11:07:17.433289" elapsed="0.000435"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.794117" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
+<msg time="2025-11-12T11:07:17.434385" level="INFO">${data} = {'rooms': []}</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.793771" elapsed="0.000363"/>
+<status status="PASS" start="2025-11-12T11:07:17.433824" elapsed="0.000584"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-12T05:46:26.794359" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
+<msg time="2025-11-12T11:07:17.434677" level="INFO">${rooms} = []</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.794235" elapsed="0.000142"/>
+<status status="PASS" start="2025-11-12T11:07:17.434513" elapsed="0.000189"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-12T05:46:26.795407" level="INFO">Length is 1.</msg>
-<msg time="2025-11-12T05:46:26.795478" level="INFO">${total} = 1</msg>
+<msg time="2025-11-12T11:07:17.435724" level="INFO">Length is 0.</msg>
+<msg time="2025-11-12T11:07:17.435772" level="INFO">${total} = 0</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.795255" elapsed="0.000248"/>
+<status status="PASS" start="2025-11-12T11:07:17.435637" elapsed="0.000147"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after booking : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:26.795590" elapsed="0.000166"/>
+<status status="PASS" start="2025-11-12T11:07:17.435851" elapsed="0.000174"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:26.189541" elapsed="0.606294"/>
+<status status="PASS" start="2025-11-12T11:07:16.868947" elapsed="0.567179"/>
 </test>
 <test id="s1-t10" name="Positive Scenario: Adding new hotel room" line="155">
 <kw name="Launch Browser Application" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:29.937083" level="INFO">Launching browser: firefox
-Browser launched and application opened.</msg>
+<msg time="2025-11-12T11:07:17.436862" level="INFO">Launching browser: firefox</msg>
+<msg time="2025-11-12T11:07:17.436918" level="FAIL">It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.</msg>
 <arg>firefox</arg>
-<status status="PASS" start="2025-11-12T05:46:26.796362" elapsed="3.140870"/>
+<status status="FAIL" start="2025-11-12T11:07:17.436733" elapsed="0.003019">It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.</status>
 </kw>
 <kw name="Login As Admin" owner="PlaywrightCore">
-<msg time="2025-11-12T05:46:29.955942" level="INFO">.env file loaded: True</msg>
-<msg time="2025-11-12T05:46:30.568855" level="INFO">Secrets fetched successfully:</msg>
-<msg time="2025-11-12T05:46:36.596951" level="INFO">Admin login successful.</msg>
-<msg time="2025-11-12T05:46:36.597258" level="INFO">dp.st.dev.jIyDRzFDJZCygJR5bXc1WHrAyKHBaZx5IKyaL5FyAkN
-{
-  "DOPPLER_CONFIG": "dev",
-  "DOPPLER_ENVIRONMENT": "dev",
-  "DOPPLER_PROJECT": "hotel-booking",
-  "PASSWORD": "password",
-  "USER": "admin"
-}</msg>
-<status status="PASS" start="2025-11-12T05:46:29.937434" elapsed="6.659959"/>
+<status status="NOT RUN" start="2025-11-12T11:07:17.439890" elapsed="0.000017"/>
 </kw>
 <kw name="Add New HotelRoom" owner="PlaywrightCore">
-<status status="PASS" start="2025-11-12T05:46:36.597712" elapsed="8.593077"/>
+<status status="NOT RUN" start="2025-11-12T11:07:17.439955" elapsed="0.000010"/>
 </kw>
 <tag>UI TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:26.795999" elapsed="18.394981"/>
+<status status="FAIL" start="2025-11-12T11:07:17.436314" elapsed="0.003748">It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.</status>
 </test>
 <test id="s1-t11" name="Positioe Scenario: Check available rooms after adding new room in the hotelbooking" line="161">
 <kw name="Make HTTP Request" owner="RESTLibrary">
-<msg time="2025-11-12T05:46:45.192598" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
+<msg time="2025-11-12T11:07:17.449519" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb248b7080&gt;</msg>
 <kw name="Generate HTTP Request" owner="RESTLibrary">
 <kw name="Generate Url" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.194172" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
+<msg time="2025-11-12T11:07:17.450366" level="INFO">https://automationintesting.online/api/room?checkin=2025-12-16&amp;checkout=2025-12-17</msg>
 <arg>${_requestInfo.url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.193465" elapsed="0.000836"/>
+<status status="PASS" start="2025-11-12T11:07:17.450018" elapsed="0.000386"/>
 </kw>
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:45.193169" elapsed="0.001208"/>
+<status status="PASS" start="2025-11-12T11:07:17.449890" elapsed="0.000565"/>
 </kw>
 <kw name="Process Authentication" owner="RESTLibrary">
 <arg>${_requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:45.194507" elapsed="0.000152"/>
+<status status="PASS" start="2025-11-12T11:07:17.450557" elapsed="0.000093"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:45.192809" elapsed="0.001907"/>
+<status status="PASS" start="2025-11-12T11:07:17.449697" elapsed="0.000985"/>
 </kw>
-<msg time="2025-11-12T05:46:45.194932" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
+<msg time="2025-11-12T11:07:17.450966" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb248b7080&gt;</msg>
 <kw name="Process Http Request" owner="RESTLibrary">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.822581" level="INFO">{
-    "rooms": [
-        {
-            "roomid": 2,
-            "roomName": "102",
-            "type": "Double",
-            "accessible": true,
-            "image": "/images/room2.jpg",
-            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
-            "features": [
-                "TV",
-                "Radio",
-                "Safe"
-            ],
-            "roomPrice": 150
-        },
-        {
-            "roomid": 4,
-            "roomName": "104",
-            "type": "Family",
-            "accessible": true,
-            "image": "https://www.mwtestconsultancy.co.uk/img/room1.jpg",
-            "description": "Please enter a description for this room",
-            "features": [
-                "WiFi",
-                "TV",
-                "Safe",
-                "Views"
-            ],
-            "roomPrice": 550
-        }
-    ]
+<msg time="2025-11-12T11:07:18.094668" level="INFO">{
+    "rooms": []
 }</msg>
 <arg>${_requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.820811" elapsed="0.001968"/>
+<status status="PASS" start="2025-11-12T11:07:18.093942" elapsed="0.000797"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.824802" level="INFO">{
-    "Date": "Wed, 12 Nov 2025 05:46:45 GMT",
+<msg time="2025-11-12T11:07:18.095504" level="INFO">{
+    "Date": "Wed, 12 Nov 2025 11:07:17 GMT",
     "Content-Type": "application/json",
     "Transfer-Encoding": "chunked",
     "Connection": "keep-alive",
     "Server": "cloudflare",
     "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
     "x-railway-edge": "railway/europe-west4-drams3a",
-    "x-railway-request-id": "Tc68EGGBSUKySAku0-QtfA",
+    "x-railway-request-id": "iM_5KALjSomP7DMsm3z_FQ",
     "cf-cache-status": "DYNAMIC",
     "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
-    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=891m5FO6SpL%2BmXQGjDPKwxaIkKKPvoq04GDtweyCZbH0Gfy%2FN53MYca4qeQArirvsmr3kP91xIlL5lZVhCO7dHAYsd5KndNpWM9AnkZAMrmsZMwzkLjfl4Ia\"}]}",
+    "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pPFV%2FnmZtGZjWL08uFA4Zw9udKuDMBQt1sx6HltdlLfyXUamqiP4rdlFsHHFwP6p%2BzcnE%2Bmp%2FrEibzwQok5yRdVGB8cJ7vS9VU%2Bjf47ai3TAqUSyCI%2BXiBD6\"}]}",
     "Content-Encoding": "gzip",
-    "CF-RAY": "99d3bb1328c81973-FRA",
+    "CF-RAY": "99d5909c8ce9d2ea-FRA",
     "alt-svc": "h3=\":443\"; ma=86400"
 }</msg>
 <arg>${_requestInfo.responseHeaders}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.823361" elapsed="0.001603"/>
+<status status="PASS" start="2025-11-12T11:07:18.095022" elapsed="0.000529"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.826632" level="INFO">200</msg>
+<msg time="2025-11-12T11:07:18.095906" level="INFO">200</msg>
 <arg>${_requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.825390" elapsed="0.001367"/>
+<status status="PASS" start="2025-11-12T11:07:18.095636" elapsed="0.000310"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:45.195046" elapsed="0.631823"/>
+<status status="PASS" start="2025-11-12T11:07:17.451089" elapsed="0.644910"/>
 </kw>
-<msg time="2025-11-12T05:46:45.827088" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
+<msg time="2025-11-12T11:07:18.096128" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb248b7080&gt;</msg>
 <kw name="Verify Response Against Baselines" owner="RESTLibrary">
 <kw name="Verify Status Code" owner="RESTLibrary">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>200</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.828488" elapsed="0.000244"/>
+<status status="PASS" start="2025-11-12T11:07:18.097628" elapsed="0.000141"/>
 </kw>
-<arg>&lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</arg>
-<status status="PASS" start="2025-11-12T05:46:45.828141" elapsed="0.000699"/>
+<arg>&lt;RESTLibrary.request_info.request_info object at 0x70fb248b7080&gt;</arg>
+<status status="PASS" start="2025-11-12T11:07:18.096378" elapsed="0.001664"/>
 </kw>
 <arg>${requestInfo}</arg>
-<status status="PASS" start="2025-11-12T05:46:45.827308" elapsed="0.001618"/>
+<status status="PASS" start="2025-11-12T11:07:18.096226" elapsed="0.001852"/>
 </kw>
-<msg time="2025-11-12T05:46:45.829095" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x7e8fc5191040&gt;</msg>
+<msg time="2025-11-12T11:07:18.098137" level="INFO">${requestInfo} = &lt;RESTLibrary.request_info.request_info object at 0x70fb248b7080&gt;</msg>
 <var>${requestInfo}</var>
 <arg>get all rooms</arg>
 <arg>https://automationintesting.online/api/room?checkin=${checkin}&amp;checkout=${checkout}</arg>
@@ -1467,96 +3620,66 @@ sponse Channelization (RC) is special and unique feature of RESTLibrary, which l
  It can channelize data from response body and response headers both.
  In case of response body channelization you can either channelize selective data or entire body itself based on your need.
  While channelizing entire body you also have an option to update it if needed.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.192131" elapsed="0.637045"/>
+<status status="PASS" start="2025-11-12T11:07:17.441043" elapsed="0.657111"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.831017" level="INFO">Response Code: 200</msg>
+<msg time="2025-11-12T11:07:18.099159" level="INFO">Response Code: 200</msg>
 <arg>Response Code: ${requestInfo.responseStatusCode}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.830438" elapsed="0.000657"/>
+<status status="PASS" start="2025-11-12T11:07:18.098238" elapsed="0.000951"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.831719" level="INFO">Response Body: {
-    "rooms": [
-        {
-            "roomid": 2,
-            "roomName": "102",
-            "type": "Double",
-            "accessible": true,
-            "image": "/images/room2.jpg",
-            "description": "Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, eleifend euismod tortor dui egestas erat. Phasellus et ipsum nisl. ",
-            "features": [
-                "TV",
-                "Radio",
-                "Safe"
-            ],
-            "roomPrice": 150
-        },
-        {
-            "roomid": 4,
-            "roomName": "104",
-            "type": "Family",
-            "accessible": true,
-            "image": "https://www.mwtestconsultancy.co.uk/img/room1.jpg",
-            "description": "Please enter a description for this room",
-            "features": [
-                "WiFi",
-                "TV",
-                "Safe",
-                "Views"
-            ],
-            "roomPrice": 550
-        }
-    ]
+<msg time="2025-11-12T11:07:18.099507" level="INFO">Response Body: {
+    "rooms": []
 }</msg>
 <arg>Response Body: ${requestInfo.responseBody}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.831228" elapsed="0.000551"/>
+<status status="PASS" start="2025-11-12T11:07:18.099263" elapsed="0.000269"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.832672" level="INFO">${data} = {'rooms': [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices...</msg>
+<msg time="2025-11-12T11:07:18.099947" level="INFO">${data} = {'rooms': []}</msg>
 <var>${data}</var>
 <arg>json.loads("""${requestInfo.responseBody}""")</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.831905" elapsed="0.000802"/>
+<status status="PASS" start="2025-11-12T11:07:18.099613" elapsed="0.000350"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-11-12T05:46:45.833045" level="INFO">${rooms} = [{'roomid': 2, 'roomName': '102', 'type': 'Double', 'accessible': True, 'image': '/images/room2.jpg', 'description': 'Vestibulum sollicitudin, lectus ac mollis consequat, lorem orci ultrices tellus, e...</msg>
+<msg time="2025-11-12T11:07:18.100164" level="INFO">${rooms} = []</msg>
 <var>${rooms}</var>
 <arg>${data}</arg>
 <arg>rooms</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.832841" elapsed="0.000234"/>
+<status status="PASS" start="2025-11-12T11:07:18.100031" elapsed="0.000154"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-12T05:46:45.833435" level="INFO">Length is 2.</msg>
-<msg time="2025-11-12T05:46:45.833521" level="INFO">${total} = 2</msg>
+<msg time="2025-11-12T11:07:18.100331" level="INFO">Length is 0.</msg>
+<msg time="2025-11-12T11:07:18.100384" level="INFO">${total} = 0</msg>
 <var>${total}</var>
 <arg>${rooms}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.833299" elapsed="0.000246"/>
+<status status="PASS" start="2025-11-12T11:07:18.100262" elapsed="0.000140"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>available rooms in hotel after adding new room : ${total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-11-12T05:46:45.833658" elapsed="0.000220"/>
+<status status="PASS" start="2025-11-12T11:07:18.100467" elapsed="0.000186"/>
 </kw>
 <tag>API TestCase</tag>
-<status status="PASS" start="2025-11-12T05:46:45.191276" elapsed="0.642708"/>
+<status status="PASS" start="2025-11-12T11:07:17.440245" elapsed="0.660513"/>
 </test>
-<status status="PASS" start="2025-11-12T05:45:39.337301" elapsed="66.497093"/>
+<status status="FAIL" start="2025-11-12T11:06:07.274407" elapsed="70.826757"/>
 </suite>
 <statistics>
 <total>
-<stat pass="11" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="4" skip="1">All Tests</stat>
 </total>
 <tag>
-<stat pass="6" fail="0" skip="0">API TestCase</stat>
-<stat pass="2" fail="0" skip="0">UI TestCase</stat>
+<stat pass="4" fail="2" skip="0">API TestCase</stat>
+<stat pass="0" fail="2" skip="0">UI TestCase</stat>
 </tag>
 <suite>
-<stat name="E2E Application Flow" id="s1" pass="11" fail="0" skip="0">E2E Application Flow</stat>
+<stat name="E2E Application Flow" id="s1" pass="6" fail="4" skip="1">E2E Application Flow</stat>
 </suite>
 </statistics>
 <errors>
