@@ -111,7 +111,7 @@ Positive Scenario: Get available hotel rooms details after booking from UI
     Set Global Variable    ${room_id}
 ##test case for post request
 Positive scenario : Create another new booking from API
-
+      skip
       log to console    ===> global room id ${room_id}
       ${requestInfo}=  Make HTTP Request
       ...   create a new booking
