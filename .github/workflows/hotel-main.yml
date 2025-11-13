@@ -33,7 +33,7 @@ jobs:
       - name: Run Robot Framework tests
 
         run: docker run --rm -e DOPPLER_TOKEN=${{ secrets.DOPPLER_TOKEN }} -v ${{ github.workspace }}:/tests robot-playwright
- 
+
       - name: Upload Robot Framework report
 
         uses: actions/upload-artifact@v4
@@ -43,4 +43,3 @@ jobs:
           name: robot-test-report
 
           path: results/
- 
