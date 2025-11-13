@@ -29,6 +29,7 @@ Positive Scenario: Validate messages from APIs
     should contain    ${name_api}    ${name}
 
 Positive Scenario: Get available hotel rooms details
+
     [Tags]    API TestCase
     ${requestInfo}=   Make HTTP Request
     ...    get all rooms
