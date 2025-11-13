@@ -1,8 +1,1 @@
-## Python cache and environment
-#__pycache__/
-#*.pyc
-#*.pyo
-#*.env
-#venv/
-#env/
 .env
