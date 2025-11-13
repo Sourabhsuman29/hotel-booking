@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Robot Framework tests
         env:
-          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}   # inject Doppler Service Token
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}   # Inject Doppler Service Token securely
         run: |
           docker run --rm \
             -e DOPPLER_TOKEN=$DOPPLER_TOKEN \
