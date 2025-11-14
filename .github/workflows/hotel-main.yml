@@ -38,9 +38,10 @@ jobs:
 
 
       # Send email with report attached
-      - name:
-          Send email with test report- name:
-            Send email: dawidd6/action-send-mail@v3
+
+      - name: Send email with test report
+        if: success() || failure()
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
@@ -50,16 +51,19 @@ jobs:
           subject: "Robot Framework Test Execution Report"
           to: "sourabhsuman29@gmail.com"
           from: "GitHub Actions <${{ secrets.EMAIL_USERNAME }}>"
-          body: |
-            Hello Team,
-
-            The Robot Framework tests have completed. Please find the attached report.
-
-            Status: ${{ job.status }}
+          html_body: |
+            <h2>Robot Framework Test Execution Report</h2>
+            <p>Hello Team,</p>
+            <p>The Robot Framework tests have completed. Please find the attached report.</p>
+            <p><strong>Status:</strong> ${{ job.status }}</p>
+            <p>You can also download the full report from GitHub:</p>
+            <p>
+              https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}View Workflow Run</a><br>
+              <a href="https://github.com/${{ github.repository }}/suites/${{ github.run_id }}/Download Artifacts</a>
+            </p>
           attachments: |
             results/report.html
             results/log.html
-        if: success() || failure()
 
 
 # # Send email with report attached through outlook
