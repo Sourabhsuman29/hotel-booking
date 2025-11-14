@@ -36,6 +36,7 @@ jobs:
           name: robot-test-report
           path: results
 
+
       # Send email with report attached
       - name: Send email with test report
         if: success() || failure()
@@ -43,6 +44,7 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
+          secure: true
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Robot Framework Test Execution Report"
@@ -54,3 +56,27 @@ jobs:
             The Robot Framework tests have completed. Please find the attached report.
 
           Status: ${{ job.status }}
+          attachments: |
+            results/report.html, results/log.html
+
+# # Send email with report attached through outlook
+#      - name: Send email with test report
+#        if: success() || failure()
+#        uses: dawidd6/action-send-mail@v3
+#        with:
+#          server_address: smtp.office365.com
+#          server_port: 587
+#          secure: true
+#          username: ${{ secrets.OUTLOOK_USERNAME }}   # Your Outlook email address
+#          password: ${{ secrets.OUTLOOK_PASSWORD }}   # App password or account password
+#          subject: "Robot Framework Test Execution Report"
+#          to: "sourabhsuman29@outlook.com"
+#          from: "GitHub Actions <${{ secrets.OUTLOOK_USERNAME }}>"
+#          body: |
+#            Hello Team,
+#
+#            The Robot Framework tests have completed. Please find the attached report.
+#
+#            Status: ${{ job.status }}
+#          attachments: tests/results/report.html, tests/results/log.html
+
