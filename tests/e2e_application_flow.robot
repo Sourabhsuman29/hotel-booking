@@ -29,6 +29,7 @@ Positive Scenario: Validate messages from APIs
     should contain    ${name_api}    ${name}
 
 Positive Scenario: Get available hotel rooms details
+
     [Tags]    API TestCase
     ${requestInfo}=   Make HTTP Request
     ...    get all rooms
@@ -111,7 +112,6 @@ Positive Scenario: Get available hotel rooms details after booking from UI
     Set Global Variable    ${room_id}
 ##test case for post request
 Positive scenario : Create another new booking from API
-
       log to console    ===> global room id ${room_id}
       ${requestInfo}=  Make HTTP Request
       ...   create a new booking

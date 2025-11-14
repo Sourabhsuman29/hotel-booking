@@ -22,10 +22,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m playwright install --with-deps
 
 # Set PYTHONPATH so Robot can find custom libraries
-ENV PYTHONPATH=/tests/ui/Library
+ENV PYTHONPATH=/tests/resources
 
 # Run Robot Framework tests in headed mode using Xvfb
-# CMD ["xvfb-run", "robot", "-d", "results", "SasRestLibrary/reqres_api_tests/end-to-end-suite.robot"]
 # CMD ["xvfb-run", "--server-args=-screen 0 1920x1080x24", "robot", "-d", "results", "SasRestLibrary/reqres_api_tests/end-to-end-suite.robot"]
 CMD ["robot", "-d", "results", "tests/e2e_application_flow.robot"]
 #CMD ["xvfb-run", "robot", "-d", "results", "tests/e2e_application_flow.robot"]
