@@ -178,7 +178,7 @@ class PlaywrightCore:
             # expect(page.locator("// a[normalize - space() = 'Rooms']")).to_be_visible()
             logger.info("Admin login successful.")
         except Exception as e:
-            raise RuntimeError(f"Failed to click 'Admin' link: {str(e)}")
+            raise RuntimeError(f"Failed to click 'Admin' link,login failed: {str(e)}")
 
     #clicking on frontpage link
     @keyword("Go Back To Front Page")
