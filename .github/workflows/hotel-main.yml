@@ -35,3 +35,24 @@ jobs:
         with:
           name: robot-test-report
           path: results
+
+      # Send email with report attached
+      - name: Send email with test report
+        if: success() || failure()
+        uses: Sourabhsuman29/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Robot Framework Test Execution Report"
+          to: "sourabhsuman29@gmail.com"
+          from: "GitHub Actions <${{ secrets.EMAIL_USERNAME }}>"
+          body: |
+            Hello Team,
+            
+            The Robot Framework tests have completed. Please find the attached report.
+            
+            Status: ${{ job.status }}
+          attachments: tests/results/report.html, tests/results/log.html
+
