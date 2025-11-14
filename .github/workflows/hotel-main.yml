@@ -38,9 +38,9 @@ jobs:
 
 
       # Send email with report attached
-      - name: Send email with test report
-        if: success() || failure()
-        uses: dawidd6/action-send-mail@v3
+      - name:
+          Send email with test report- name:
+            Send email: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
@@ -55,9 +55,12 @@ jobs:
 
             The Robot Framework tests have completed. Please find the attached report.
 
-          Status: ${{ job.status }}
+            Status: ${{ job.status }}
           attachments: |
-            results/report.html, results/log.html
+            results/report.html
+            results/log.html
+        if: success() || failure()
+
 
 # # Send email with report attached through outlook
 #      - name: Send email with test report
