@@ -39,7 +39,7 @@ jobs:
       # Send email with report attached
       - name: Send email with test report
         if: success() || failure()
-        uses: Sourabhsuman29/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
@@ -50,9 +50,7 @@ jobs:
           from: "GitHub Actions <${{ secrets.EMAIL_USERNAME }}>"
           body: |
             Hello Team,
-            
-            The Robot Framework tests have completed. Please find the attached report.
-            
-            Status: ${{ job.status }}
-          attachments: tests/results/report.html, tests/results/log.html
 
+            The Robot Framework tests have completed. Please find the attached report.
+
+          Status: ${{ job.status }}
