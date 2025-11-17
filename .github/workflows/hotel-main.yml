@@ -46,6 +46,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 587
           secure: true
+          gnore_cert: true
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "Robot Framework Test Execution Report"
