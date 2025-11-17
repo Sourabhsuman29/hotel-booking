@@ -62,9 +62,9 @@ jobs:
               https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}View Workflow Run</a><br>
               <a href="https://github.com/${{ github.repository }}/suites/${{ github.run_id }}/Download Artifacts</a>
             </p>
-          attachments: |
-            results/report.html
-            results/log.html
+#          attachments: |
+#            results/report.html
+#            results/log.html
 
 
 # # Send email with report attached through outlook

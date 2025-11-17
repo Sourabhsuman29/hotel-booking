@@ -14,7 +14,6 @@ Pick Random Room from List
 
 *** Test Cases ***
 Positive Scenario: Send a inquiry messages from UI
-    skip
     Launch Browser Application    firefox
     Login As Admin          # ${ADMIN_USER}    ${ADMIN_PASS}
     Go Back To Front Page
@@ -22,7 +21,7 @@ Positive Scenario: Send a inquiry messages from UI
     Close Browser
 
 Positive Scenario: Validate messages from APIs
-    skip
+
     ${requestInfo}=   Make HTTP Request
     ...    get all messages
     ...    https://automationintesting.online/api/message
