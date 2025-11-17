@@ -14,7 +14,6 @@ Pick Random Room from List
 
 *** Test Cases ***
 Positive Scenario: Send a inquiry messages from UI
-
     Launch Browser Application    firefox
     Login As Admin          # ${ADMIN_USER}    ${ADMIN_PASS}
     Go Back To Front Page
@@ -22,6 +21,7 @@ Positive Scenario: Send a inquiry messages from UI
     Close Browser
 
 Positive Scenario: Validate messages from APIs
+
     ${requestInfo}=   Make HTTP Request
     ...    get all messages
     ...    https://automationintesting.online/api/message
@@ -29,6 +29,7 @@ Positive Scenario: Validate messages from APIs
     should contain    ${name_api}    ${name}
 
 Positive Scenario: Get available hotel rooms details
+
     [Tags]    API TestCase
     ${requestInfo}=   Make HTTP Request
     ...    get all rooms
@@ -111,7 +112,6 @@ Positive Scenario: Get available hotel rooms details after booking from UI
     Set Global Variable    ${room_id}
 ##test case for post request
 Positive scenario : Create another new booking from API
-
       log to console    ===> global room id ${room_id}
       ${requestInfo}=  Make HTTP Request
       ...   create a new booking

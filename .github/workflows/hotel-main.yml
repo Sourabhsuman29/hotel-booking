@@ -1,0 +1,82 @@
+name: Run Robot Framework Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image
+        run: docker build -t robot-playwright .
+
+      - name: Run Robot Framework tests
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN }}   # Inject Doppler Service Token securely
+        run: |
+          docker run --rm \
+            -e DOPPLER_TOKEN=$DOPPLER_TOKEN \
+            -v ${{ github.workspace }}:/tests \
+            robot-playwright
+
+      # Upload full report as artifact to store report
+      - name: Upload Robot Framework report
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-test-report
+          path: results
+
+# comment
+      # Send email with report attached
+      - name: Send email with test report
+        if: success() || failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Robot Framework Test Execution Report"
+          to: "sourabhsuman29@gmail.com"
+          from: "GitHub Actions <${{ secrets.EMAIL_USERNAME }}>"
+          body: |
+            Hello Team,
+
+            The Robot Framework tests have completed. Please find the attached report.
+
+          Status: ${{ job.status }}
+#          attachments: |
+#            results/report.html, results/log.html
+
+# # Send email with report attached through outlook
+#      - name: Send email with test report
+#        if: success() || failure()
+#        uses: dawidd6/action-send-mail@v3
+#        with:
+#          server_address: smtp.office365.com
+#          server_port: 587
+#          secure: true
+#          username: ${{ secrets.OUTLOOK_USERNAME }}   # Your Outlook email address
+#          password: ${{ secrets.OUTLOOK_PASSWORD }}   # App password or account password
+#          subject: "Robot Framework Test Execution Report"
+#          to: "sourabhsuman29@outlook.com"
+#          from: "GitHub Actions <${{ secrets.OUTLOOK_USERNAME }}>"
+#          body: |
+#            Hello Team,
+#
+#            The Robot Framework tests have completed. Please find the attached report.
+#
+#            Status: ${{ job.status }}
+#          attachments: tests/results/report.html, tests/results/log.html
+
